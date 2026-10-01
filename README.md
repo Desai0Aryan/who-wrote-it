@@ -87,7 +87,7 @@ The script also provided summary information, including the number of responses 
 
 The prompts consisted of **120 original questions** that I created for this project across four task types: coding, math, factual questions, and writing.
 
-The responses were collected manually from the free web interfaces for **Claude, ChatGPT, and Gemini** between `<dates>`.
+The responses were collected manually from the free web interfaces for **Claude, ChatGPT, and Gemini**.
 
 The model versions displayed by the applications were:
 
