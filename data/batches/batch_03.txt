@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: What is the Pythagorean theorem and where is it used?
+
+PROMPT 2: Explain how a hash table works and implement a simple one in Python.
+
+PROMPT 3: Write a SQL query that finds the second-highest salary from an Employees table.
+
+PROMPT 4: How many ways can 5 people be arranged in a row?
+
+PROMPT 5: Explain what standard deviation measures and compute it for the data 2, 4, 4, 4, 5, 5, 7, 9.
+
+PROMPT 6: Why is the ocean salty?

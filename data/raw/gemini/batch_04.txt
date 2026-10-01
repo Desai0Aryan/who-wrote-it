@@ -1,0 +1,139 @@
+```python
+# Prompt 2 verification: log2(x) = 5 -> x = 2**5
+x = 2**5
+print(f"x = {x}")
+
+
+```
+
+```text
+x = 32
+
+
+```
+
+=== ANSWER 1 ===
+We have seasons primarily because **Earth's axis is tilted** at an angle of approximately $23.5^\circ$ as it orbits the Sun.
+
+* **The Tilt:** As Earth revolves around the Sun over the course of a year, this tilt remains fixed in space.
+* **Hemispheric Exposure:** When the Northern Hemisphere is tilted toward the Sun, it receives more direct sunlight for longer periods, resulting in summer. At the same time, the Southern Hemisphere is tilted away, experiencing winter. Six months later, the positions are reversed.
+* **Distance vs. Tilt:** Earth's distance from the Sun actually varies slightly throughout the year (closest in January, farthest in July), but this has a minimal effect on temperatures compared to the dramatic impact of axial tilt and directness of sunlight.
+
+=== ANSWER 2 ===
+If $\log_2(x) = 5$, then $x = 32$.
+
+* **Explanation:** By definition, a logarithmic equation $\log_b(y) = c$ can be rewritten in its exponential form as $b^c = y$. Applying this here: $2^5 = 2 \times 2 \times 2 \times 2 \times 2 = 32$.
+
+=== ANSWER 3 ===
+Here is a robust JavaScript implementation of a debounce function:
+
+```javascript
+function debounce(func, delay) {
+  let timeoutId;
+  return function(...args) {
+    // Clear the previous timeout if the function is called again within the delay period
+    clearTimeout(timeoutId);
+    
+    // Set a new timeout to execute the function after the specified delay
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
+
+```
+
+* **Usage Example:**
+
+```javascript
+const handleResize = debounce(() => {
+  console.log('Window resized!');
+}, 300);
+
+window.addEventListener('resize', handleResize);
+
+```
+
+=== ANSWER 4 ===
+To prove that $1 + 2 + \dots + n = \frac{n(n+1)}{2}$ for all positive integers $n$ using mathematical induction, we follow two steps:
+
+**1. Base Case ($n = 1$):**
+
+* **Left-hand side (LHS):** $1$
+* **Right-hand side (RHS):** $\frac{1(1+1)}{2} = \frac{2}{2} = 1$
+* Since LHS = RHS, the base case holds true.
+
+**2. Inductive Step:**
+
+* Assume the statement is true for some arbitrary positive integer $k$. That is, the inductive hypothesis is:
+
+$$1 + 2 + \dots + k = \frac{k(k+1)}{2}$$
+
+
+* We must show that the statement holds for $n = k + 1$, meaning we want to prove:
+
+$$1 + 2 + \dots + k + (k+1) = \frac{(k+1)((k+1)+1)}{2} = \frac{(k+1)(k+2)}{2}$$
+
+
+* **Proof:**
+Starting with the sum up to $k+1$:
+
+$$[1 + 2 + \dots + k] + (k+1)$$
+
+
+
+Substitute the inductive hypothesis for the bracketed term:
+
+$$= \frac{k(k+1)}{2} + (k+1)$$
+
+
+
+Factor out $(k+1)$:
+
+$$= (k+1) \left( \frac{k}{2} + 1 \right)$$
+
+
+
+Find a common denominator for the term inside the parentheses:
+
+$$= (k+1) \left( \frac{k + 2}{2} \right) = \frac{(k+1)(k+2)}{2}$$
+
+
+* This matches our target RHS for $n = k+1$. By mathematical induction, the formula holds for all positive integers $n$.
+
+=== ANSWER 5 ===
+Here is a Python function to detect whether a linked list contains a cycle using **Floyd's Cycle-Finding Algorithm** (the "tortoise and hare" approach):
+
+```python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def has_cycle(head: ListNode) -> bool:
+    if not head or not head.next:
+        return False
+        
+    slow = head
+    fast = head
+    
+    while fast and fast.next:
+        slow = slow.next          # Moves 1 step
+        fast = fast.next.next     # Moves 2 steps
+        
+        if slow == fast:
+            return True           # Cycle detected
+            
+    return False                  # Reached end of list, no cycle
+
+```
+
+* **Complexity:** Time complexity is $O(n)$ where $n$ is the number of nodes, and space complexity is $O(1)$ since it only uses two pointers.
+
+=== ANSWER 6 ===
+Earthquakes are primarily caused by the **sudden movement of tectonic plates** along faults within the Earth's crust:
+
+* **Tectonic Forces:** Earth's outer shell is broken into massive pieces called tectonic plates that constantly move due to convection currents in the underlying mantle.
+* **Friction and Stress:** As these plates grind, collide, or slide past each other, their rough edges get stuck while the rest of the plate keeps moving. This builds up immense stress and potential energy over time.
+* **Elastic Rebound:** When the accumulated stress exceeds the friction holding the rocks together, the rocks snap or slip suddenly, releasing energy in the form of seismic waves that shake the ground.
+* **Other Causes:** While most earthquakes are tectonic, minor tremors can also be triggered by volcanic activity, large landslides, meteorite impacts, or human activities like hydraulic fracturing and wastewater injection.

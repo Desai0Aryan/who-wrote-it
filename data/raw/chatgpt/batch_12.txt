@@ -1,0 +1,122 @@
+=== ANSWER 1 ===
+
+```
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+
+    return quicksort(left) + middle + quicksort(right)
+
+# Example
+numbers = [5, 2, 8, 1, 3]
+print(quicksort(numbers))  # [1, 2, 3, 5, 8]
+```
+
+ Average-case time complexity is **O(n log n)**, while the worst case is **O(n²)**.
+
+ === ANSWER 2 ===
+
+ For a fair six-sided die with outcomes $1,2,3,4,5,6$:
+
+ $$
+E[X] = \frac{1+2+3+4+5+6}{6} = \frac{21}{6} = 3.5
+$$
+
+  E\[X\]=∑xxP(X=x)\\mathbb{E}\[X\] = \\sum\_x xP(X=x)  **Expected value: 3.5**
+
+ === ANSWER 3 ===
+
+ This is a geometric series with first term $a=1$ and common ratio $r=\frac12$.
+
+ $$
+S=\frac{a}{1-r}
+=\frac{1}{1-\frac12}
+=2
+$$
+
+  ∑k=0∞ark=a1−r,∣r∣\<1\\sum\_{k=0}^{\\infty} ar^k = \\frac{a}{1-r},\\quad |r|\<1  **Answer: $\boxed{2}$**
+
+ === ANSWER 4 ===
+
+ Using the distance formula:
+
+ $$
+d=\sqrt{(4-1)^2+(6-2)^2}
+$$
+
+ $$
+d=\sqrt{3^2+4^2}=\sqrt{25}=5
+$$
+
+ **Answer: $\boxed{5}$**
+
+ === ANSWER 5 ===
+
+ Funny Out-of-Office
+
+Hi!
+
+ I’m currently out of the office and doing my best to remember what day it is. I’ll be back on \[date\] and will respond to your message then.
+
+ If this is urgent, please contact \[backup contact\]. If it’s not urgent, congratulations—you’ve successfully avoided creating an emergency.
+
+ Thanks!
+
+ === ANSWER 6 ===
+
+ The Knock
+
+The knock came at 03:17.
+
+ Commander Reyes froze above the control panel.
+
+ Three knocks.
+
+ Slow. Deliberate.
+
+ She stared at the airlock camera. The corridor beyond was empty, stretching into darkness.
+
+ “Computer,” she whispered, “identify the source.”
+
+ “Unknown.”
+
+ Reyes swallowed. “There’s no one outside.”
+
+ A fourth knock sounded.
+
+ Then a voice crackled through the intercom.
+
+ “Commander Reyes? Open the door.”
+
+ Her blood ran cold.
+
+ The voice was hers.
+
+ She looked at the mission clock.
+
+ **03:17.**
+
+ The transmission continued.
+
+ “Please, Commander. I’ve been outside for six hours.”
+
+ Reyes backed away from the airlock.
+
+ Then the computer spoke.
+
+ “Commander, I recommend opening the door.”
+
+ “Why?”
+
+ A pause.
+
+ “Because the person outside has your life-signs.”
+
+ The knocking stopped.
+
+ Something on the other side began to breathe.

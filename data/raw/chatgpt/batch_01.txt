@@ -1,0 +1,122 @@
+=== ANSWER 1 ===
+
+```
+def gcd(a, b):
+    """Return the greatest common divisor of a and b."""
+    while b:
+        a, b = b, a % b
+    return abs(a)
+```
+
+ === ANSWER 2 ===
+
+```
+def rotate_90_clockwise(matrix):
+    """Return a square matrix rotated 90 degrees clockwise."""
+    n = len(matrix)
+    return [[matrix[n - 1 - row][col] for row in range(n)]
+            for col in range(n)]
+```
+
+ === ANSWER 3 ===
+
+ A blockchain is a distributed digital ledger that records transactions in a sequence of blocks. Instead of one central authority maintaining the ledger, copies are typically maintained by many computers called **nodes**.
+
+ The basic process is:
+
+ 1. **A transaction is created.** For example, Alice sends cryptocurrency to Bob.
+2. **The transaction is broadcast** to the network.
+3. **Nodes verify it**, checking things such as whether Alice has the necessary funds and whether the transaction follows the network's rules.
+4. **Valid transactions are grouped into a block.**
+5. **The network reaches consensus** about whether the block should be added. Different blockchains use different mechanisms, such as Proof of Work or Proof of Stake.
+6. **The block is added to the chain.** Each block contains information that cryptographically connects it to the previous block.
+7. **The ledger is replicated** across participating nodes.
+
+ The cryptographic links make changing old blocks difficult: altering a transaction would generally change that block's cryptographic hash and break the chain's subsequent links. The consensus mechanism and distributed copies provide additional protection against unauthorized changes.
+
+ Blockchains can be used for cryptocurrencies, but the underlying technology can also support other kinds of shared records and applications.
+
+ === ANSWER 4 ===
+
+```
+#include <stddef.h>
+
+void reverse_string(char *str)
+{
+    if (str == NULL)
+        return;
+
+    char *end = str;
+
+    while (*end != '\0')
+        end++;
+
+    if (end != str)
+        end--;
+
+    while (str < end) {
+        char temp = *str;
+        *str = *end;
+        *end = temp;
+
+        str++;
+        end--;
+    }
+}
+```
+
+ === ANSWER 5 ===
+
+ The last answer leaves the page\
+ and suddenly\
+ the room feels larger.
+
+ Pencils go quiet.\
+ Chairs scrape the floor.\
+ A clock keeps counting\
+ even though I no longer need it.
+
+ I walk outside\
+ carrying nothing\
+ but a name on a page,\
+ a few uncertain answers,\
+ and the strange lightness\
+ of having finally stopped.
+
+ For weeks,\
+ the exam was a door\
+ I kept walking toward.
+
+ Now it is behind me.
+
+ The future can wait\
+ until tomorrow.
+
+ For tonight,\
+ I can breathe.
+
+ === ANSWER 6 ===
+
+```
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <button onClick={() => setCount(count - 1)}>
+        Decrement
+      </button>
+
+      <span style={{ margin: "0 16px" }}>{count}</span>
+
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+    </div>
+  );
+}
+
+export default Counter;
+```

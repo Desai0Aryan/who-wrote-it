@@ -1,0 +1,183 @@
+=== ANSWER 1 ===
+
+```
+import string
+
+def is_palindrome(s: str) -> bool:
+    cleaned = ''.join(
+        char.lower()
+        for char in s
+        if char.isalnum()
+    )
+    return cleaned == cleaned[::-1]
+```
+
+ Example:
+
+```
+print(is_palindrome("A man, a plan, a canal: Panama!"))  # True
+print(is_palindrome("Hello"))                             # False
+```
+
+ This removes punctuation and spaces, ignores case, and compares the result with its reverse.
+
+ === ANSWER 2 ===
+
+ A simple LRU (Least Recently Used) cache can be implemented with `OrderedDict`:
+
+```
+from collections import OrderedDict
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        self.capacity = capacity
+        self.cache = OrderedDict()
+
+    def get(self, key):
+        if key not in self.cache:
+            return None
+
+        # Mark as recently used
+        self.cache.move_to_end(key)
+        return self.cache[key]
+
+    def put(self, key, value):
+        if key in self.cache:
+            self.cache.move_to_end(key)
+
+        self.cache[key] = value
+
+        # Remove least recently used item
+        if len(self.cache) > self.capacity:
+            self.cache.popitem(last=False)
+```
+
+ Example:
+
+```
+cache = LRUCache(2)
+
+cache.put("a", 1)
+cache.put("b", 2)
+
+print(cache.get("a"))  # 1
+
+cache.put("c", 3)      # Evicts "b"
+
+print(cache.get("b"))  # None
+print(cache.get("c"))  # 3
+```
+
+ Both `get` and `put` are **O(1)** average time.
+
+ === ANSWER 3 ===
+
+ There are $6 \times 6 = 36$ equally likely outcomes when rolling two fair six-sided dice.
+
+ A sum of 8 occurs with these combinations:
+
+ $$
+(2,6), (3,5), (4,4), (5,3), (6,2)
+$$
+
+ That's 5 outcomes, so:
+
+ $$
+P(\text{sum}=8)=\frac{5}{36}\approx 0.1389
+$$
+
+ **Answer: $\boxed{\frac{5}{36}}$, or about $13.89\%$.**
+
+ === ANSWER 4 ===
+
+ A simple regular expression for a basic email format is:
+
+```
+^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$
+```
+
+ Breakdown:
+
+ - `^` — start of the string.
+- `[A-Za-z0-9._%+-]+` — one or more letters, digits, or common characters allowed in the username.
+- `@` — requires the `@` symbol.
+- `[A-Za-z0-9.-]+` — one or more letters, digits, dots, or hyphens for the domain.
+- `\.` — a literal dot.
+- `[A-Za-z]{2,}` — a top-level domain containing at least two letters.
+- `$` — end of the string.
+
+ For example, it matches:
+
+```
+alice@example.com
+john.smith42@company.org
+```
+
+ This is intentionally a **simple** validator; full RFC-compliant email validation is considerably more complicated.
+
+ === ANSWER 5 ===
+
+ Use the **product rule**:
+
+ $$
+\frac{d}{dx}[f(x)g(x)] = f'(x)g(x)+f(x)g'(x)
+$$
+
+ Let
+
+ $$
+f(x)=x^3,\qquad g(x)=\sin(x)
+$$
+
+ Then
+
+ $$
+f'(x)=3x^2,\qquad g'(x)=\cos(x)
+$$
+
+ Therefore,
+
+ $$
+\frac{d}{dx}[x^3\sin(x)]
+=3x^2\sin(x)+x^3\cos(x)
+$$
+
+ So the answer is:
+
+ $$
+\boxed{3x^2\sin(x)+x^3\cos(x)}
+$$
+
+ === ANSWER 6 ===
+
+ The sum of the first $n$ positive integers is
+
+ $$
+\frac{n(n+1)}{2}
+$$
+
+ For $n=50$:
+
+ $$
+\frac{50(51)}{2}
+=25\cdot51
+=1275
+$$
+
+ Therefore,
+
+ $$
+\boxed{1275}
+$$
+
+ A quick way to see the formula is to pair the numbers from opposite ends:
+
+ $$
+1+50=51,\quad 2+49=51,\quad \ldots
+$$
+
+ There are 25 such pairs, each totaling 51:
+
+ $$
+25\times51=1275.
+$$

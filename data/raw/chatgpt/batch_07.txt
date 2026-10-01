@@ -1,0 +1,178 @@
+=== ANSWER 1 ===
+
+ The **water cycle** is the continuous movement of water between Earth’s surface, the atmosphere, and underground.
+
+ The main stages are:
+
+ - **Evaporation:** Heat from the Sun turns liquid water from oceans, lakes, and rivers into water vapor.
+- **Condensation:** Water vapor cools and forms tiny droplets, creating clouds.
+- **Precipitation:** Water falls from clouds as rain, snow, sleet, or hail.
+- **Collection:** Water gathers in oceans, lakes, rivers, glaciers, and underground reservoirs.
+- **Transpiration:** Plants release water vapor into the atmosphere through their leaves.
+
+ These processes continually recycle Earth’s water.
+
+ === ANSWER 2 ===
+
+ **Proof by contradiction:**
+
+ Suppose that $\sqrt{2}$ is rational. Then it can be written as a fraction in lowest terms:
+
+ $$
+\sqrt{2}=\frac{a}{b}
+$$
+
+ where $a$ and $b$ are integers, $b\neq0$, and $a,b$ have no common factor.
+
+ Squaring both sides:
+
+ $$
+2=\frac{a^2}{b^2}
+$$
+
+ so
+
+ $$
+a^2=2b^2.
+$$
+
+ Thus $a^2$ is even, which means $a$ must be even. Write $a=2k$.
+
+ Substituting:
+
+ $$
+(2k)^2=2b^2
+$$
+
+ $$
+4k^2=2b^2
+$$
+
+ $$
+b^2=2k^2.
+$$
+
+ Therefore $b^2$ is even, so $b$ is also even.
+
+ But then both $a$ and $b$ are even, contradicting our assumption that $\frac ab$ was in lowest terms.
+
+ Therefore,
+
+ $$
+\boxed{\sqrt{2}\text{ is irrational}.}
+$$
+
+ === ANSWER 3 ===
+
+ Limerick
+
+There once was a cat who loved brew,\
+ Who sipped his espresso at two.\
+ He'd purr with delight,\
+ All morning and night,\
+ And dream of a cappuccino or two.
+
+ === ANSWER 4 ===
+
+ A **virus** and a **bacterium** are both microscopic infectious agents, but they are fundamentally different.
+
+ | Feature | Virus | Bacterium |
+| --- | --- | --- |
+| Structure | Genetic material surrounded by a protein coat | Complete single-celled organism |
+| Living organism? | Generally not considered independently living | Yes, a living cell |
+| Size | Usually much smaller | Usually larger |
+| Reproduction | Must infect a host cell to make more viruses | Can reproduce independently by cell division |
+| Treatment | Antibiotics do not work against viruses | Some bacterial infections can be treated with antibiotics |
+| Examples | Influenza virus, HIV, SARS-CoV-2 | _E. coli_, _Streptococcus_ |
+
+In simple terms, **bacteria are living cells**, whereas **viruses are genetic material packaged in a structure that must use a host cell to reproduce**.
+
+ === ANSWER 5 ===
+
+ We want to evaluate
+
+ $$
+\int 2x e^{x^2}\,dx.
+$$
+
+ Use the substitution
+
+ $$
+u=x^2.
+$$
+
+ Then
+
+ $$
+du=2x\,dx.
+$$
+
+ So the integral becomes
+
+ $$
+\int e^u\,du=e^u+C.
+$$
+
+ Substituting back $u=x^2$:
+
+ $$
+\boxed{e^{x^2}+C}.
+$$
+
+ === ANSWER 6 ===
+
+ First Meeting
+
+**Child:** Whoa! Are you a robot?
+
+ **Robot:** Correct. I am Unit-7. Are you a human?
+
+ **Child:** Yep! I'm Maya. Nice to meet you.
+
+ **Robot:** Nice to meet you, Maya. I have never met a human named Maya before.
+
+ **Child:** And I've never met a real robot before.
+
+ **Robot:** Then we are both experiencing something new.
+
+ **Child:** Can you really talk?
+
+ **Robot:** I am talking right now.
+
+ **Child:** Can you do anything cool?
+
+ **Robot:** I can calculate the square root of 2 to many decimal places.
+
+ **Child:** That's not very cool.
+
+ **Robot:** I can also do this.
+
+ **Child:** Do what?
+
+ **Robot:** _\[Robot's eyes flash bright blue.\]_
+
+ **Child:** Okay, that's pretty cool!
+
+ **Robot:** Thank you. I have recorded that as a successful first impression.
+
+ **Child:** So, what do robots do for fun?
+
+ **Robot:** I do not know yet.
+
+ **Child:** Then I'll show you.
+
+ **Robot:** Excellent. Where are we going?
+
+ **Child:** To the playground!
+
+ **Robot:** Is that safe?
+
+ **Child:** Mostly.
+
+ **Robot:** I am beginning to understand why humans are interesting.
+
+ **Child:** And I'm beginning to think robots might be fun.
+
+ **Robot:** Then perhaps this is the beginning of a friendship.
+
+ **Child:** Definitely.

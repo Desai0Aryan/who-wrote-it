@@ -1,0 +1,53 @@
+=== ANSWER 1 ===
+The dot product is (1)(4) + (2)(5) + (3)(6) = 4 + 10 + 18 = **32**.
+
+=== ANSWER 2 ===
+**Permutations** count arrangements where order matters. **Combinations** count selections where order doesn't matter.
+
+**Example:** Suppose you have 3 people (A, B, C) and want to choose 2 of them.
+
+- **Permutations** (e.g., choosing a president and a vice president): AB, BA, AC, CA, BC, CB gives 6 outcomes. Formula: P(n, r) = n! / (n - r)! = 3! / 1! = 6.
+- **Combinations** (e.g., choosing a 2-person committee): AB, AC, BC gives 3 outcomes. Formula: C(n, r) = n! / (r!(n - r)!) = 3! / (2! · 1!) = 3.
+
+Each combination corresponds to r! permutations (here 2! = 2), which is why C(n, r) = P(n, r) / r!. Ask yourself: "Does swapping the order give a different outcome?" If yes, it's a permutation. If no, it's a combination.
+
+=== ANSWER 3 ===
+Vaccines expose the immune system to a harmless version or piece of a pathogen so it can learn to recognize the real thing without you having to get sick.
+
+**1. Introducing an antigen.** A vaccine contains something that looks like the pathogen to your immune system: a weakened or inactivated virus, a protein fragment, or genetic instructions (mRNA or viral vector) that make your cells produce a harmless piece of the pathogen, such as a spike protein.
+
+**2. Innate response.** Immune cells like dendritic cells and macrophages detect the antigen, engulf it, and display pieces of it on their surface. Adjuvants (ingredients in some vaccines) boost this alarm signal.
+
+**3. Adaptive response.** Those cells travel to lymph nodes and present the antigen to T cells and B cells.
+- **Helper T cells** coordinate the response.
+- **B cells** produce antibodies that bind the antigen.
+- **Cytotoxic T cells** learn to destroy infected cells.
+
+**4. Memory.** After the initial response fades, long-lived **memory B and T cells** remain. If you later encounter the real pathogen, these cells recognize it quickly and mount a faster, stronger response, often stopping infection or reducing severity before symptoms develop.
+
+**Why boosters?** Some vaccines need multiple doses to build strong memory, and protection from some can wane over time, so boosters refresh the response. Mild side effects like a sore arm or low fever are signs the immune system is responding.
+
+=== ANSWER 4 ===
+**Weather** is the state of the atmosphere at a particular place and time: temperature, precipitation, wind, humidity, cloud cover. It changes hour to hour and day to day.
+
+**Climate** is the long-term pattern of weather in a region, typically averaged over 30 years or more. It describes what's typical and the range of variability, such as "Phoenix has hot, dry summers."
+
+A common way to remember it: *climate is what you expect, weather is what you get.* A single cold winter day is weather and doesn't disprove a warming climate trend, just as one hot day doesn't prove one. Climate change refers to shifts in those long-term averages and patterns.
+
+=== ANSWER 5 ===
+Area = ∫₀³ x² dx = [x³/3]₀³ = 27/3 − 0 = **9** square units.
+
+=== ANSWER 6 ===
+These terms describe different things, and they aren't mutually exclusive.
+
+**Democracy** describes *who holds power*: the people, either directly (citizens vote on laws themselves, as in ancient Athens) or through elected representatives.
+
+**Republic** describes *how government is structured*: a state where the head of state is not a hereditary monarch, and where officials are chosen to serve the public interest under a constitution or established laws. Republics typically emphasize rule of law and limits on power, including protections for minority rights.
+
+**Key distinctions:**
+- A **direct democracy** has citizens decide issues themselves; a republic uses representatives.
+- A **republic** is usually bound by a constitution that limits what the majority can do; a pure democracy, in theory, lets the majority decide anything.
+- A country can be both: the United States, France, and India are democratic republics.
+- A republic isn't automatically democratic (some states called republics have limited or no free elections), and a democracy can be a monarchy (the UK, Japan, and Sweden are constitutional monarchies with democratic governance).
+
+In everyday political debate, people sometimes use the distinction to argue about majority rule versus constitutional limits, and there's disagreement over how sharp that line is. Most political scientists treat the two as overlapping rather than opposed.

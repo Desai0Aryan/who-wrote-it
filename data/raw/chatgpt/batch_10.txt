@@ -1,0 +1,76 @@
+=== ANSWER 1 ===
+
+ The dot product is:
+
+ $$
+(1,2,3)\cdot(4,5,6)=1(4)+2(5)+3(6)=4+10+18=\boxed{32}
+$$
+
+ === ANSWER 2 ===
+
+ **Permutations** count arrangements where **order matters**.
+
+ **Combinations** count selections where **order does not matter**.
+
+ For example, suppose you have three people: A, B, and C, and you need to choose two.
+
+ - **Permutations:** AB and BA are different, because the order matters. There are $3\times2=6$ arrangements.
+- **Combinations:** AB and BA are the same selection, because order doesn't matter. There are $\binom{3}{2}=3$ selections: AB, AC, BC.
+
+  Learn more  In short: **permutation = arrangement; combination = selection.**
+
+ === ANSWER 3 ===
+
+ Vaccines train the immune system by exposing it to a **safe form or piece of a pathogen**, such as a protein or an inactivated pathogen, without causing the disease the pathogen normally causes.
+
+ The immune system responds by:
+
+ 1. **Recognizing the antigen** as foreign.
+2. **Activating immune cells**, including B cells and T cells.
+3. **Producing antibodies** and other immune defenses.
+4. **Creating memory cells** that remain after the initial response.
+
+ Later, if the person encounters the actual pathogen, these memory cells can trigger a **faster and stronger immune response**, helping prevent infection or reduce the severity of illness.
+
+ === ANSWER 4 ===
+
+ **Weather** describes the short-term state of the atmosphere—what is happening over minutes, hours, or days. Examples include today's temperature, rainfall, wind, or thunderstorms.
+
+ **Climate** describes the long-term patterns and averages of weather in a region, typically considered over decades or longer. Examples include a region's typical summer temperatures or long-term rainfall patterns.
+
+ A simple way to remember it:
+
+ - **Weather:** what is happening now or soon.
+- **Climate:** what is typical over a long period.
+
+ === ANSWER 5 ===
+
+ The area under $y=x^2$ from $x=0$ to $x=3$ is the definite integral:
+
+ $$
+\int_0^3 x^2\,dx
+$$
+
+ The antiderivative of $x^2$ is $\frac{x^3}{3}$, so:
+
+ $$
+\left[\frac{x^3}{3}\right]_0^3
+=\frac{3^3}{3}-\frac{0^3}{3}
+=\frac{27}{3}
+=\boxed{9}
+$$
+
+ So the area is **9 square units**.
+
+ === ANSWER 6 ===
+
+ A **democracy** is a system in which political authority ultimately comes from the people, typically through voting and other forms of political participation.
+
+ A **republic** is a form of government in which the country is considered a public political entity and government authority is exercised through representatives and established laws or institutions.
+
+ The terms can overlap: **a country can be both democratic and a republic**. For example, citizens may elect representatives who make laws on their behalf.
+
+ In simple terms:
+
+ - **Democracy:** emphasizes **popular participation and political authority of the people**.
+- **Republic:** emphasizes **representative government and rule through established institutions/laws**.

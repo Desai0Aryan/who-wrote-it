@@ -1,0 +1,78 @@
+=== ANSWER 1 ===
+Ada Lovelace (1815-1852), born Augusta Ada Byron, was an English mathematician and the daughter of the poet Lord Byron. Her mother encouraged her study of mathematics and science, partly to steer her away from her father's poetic temperament.
+
+She is important chiefly for her work with Charles Babbage on his proposed Analytical Engine, a mechanical general-purpose computer that was never completed. In 1843 she translated an article about the engine by the Italian engineer Luigi Menabrea and added extensive notes of her own, which ended up longer than the original text. In those notes she:
+
+- Described a step-by-step method for the engine to calculate Bernoulli numbers, which is often regarded as the first published computer program.
+- Recognized that the machine could manipulate symbols, not just numbers, and speculated it might compose music or handle other non-numerical tasks. This anticipated the idea of general-purpose computing.
+- Argued that the engine could not originate anything on its own and could only do what it was instructed to do, a point later discussed as "Lady Lovelace's Objection" by Alan Turing in his work on machine intelligence.
+
+Historians debate how much of the technical content was her own versus Babbage's, but her conceptual insight into what computing machines could become is widely acknowledged. The programming language Ada and Ada Lovelace Day, celebrated each October, are named in her honor.
+
+=== ANSWER 2 ===
+In traditional programming, a human writes explicit rules. You give the computer the rules and the input data, and it produces output. For example, to detect spam you might write rules like "if the subject contains 'free money,' flag it."
+
+In machine learning, you instead give the computer example data along with the desired answers, and an algorithm learns the rules (a model) on its own. You then apply that model to new inputs. For spam detection, you would supply thousands of emails labeled spam or not spam, and the system learns which patterns distinguish them.
+
+Key differences:
+
+- **Source of logic:** Hand-written by programmers vs. inferred from data.
+- **Adaptability:** Traditional programs change only when someone edits the code; ML models can improve by retraining on new data.
+- **Best suited for:** Traditional programming excels when rules are clear and exact (payroll, sorting, database queries). ML excels when rules are too complex or fuzzy to write down (image recognition, language translation, recommendations).
+- **Predictability:** Traditional code behaves deterministically and is easy to debug. ML models are probabilistic, can make errors on unfamiliar inputs, and are often harder to interpret.
+- **Dependencies:** ML needs substantial, good-quality data, while traditional programming needs a clear specification.
+
+In practice, the two are often combined: ML models are built and deployed within systems that are themselves traditionally programmed.
+
+=== ANSWER 3 ===
+**The Everyday Bottle: Hydration That Goes Where You Do**
+
+Ditch the single-use plastic and carry something better. Our reusable water bottle is built from durable, BPA-free, double-wall insulated stainless steel that keeps drinks ice-cold for up to 24 hours or piping hot for up to 12, whether you're at the gym, on a hike, or stuck in a long meeting.
+
+The leak-proof, screw-top lid and carry loop make it easy to toss in a bag or clip to a backpack. The wide mouth fits ice cubes and cleans up easily, and the powder-coated finish gives you a secure, sweat-free grip. It also fits most standard cup holders.
+
+- Insulated to keep drinks cold or hot all day
+- Leak-proof lid with comfortable carry loop
+- Wide mouth for easy filling and cleaning
+- Free of BPA and other harmful chemicals
+- Available in multiple colors
+
+One bottle, used every day, can replace hundreds of disposable bottles a year. Stay hydrated, cut down on waste, and sip in style.
+
+=== ANSWER 4 ===
+**First Snow**
+
+I woke to a hush I couldn't name,
+the world held still, as if it knew,
+and out the window, soft and tame,
+the first white flakes came drifting through.
+
+They settled on the sleeping trees,
+on rooftops, fences, and the lane,
+and all the noise of autumn's leaves
+lay muffled, quiet as the rain.
+
+A child's laugh rang in the cold,
+a small hand reached to catch the sky,
+and winter, gentle, calm, and old,
+walked in as silently as a sigh.
+
+=== ANSWER 5 ===
+Factor the numerator as a difference of squares:
+
+x² − 9 = (x − 3)(x + 3)
+
+So:
+
+(x² − 9)/(x − 3) = (x − 3)(x + 3)/(x − 3) = **x + 3**, for x ≠ 3
+
+The restriction x ≠ 3 remains because the original expression is undefined at x = 3.
+
+=== ANSWER 6 ===
+Break 23 into 20 + 3 and distribute:
+
+1. 17 × 20 = 340
+2. 17 × 3 = 51
+3. 340 + 51 = 391
+
+**17 × 23 = 391**

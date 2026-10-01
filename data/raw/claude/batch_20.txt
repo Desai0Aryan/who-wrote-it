@@ -1,0 +1,102 @@
+=== ANSWER 1 ===
+```python
+import re
+
+def is_palindrome(s: str) -> bool:
+    cleaned = re.sub(r"[^A-Za-z0-9]", "", s).lower()
+    return cleaned == cleaned[::-1]
+```
+
+Examples:
+```python
+is_palindrome("A man, a plan, a canal: Panama")  # True
+is_palindrome("Hello, world!")                   # False
+```
+
+The function strips every character that isn't a letter or digit, lowercases the result, and compares it to its reverse.
+
+=== ANSWER 2 ===
+```python
+from collections import OrderedDict
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        if capacity <= 0:
+            raise ValueError("capacity must be positive")
+        self.capacity = capacity
+        self._data = OrderedDict()
+
+    def get(self, key, default=-1):
+        if key not in self._data:
+            return default
+        self._data.move_to_end(key)  # mark as most recently used
+        return self._data[key]
+
+    def put(self, key, value):
+        if key in self._data:
+            self._data.move_to_end(key)
+        self._data[key] = value
+        if len(self._data) > self.capacity:
+            self._data.popitem(last=False)  # evict least recently used
+
+    def __len__(self):
+        return len(self._data)
+```
+
+Usage:
+```python
+cache = LRUCache(2)
+cache.put("a", 1)
+cache.put("b", 2)
+cache.get("a")      # 1  (a is now most recent)
+cache.put("c", 3)   # evicts "b"
+cache.get("b")      # -1
+```
+
+`OrderedDict` keeps keys in usage order, so `get` and `put` are both O(1). Accessing a key moves it to the end, and eviction removes from the front.
+
+=== ANSWER 3 ===
+There are 6 × 6 = 36 equally likely outcomes. The pairs that sum to 8 are (2,6), (3,5), (4,4), (5,3), (6,2), which is 5 outcomes.
+
+Probability = 5/36 ≈ 0.139 (about 13.9%).
+
+=== ANSWER 4 ===
+A simple pattern:
+
+```
+^[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$
+```
+
+Breakdown:
+
+- `^` anchors the match to the start of the string.
+- `[A-Za-z0-9._%+-]+` is the local part (before the @): one or more letters, digits, or the characters `. _ % + -`.
+- `@` is the literal at-sign.
+- `[A-Za-z0-9-]+` is the first domain label, such as `example`.
+- `(\.[A-Za-z0-9-]+)*` allows zero or more additional labels, such as `.co` in `example.co.uk`.
+- `\.` is a literal dot before the top-level domain.
+- `[A-Za-z]{2,}` is the top-level domain, at least two letters (`com`, `org`, `uk`).
+- `$` anchors the match to the end of the string.
+
+Python example:
+```python
+import re
+pattern = re.compile(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$")
+bool(pattern.match("user.name@example.co.uk"))  # True
+```
+
+This is deliberately simplified. It won't reject things like consecutive dots in the local part and doesn't handle quoted local parts or internationalized addresses. For production, the most reliable validation is sending a confirmation email.
+
+=== ANSWER 5 ===
+Use the product rule: (uv)′ = u′v + uv′, with u = x³ and v = sin x.
+
+d/dx [x³ sin x] = 3x² sin x + x³ cos x
+
+which can also be written as x²(3 sin x + x cos x).
+
+=== ANSWER 6 ===
+Pair the numbers from opposite ends: 1 + 50 = 51, 2 + 49 = 51, 3 + 48 = 51, and so on. There are 50 numbers, so 25 such pairs, each summing to 51.
+
+Sum = 25 × 51 = **1275**
+
+This matches the formula n(n + 1)/2 = 50 × 51 / 2 = 1275.

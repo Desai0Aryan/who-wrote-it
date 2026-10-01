@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: Convert 0.375 to a fraction in lowest terms.
+
+PROMPT 2: Write a pitch for a mobile app that helps people find study partners.
+
+PROMPT 3: Write a Java method that checks whether two strings are anagrams.
+
+PROMPT 4: What is inflation and what causes it?
+
+PROMPT 5: Write a function that checks whether the parentheses in a string are balanced.
+
+PROMPT 6: Write a Python function that removes duplicates from a list while preserving order.

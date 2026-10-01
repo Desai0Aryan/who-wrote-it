@@ -1,0 +1,140 @@
+=== ANSWER 1 ===
+Here is a Python function that computes the greatest common divisor (GCD) of two numbers using the Euclidean algorithm:
+
+```python
+def gcd(a: int, b: int) -> int:
+    """Computes the greatest common divisor of two numbers using the Euclidean algorithm."""
+    while b:
+        a, b = b, a % b
+    return abs(a)
+
+```
+
+### Explanation
+
+* **Euclidean Algorithm**: The algorithm relies on the mathematical principle that the GCD of two numbers also divides their difference. By repeatedly taking the remainder (`a % b`), the numbers shrink rapidly until `b` becomes 0, at which point `a` holds the GCD.
+* **`abs(a)`**: Ensures the result is always non-negative, even if negative inputs are provided.
+
+---
+
+=== ANSWER 2 ===
+Here is a Python function that rotates a square matrix 90 degrees clockwise in place:
+
+```python
+def rotate_matrix_90_clockwise(matrix: list[list[int]]) -> None:
+    """Rotates a square matrix 90 degrees clockwise in place."""
+    n = len(matrix)
+    
+    # Step 1: Transpose the matrix (swap elements across the main diagonal)
+    for i in range(n):
+        for j in range(i, n):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+            
+    # Step 2: Reverse each row
+    for i in range(n):
+        matrix[i].reverse()
+
+```
+
+### Explanation
+
+1. **Transposition**: Swapping the rows and columns (matrix[i][j] with matrix[j][i]) reflects the matrix along its main diagonal.
+2. **Reversing Rows**: Reversing the elements of each row effectively mirrors the transposed matrix horizontally, resulting in a complete 90-degree clockwise rotation.
+
+---
+
+=== ANSWER 3 ===
+A blockchain is a decentralized, distributed digital ledger that securely records transactions across a peer-to-peer network of computers. Here is how it works step-by-step:
+
+* **1. Transaction Initiation:** A user requests a transaction, such as transferring digital currency, contracts, or data.
+* **2. Block Formation:** This transaction is combined with other recent transactions to form a data candidate known as a "block."
+* **3. Cryptographic Hashing:** Each block is assigned a unique cryptographic code called a **hash** (generated via algorithms like SHA-256). It also contains the hash of the *previous* block, linking them together into a chronological chain.
+* **4. Consensus Validation:** Before the block is added, network participants (nodes) verify its validity using consensus mechanisms (such as **Proof of Work** or **Proof of Stake**).
+* **5. Immutability:** Once verified and added to the ledger, the block cannot be altered retroactively without changing all subsequent blocks, which would require re-computing the work for the entire network. This ensures high security and transparency without needing a central authority.
+
+---
+
+=== ANSWER 4 ===
+Here is a C function that reverses a string in place using two pointers:
+
+```c
+#include <string.h>
+
+void reverse_string(char *str) {
+    if (str == NULL) return;
+    
+    char *start = str;
+    char *end = str + strlen(str) - 1;
+    char temp;
+
+    while (start < end) {
+        // Swap the characters
+        temp = *start;
+        *start = *end;
+        *end = temp;
+
+        // Move pointers toward the center
+        start++;
+        end--;
+    }
+}
+
+```
+
+### Explanation
+
+* **Two Pointers**: We initialize a `start` pointer at the beginning of the string and an `end` pointer at the last character (excluding the null terminator `\0`).
+* **In-Place Swapping**: We swap the characters at `start` and `end`, then move both pointers inward until they meet in the middle. This operates in $O(n)$ time complexity with $O(1)$ auxiliary space.
+
+---
+
+=== ANSWER 5 ===
+The silence after the final scratch of pen on paper,
+a heavy weight lifting off the shoulders
+like mist burning away at noon.
+My hand uncurls, cramped and stained with ink,
+reclaiming its freedom.
+Outside, the world keeps moving,
+indifferent to the hours spent wrestling with equations and arguments.
+I walk out the door,
+breathing in the cool, ordinary air,
+empty-headed, light, and entirely unbound.
+
+---
+
+=== ANSWER 6 ===
+Here is a functional React component that implements a counter with increment and decrement buttons using the `useState` hook:
+
+```jsx
+import React, { useState } from 'react';
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div style={{ textAlign: 'center', fontFamily: 'sans-serif', marginTop: '2rem' }}>
+      <h2>Counter: {count}</h2>
+      <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+        <button 
+          onClick={() => setCount(count - 1)} 
+          style={{ padding: '0.5rem 1rem', cursor: 'pointer' }}
+        >
+          Decrement
+        </button>
+        <button 
+          onClick={() => setCount(count + 1)} 
+          style={{ padding: '0.5rem 1rem', cursor: 'pointer' }}
+        >
+          Increment
+        </button>
+      </div>
+    </div>
+  );
+}
+
+```
+
+### Explanation
+
+* **`useState(0)`**: Initializes our state variable `count` at `0` and provides a setter function `setCount`.
+* **Event Handlers**: The `onClick` handlers update the state by decrementing or incrementing the current `count` value, causing React to automatically re-render the component with the new count.

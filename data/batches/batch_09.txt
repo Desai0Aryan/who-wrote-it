@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: Who was Ada Lovelace and why is she important?
+
+PROMPT 2: What is the difference between machine learning and traditional programming?
+
+PROMPT 3: Write a product description for a reusable water bottle.
+
+PROMPT 4: Write a short poem about the first snowfall of winter.
+
+PROMPT 5: Simplify (x^2 - 9)/(x - 3).
+
+PROMPT 6: Compute 17 x 23 without a calculator and show your steps.

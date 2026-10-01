@@ -1,0 +1,95 @@
+=== ANSWER 1 ===
+
+ The internet sends data using a system called **packet switching**.
+
+ When you send something online—such as a webpage request, message, or photo:
+
+ 1. Your computer breaks the data into small pieces called **packets**.
+2. Each packet gets information about where it came from and where it needs to go.
+3. **Routers** examine the destination and forward packets through networks toward the receiving computer.
+4. Different packets can take different routes depending on network conditions.
+5. The receiving computer puts the packets back together in the correct order.
+6. Protocols such as **TCP/IP** help ensure that the data reaches the right destination and that missing or corrupted packets can be detected and retransmitted.
+
+ So, in simple terms: **computers break data into packets, routers move those packets across interconnected networks, and the destination computer reassembles them.**
+
+ === ANSWER 2 ===
+
+ Given
+
+ $$
+f(x)=2x+3
+$$
+
+ Let $y=2x+3$. Solve for $x$:
+
+ $$
+y-3=2x
+$$
+
+ $$
+x=\frac{y-3}{2}
+$$
+
+ Replace $y$ with $x$:
+
+ $$
+\boxed{f^{-1}(x)=\frac{x-3}{2}}
+$$
+
+ === ANSWER 3 ===
+
+ Factor $360$ into primes:
+
+ $$
+360=2^3\cdot3^2\cdot5^1
+$$
+
+ For a number with prime factorization
+
+ $$
+p_1^{a_1}p_2^{a_2}\cdots,
+$$
+
+ the number of positive divisors is
+
+ $$
+(a_1+1)(a_2+1)\cdots
+$$
+
+ Therefore,
+
+ $$
+(3+1)(2+1)(1+1)=4\cdot3\cdot2=\boxed{24}.
+$$
+
+ So **360 has 24 positive divisors**.
+
+ === ANSWER 4 ===
+
+ Airplanes stay in the air because their **wings generate lift** as air flows around them.
+
+ As an airplane moves forward, its wings interact with the surrounding air. The wing's shape and angle cause it to redirect air downward and create a pressure distribution around the wing. The resulting upward force is called **lift**.
+
+ Four main forces act on an airplane:
+
+ - **Lift** — upward force produced mainly by the wings.
+- **Weight** — downward force caused by gravity.
+- **Thrust** — forward force produced by the engines or propellers.
+- **Drag** — backward force caused by air resistance.
+
+ During steady, level flight, lift is approximately equal to weight, while thrust is approximately equal to drag. The engines provide the thrust needed to keep the airplane moving through the air, allowing the wings to continue producing lift.
+
+ === ANSWER 5 ===
+
+ The **greenhouse effect** is the natural process by which certain gases in Earth's atmosphere absorb and re-emit infrared radiation, helping keep the planet warm.
+
+ Sunlight passes through the atmosphere and warms Earth's surface. The warmed surface then emits energy as **infrared radiation**. Greenhouse gases—including carbon dioxide, water vapor, methane, and nitrous oxide—absorb some of this outgoing infrared energy and re-emit it in different directions, including back toward the surface.
+
+  Learn more  The natural greenhouse effect makes Earth much warmer than it would otherwise be. Human activities, particularly burning fossil fuels and changing land use, have increased concentrations of several greenhouse gases, strengthening this effect and causing **global warming**.
+
+ === ANSWER 6 ===
+
+ Mystery Novel Opening
+
+The fog came in just before midnight, swallowing the harbor, the lighthouse, and every boat tied along the old pier. By morning, everyone in Bellweather Cove would know that the mayor's son had disappeared—but only Mara Venn would notice the wet footprints leading from the sea to her back door. She stood frozen in the kitchen, listening to the slow drip of water onto the floorboards, while somewhere beyond the fog, the lighthouse bell rang once.

@@ -1,0 +1,68 @@
+=== ANSWER 1 ===
+The sky looks blue because of Rayleigh scattering. Sunlight contains all colors, and as it passes through the atmosphere it collides with gas molecules (mostly nitrogen and oxygen) that are much smaller than the wavelength of visible light. Shorter wavelengths, like blue and violet, scatter far more strongly than longer ones, like red and orange. The amount of scattering is proportional to 1/λ⁴, so blue light is scattered roughly 5 to 10 times more than red.
+
+That scattered blue light reaches your eyes from every direction in the sky, so the whole dome looks blue. Violet scatters even more than blue, but the sun emits less violet light, the upper atmosphere absorbs some of it, and our eyes are less sensitive to it, so we perceive the sky as blue rather than violet.
+
+At sunrise and sunset, sunlight travels through much more atmosphere to reach you. Most of the blue is scattered out of the direct beam along the way, leaving the reds and oranges.
+
+=== ANSWER 2 ===
+Let the width be w, so the length is 2w.
+
+Perimeter: 2(w + 2w) = 6w = 36, so w = 6 and the length is 12.
+
+Area = 6 × 12 = **72**
+
+=== ANSWER 3 ===
+Add the two equations to eliminate y:
+
+(2x + y) + (x − y) = 7 + 2
+3x = 9
+x = 3
+
+Substitute into x − y = 2: 3 − y = 2, so y = 1.
+
+**x = 3, y = 1**
+
+Check: 2(3) + 1 = 7 ✓ and 3 − 1 = 2 ✓
+
+=== ANSWER 4 ===
+**1.**
+Crisp leaves drift and fall,
+painting the quiet footpath
+in amber and rust.
+
+**2.**
+Morning fog lingers,
+geese call out across the field,
+summer's last goodbye.
+
+**3.**
+Woodsmoke in the air,
+a sweater, a steaming cup,
+the year slowing down.
+
+=== ANSWER 5 ===
+A 20% discount means the shirt sold for 80% of the original price.
+
+0.80 × original = 40
+original = 40 ÷ 0.80 = **$50**
+
+Check: 20% of $50 is $10, and $50 − $10 = $40 ✓
+
+=== ANSWER 6 ===
+**Subject: Broken Heater in Unit [Number]**
+
+Dear [Landlord's Name],
+
+I hope you're doing well. I'm writing to let you know that the heater in my unit at [address] has stopped working. It stopped producing heat on [date], and with temperatures dropping, it's becoming difficult to keep the apartment at a safe and comfortable level.
+
+I would be grateful if you could arrange for a repair or replacement as soon as possible. I'm happy to work around your or a technician's schedule to provide access to the unit. If it would help, I can also share photos or more details about the problem.
+
+Could you please let me know when I might expect someone to come by? In the meantime, I'll use a space heater if you have no objection, but I'd prefer to have the issue resolved properly.
+
+Thank you for your time and your help with this. I appreciate your prompt attention.
+
+Sincerely,
+[Your Name]
+[Phone Number / Email]
+[Unit Number]

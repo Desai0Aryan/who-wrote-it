@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: Write the opening paragraph of a cover letter for a software engineering internship.
+
+PROMPT 2: Explain how the electoral college works in the United States.
+
+PROMPT 3: Implement a queue using two stacks in Python.
+
+PROMPT 4: Write a short tribute to a beloved old car.
+
+PROMPT 5: Write a bash one-liner to find the 10 largest files in a directory, and explain it.
+
+PROMPT 6: Write a short original fable with a moral about a fox and a crow.

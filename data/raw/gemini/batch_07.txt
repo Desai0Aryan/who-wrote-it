@@ -1,0 +1,79 @@
+=== ANSWER 1 ===
+The water cycle (also known as the hydrologic cycle) describes the continuous movement of water on, above, and below the surface of the Earth.
+
+* **Evaporation:** The sun heats up water in oceans, lakes, and rivers, turning it into water vapor that rises into the air. Plants also release water vapor through **transpiration**.
+* **Condensation:** As the water vapor rises, it cools and turns back into liquid water droplets, forming clouds and fog.
+* **Precipitation:** When the water droplets in clouds become too heavy, they fall back to the Earth as rain, snow, sleet, or hail.
+* **Collection (Runoff):** Water flows over the land and collects in oceans, rivers, and lakes, or seeps into the ground as groundwater, starting the cycle all over again.
+
+=== ANSWER 2 ===
+To prove that $\sqrt{2}$ is irrational, we use a proof by contradiction.
+
+1. **Assume the contrary:** Assume that $\sqrt{2}$ is a rational number. This means it can be expressed as a fraction $\frac{a}{b}$ in simplest form, where $a$ and $b$ are integers with no common factors other than 1, and $b \neq 0$.
+2. **Square both sides:**
+
+$$\sqrt{2} = \frac{a}{b} \implies 2 = \frac{a^2}{b^2} \implies a^2 = 2b^2$$
+
+
+3. **Analyze $a$:** Since $a^2$ is equal to $2$ times an integer ($b^2$), $a^2$ must be an even number. This implies that $a$ itself must also be an even number. Therefore, we can write $a = 2k$ for some integer $k$.
+4. **Substitute $a$ back in:**
+
+$$(2k)^2 = 2b^2 \implies 4k^2 = 2b^2 \implies b^2 = 2k^2$$
+
+
+5. **Analyze $b$:** This equation shows that $b^2$ is also even, which means $b$ must be even as well.
+6. **Conclusion:** If both $a$ and $b$ are even, they share a common factor of $2$. This contradicts our initial assumption that $\frac{a}{b}$ is in simplest form. Therefore, our original assumption must be false, meaning **$\sqrt{2}$ is irrational**.
+
+=== ANSWER 3 ===
+There once was a feline named Pete,
+Whose coffee was oh so elite.
+He'd sip it and zoom,
+Around the whole room,
+With boundless and jittery feet!
+
+=== ANSWER 4 ===
+While both can cause illness, bacteria and viruses are fundamentally different:
+
+* **Nature of Life:** Bacteria are living, single-celled organisms that have their own machinery to grow, metabolize, and reproduce independently. Viruses are not considered living organisms; they are essentially genetic material (DNA or RNA) enclosed in a protein coat that cannot reproduce without a host cell.
+* **Size:** Bacteria are much larger (typically measured in micrometers), whereas viruses are microscopic and significantly smaller (measured in nanometers).
+* **Treatment:** Bacterial infections are generally treated with **antibiotics**, which kill the bacteria or stop them from multiplying. Viruses do not respond to antibiotics; instead, viral infections are managed with supportive care, antiviral medications, or prevented using vaccines.
+
+=== ANSWER 5 ===
+To evaluate the indefinite integral $\int 2x e^{x^2} \, dx$, we can use the method of substitution (u-substitution).
+
+1. **Choose a substitution:** Let $u = x^2$.
+2. **Find the derivative:** The differential $du$ is:
+
+$$du = 2x \, dx$$
+
+
+3. **Substitute into the integral:** Notice that $2x \, dx$ is already present in the original integral. Substituting $u$ and $du$ gives:
+
+$$\int e^u \, du$$
+
+
+4. **Integrate:** The integral of $e^u$ with respect to $u$ is simply $e^u + C$:
+
+$$e^u + C$$
+
+
+5. **Substitute back:** Replace $u$ with $x^2$:
+
+$$e^{x^2} + C$$
+
+
+
+**Answer:** $\int 2x e^{x^2} \, dx = e^{x^2} + C$
+
+=== ANSWER 6 ===
+**Leo (Child):** *(Tugging on his mother's sleeve, pointing wide-eyed)* Mommy, look! Is it a toy?
+
+**Aria (Robot):** *(Turning its head with a soft mechanical whir, glowing blue LEDs blinking)* Greetings, young human. I am ARIA, an Autonomous Robotic Intelligence Assistant. I am not a toy. I am a machine.
+
+**Leo:** *(Stepping a little closer, tilting his head)* A machine? Can you play tag?
+
+**Aria:** *(Processing, lights shifting to a warm amber)* My programming does not include recreational running protocols. However, my mobility motors are fully functional. Would you like to test my running speed?
+
+**Leo:** *(Giggling)* Yes! Ready, set, go!
+
+**Aria:** *(Softly whirring as it takes off alongside him)* Speed test initiated. This is... exceptionally fun.

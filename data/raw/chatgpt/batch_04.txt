@@ -1,0 +1,161 @@
+=== ANSWER 1 ===
+
+ We have seasons because **Earth’s axis is tilted about 23.5°** relative to the plane of its orbit around the Sun.
+
+ As Earth orbits the Sun:
+
+ - When your hemisphere is tilted **toward the Sun**, it gets more direct sunlight and longer days → **summer**.
+- When it is tilted **away from the Sun**, it gets less direct sunlight and shorter days → **winter**.
+- The periods in between are **spring and autumn**.
+
+ So, seasons are caused primarily by **Earth’s axial tilt, not by changes in its distance from the Sun**.
+
+ === ANSWER 2 ===
+
+ Given:
+
+ $$
+\log_2(x)=5
+$$
+
+ Convert to exponential form:
+
+ $$
+x=2^5
+$$
+
+ Therefore:
+
+ $$
+\boxed{x=32}
+$$
+
+ === ANSWER 3 ===
+
+```
+function debounce(func, delay) {
+  let timeoutId;
+
+  return function (...args) {
+    clearTimeout(timeoutId);
+
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
+```
+
+ Example:
+
+```
+const debouncedSearch = debounce((query) => {
+  console.log("Searching for:", query);
+}, 300);
+
+debouncedSearch("hello");
+```
+
+ The wrapped function runs only after calls have stopped for the specified delay.
+
+ === ANSWER 4 ===
+
+ We prove by mathematical induction that
+
+ $$
+1+2+\cdots+n=\frac{n(n+1)}2
+$$
+
+ for every positive integer $n$.
+
+ **Base case: $n=1$**
+
+ $$
+1=\frac{1(1+1)}2=\frac22=1
+$$
+
+ So the statement is true for $n=1$.
+
+ **Inductive hypothesis**
+
+ Assume the statement is true for some positive integer $k$:
+
+ $$
+1+2+\cdots+k=\frac{k(k+1)}2
+$$
+
+ **Inductive step**
+
+ We must show that it is true for $k+1$:
+
+ $$
+1+2+\cdots+k+(k+1)
+$$
+
+ Using the inductive hypothesis:
+
+ $$
+\frac{k(k+1)}2+(k+1)
+$$
+
+ Factor out $k+1$:
+
+ $$
+(k+1)\left(\frac{k}{2}+1\right)
+$$
+
+ $$
+=(k+1)\frac{k+2}{2}
+$$
+
+ $$
+=\frac{(k+1)((k+1)+1)}2
+$$
+
+ Thus the formula holds for $k+1$.
+
+ Since it is true for $n=1$, and truth for $n=k$ implies truth for $n=k+1$, by mathematical induction,
+
+ $$
+\boxed{1+2+\cdots+n=\frac{n(n+1)}2}
+$$
+
+ for every positive integer $n$.
+
+ === ANSWER 5 ===
+
+ A standard solution uses **Floyd’s cycle detection algorithm** ("tortoise and hare"):
+
+```
+def has_cycle(head):
+    slow = head
+    fast = head
+
+    while fast is not None and fast.next is not None:
+        slow = slow.next
+        fast = fast.next.next
+
+        if slow is fast:
+            return True
+
+    return False
+```
+
+ The `slow` pointer moves one node at a time, while `fast` moves two. If there is a cycle, they will eventually meet. If `fast` reaches the end of the list, there is no cycle.
+
+ - **Time:** $O(n)$
+- **Extra space:** $O(1)$
+
+ === ANSWER 6 ===
+
+ Earthquakes occur when **stress built up in Earth’s crust is suddenly released**, causing the ground to shake.
+
+ Most earthquakes happen along **faults**, where blocks of rock move relative to one another. Tectonic plates are constantly moving, but friction can temporarily prevent rocks along a fault from sliding. Stress accumulates until the rocks suddenly slip, releasing stored energy as **seismic waves**.
+
+ The main causes include:
+
+ - **Tectonic plate movement** — by far the most common cause.
+- **Volcanic activity** — movement of magma can produce earthquakes.
+- **Human activities** — activities such as reservoir filling, mining, and wastewater injection can sometimes induce earthquakes.
+
+ The point underground where an earthquake begins is called the **focus (hypocenter)**. The point on Earth’s surface directly above it is the **epicenter**.

@@ -1,0 +1,106 @@
+=== ANSWER 1 ===
+
+ $0.375 = \frac{375}{1000}$.
+
+ Divide numerator and denominator by 125:
+
+ $$
+\boxed{\frac{3}{8}}
+$$
+
+ === ANSWER 2 ===
+
+ Study Partner App Pitch
+
+Finding the right study partner shouldn’t be harder than studying itself.
+
+ **StudyMatch** is a mobile app that helps students find compatible study partners based on their subjects, schedules, goals, and preferred study styles. Whether you need someone to review flashcards with, prepare for an exam, or simply stay accountable, StudyMatch connects you with people who have similar academic needs.
+
+ Users create a quick profile, choose their courses and availability, and discover potential study partners nearby or online. Built-in scheduling, chat, study-session planning, and progress tracking make it easy to turn a match into a productive study routine.
+
+ **StudyMatch: Find your study partner. Stay accountable. Learn together.**
+
+ === ANSWER 3 ===
+
+```
+public static boolean areAnagrams(String s1, String s2) {
+    if (s1 == null || s2 == null || s1.length() != s2.length()) {
+        return false;
+    }
+
+    int[] counts = new int[256];
+
+    for (int i = 0; i < s1.length(); i++) {
+        counts[s1.charAt(i)]++;
+        counts[s2.charAt(i)]--;
+    }
+
+    for (int count : counts) {
+        if (count != 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+```
+
+ This treats uppercase/lowercase and spaces as different characters. For example, `"listen"` and `"silent"` return `true`.
+
+ === ANSWER 4 ===
+
+ **Inflation** is a sustained increase in the overall price level of goods and services in an economy. As prices rise, each unit of currency generally buys fewer goods and services, meaning its purchasing power falls.
+
+ Common causes include:
+
+ - **Demand-pull inflation:** Demand for goods and services grows faster than the economy's ability to produce them.
+- **Cost-push inflation:** Production costs, such as wages, energy, or raw materials, increase and businesses raise prices.
+- **Supply disruptions:** Events such as natural disasters, wars, or transportation problems can reduce supply and push prices higher.
+- **Monetary factors:** Rapid growth in the money supply can contribute to inflation when it exceeds the economy's capacity to produce goods and services.
+
+ Inflation can have different effects depending on its rate, duration, and underlying cause. Moderate, stable inflation is generally viewed differently from sudden or persistently high inflation.
+
+ === ANSWER 5 ===
+
+```
+def is_balanced(s):
+    balance = 0
+
+    for char in s:
+        if char == '(':
+            balance += 1
+        elif char == ')':
+            balance -= 1
+
+            # A closing parenthesis appeared without
+            # a matching opening parenthesis.
+            if balance < 0:
+                return False
+
+    return balance == 0
+```
+
+ Examples:
+
+```
+is_balanced("(hello)")   # True
+is_balanced("(()())")    # True
+is_balanced("(()")       # False
+is_balanced("())(")      # False
+```
+
+ === ANSWER 6 ===
+
+```
+def remove_duplicates(items):
+    return list(dict.fromkeys(items))
+```
+
+ Example:
+
+```
+remove_duplicates([3, 1, 3, 2, 1, 4])
+# [3, 1, 2, 4]
+```
+
+ `dict` preserves insertion order in modern Python, so the first occurrence of each item is retained.

@@ -1,0 +1,127 @@
+=== ANSWER 1 ===
+0.375 = 375/1000. Both the numerator and denominator are divisible by 125, so 375 ÷ 125 = 3 and 1000 ÷ 125 = 8.
+
+**0.375 = 3/8**
+
+=== ANSWER 2 ===
+**StudyMatch: Find Your People, Ace Your Classes**
+
+**The problem:** Studying alone is hard. Students struggle to stay motivated, get stuck on concepts, and often don't know who else in their class is looking for a study group. Existing options, like random group chats or campus bulletin boards, are hit-or-miss.
+
+**The solution:** StudyMatch is a mobile app that connects students with compatible study partners in minutes. Users enter their courses, goals, and availability, and the app suggests matches based on:
+
+- **Shared classes and topics** (same course, same exam, same professor)
+- **Schedule overlap** (find times that actually work for everyone)
+- **Study style** (quiet focus vs. discussion-heavy, in-person vs. virtual)
+- **Goals** (cramming for a midterm vs. mastering material long-term)
+
+**Key features:**
+- **Smart matching:** Swipe-free suggestions ranked by compatibility
+- **Group scheduling:** Built-in calendar that finds shared free time and books campus study rooms
+- **Session tools:** Shared notes, flashcards, and a focus timer
+- **Accountability streaks:** Gentle reminders and progress tracking keep groups on track
+- **Safety first:** Verified school emails, in-app messaging, and public meeting-spot suggestions
+
+**Why now:** Students are more open than ever to peer learning, and research consistently shows that collaborative study improves retention and reduces stress. Yet no dominant app owns this space.
+
+**Business model:** Free for students, with a premium tier ($4.99/month) offering advanced matching, unlimited groups, and AI-generated study guides. Partnerships with universities and tutoring centers provide a second revenue stream.
+
+**Go-to-market:** Launch at five campuses through student ambassadors, then expand through word of mouth. Every study group is a built-in invitation engine.
+
+**The vision:** A world where no student has to study alone unless they want to.
+
+=== ANSWER 3 ===
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+public static boolean areAnagrams(String a, String b) {
+    if (a == null || b == null) return false;
+
+    // Ignore case and whitespace
+    a = a.replaceAll("\\s+", "").toLowerCase();
+    b = b.replaceAll("\\s+", "").toLowerCase();
+
+    if (a.length() != b.length()) return false;
+
+    Map<Character, Integer> counts = new HashMap<>();
+    for (char c : a.toCharArray()) {
+        counts.merge(c, 1, Integer::sum);
+    }
+    for (char c : b.toCharArray()) {
+        Integer count = counts.get(c);
+        if (count == null || count == 0) return false;
+        counts.put(c, count - 1);
+    }
+    return true;
+}
+```
+
+This runs in O(n) time. It counts the characters in the first string, then decrements the counts using the second string. If a character is missing or runs out, the strings aren't anagrams. If you only need to handle lowercase letters a-z, you can swap the map for an `int[26]` array for a small speedup. Alternatively, sorting both character arrays and comparing them works in O(n log n) with simpler code.
+
+=== ANSWER 4 ===
+**Inflation** is a sustained increase in the general level of prices across an economy, which means each unit of currency buys less over time. It's usually measured as the annual percentage change in a price index such as the Consumer Price Index (CPI). Moderate inflation (around 2% a year is a common central bank target) is considered normal for a healthy economy, while high or unpredictable inflation erodes savings and makes planning difficult.
+
+**Main causes:**
+
+1. **Demand-pull inflation:** Total demand for goods and services outpaces the economy's ability to supply them. This can happen when consumers spend heavily, governments increase spending, credit is cheap, or exports surge. "Too much money chasing too few goods."
+
+2. **Cost-push inflation:** Production costs rise, and businesses pass them on to consumers. Common triggers include higher wages, more expensive raw materials, energy price spikes, supply chain disruptions, or tariffs.
+
+3. **Monetary expansion:** When the money supply grows faster than economic output, the value of each unit of money falls. Central banks influence this through interest rates and asset purchases.
+
+4. **Expectations:** If people and businesses expect prices to keep rising, they demand higher wages and set higher prices, which can make inflation self-fulfilling. This is why central banks work to keep expectations "anchored."
+
+5. **Exchange rates:** A weaker currency makes imports more expensive, adding to domestic prices.
+
+In practice, real-world inflation usually reflects a mix of these forces. Economists debate how much weight each deserves in any given episode. Central banks typically respond by raising interest rates to cool demand, while governments may use fiscal policy or address supply bottlenecks.
+
+=== ANSWER 5 ===
+```python
+def is_balanced(s: str) -> bool:
+    pairs = {')': '(', ']': '[', '}': '{'}
+    stack = []
+
+    for ch in s:
+        if ch in '([{':
+            stack.append(ch)
+        elif ch in pairs:
+            if not stack or stack.pop() != pairs[ch]:
+                return False
+
+    return not stack
+```
+
+**Examples:**
+```python
+is_balanced("(a + b) * [c - {d}]")  # True
+is_balanced("(]")                   # False
+is_balanced("((")                   # False
+```
+
+The function uses a stack: each opening bracket is pushed, and each closing bracket must match the most recent unmatched opener. Non-bracket characters are ignored. The string is balanced if the stack is empty at the end. It runs in O(n) time. If you only care about round parentheses, you can replace the stack with a simple counter that must never go negative and must end at zero.
+
+=== ANSWER 6 ===
+```python
+def remove_duplicates(items):
+    seen = set()
+    result = []
+    for item in items:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result
+```
+
+**Example:**
+```python
+remove_duplicates([3, 1, 3, 2, 1, 4])  # [3, 1, 2, 4]
+```
+
+This runs in O(n) time and keeps the first occurrence of each element. It requires items to be hashable. For unhashable items (such as lists), use a list for `seen` instead, which is slower at O(n²).
+
+A one-liner alternative for hashable items, relying on dicts preserving insertion order (Python 3.7+):
+
+```python
+list(dict.fromkeys(items))
+```

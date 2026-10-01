@@ -1,0 +1,98 @@
+=== ANSWER 1 ===
+
+ The sky appears blue because molecules in Earth’s atmosphere scatter sunlight in all directions. Blue light has a shorter wavelength than red light, so it is scattered more strongly. This scattered blue light reaches our eyes from across the sky, making the sky look blue.
+
+ === ANSWER 2 ===
+
+ Let the width be $w$. Then the length is $2w$.
+
+ $$
+2(L+W)=36
+$$
+
+ $$
+2(2w+w)=36
+$$
+
+ $$
+6w=36 \Rightarrow w=6
+$$
+
+ So the length is $12$.
+
+ $$
+\text{Area}=12\times6=\boxed{72}
+$$
+
+ === ANSWER 3 ===
+
+ Given:
+
+ $$
+2x+y=7
+$$
+
+ $$
+x-y=2
+$$
+
+ Add the equations:
+
+ $$
+3x=9 \Rightarrow x=3
+$$
+
+ Substitute into $x-y=2$:
+
+ $$
+3-y=2 \Rightarrow y=1
+$$
+
+ **Answer:** $\boxed{x=3,\ y=1}$
+
+ === ANSWER 4 ===
+
+ Three Autumn Haikus
+
+Crimson leaves whisper\
+ Cool winds dance through empty trees\
+ Autumn walks softly
+
+ Golden fields grow still\
+ Geese stitch shadows across dusk\
+ Night gathers sooner
+
+ Pumpkins glow at dusk\
+ Crisp air carries woodsmoke scents\
+ Stars brighten the cold
+
+ === ANSWER 5 ===
+
+ A 20% discount means the shirt costs **80%** of its original price.
+
+ $$
+0.80P=40
+$$
+
+ $$
+P=\frac{40}{0.80}=\boxed{\$50}
+$$
+
+ The original price was **$50**.
+
+ === ANSWER 6 ===
+
+ Broken Heater — Request for Repair
+
+Dear Landlord,
+
+ I’m writing to let you know that the heater in my apartment is not working. The apartment has become quite cold, and I’m concerned about the issue getting worse, especially with the colder weather.
+
+ Could you please arrange for the heater to be inspected and repaired as soon as possible? I would appreciate it if you could let me know when someone will be available to address the problem.
+
+ Thank you for your prompt attention to this matter.
+
+ Best regards,\
+ \[Your Name\]
+
+ If you'd like, I can also make the complaint firmer or more formal.

@@ -1,0 +1,54 @@
+=== ANSWER 1 ===
+Factor the quadratic: x² − 5x + 6 = (x − 2)(x − 3) = 0.
+
+Setting each factor to zero gives **x = 2** or **x = 3**.
+
+Check: 2² − 5(2) + 6 = 4 − 10 + 6 = 0, and 3² − 5(3) + 6 = 9 − 15 + 6 = 0.
+
+=== ANSWER 2 ===
+Good evening, everyone, and thank you for being here.
+
+Few subjects shape our future as much as the changing climate, and few people are better placed to help us understand it than tonight's speaker. Over a career spanning two decades, our guest has studied how oceans, ice, and atmosphere interact, and has helped turn complex data into findings that inform both science and public policy.
+
+What I admire most is the ability to make this work accessible. Climate science can feel overwhelming, but our speaker has a gift for explaining what we know, what we're still learning, and what we can do about it, without hype and without despair.
+
+Tonight's talk promises to be both rigorous and hopeful. Please join me in giving a warm welcome to our guest lecturer.
+
+=== ANSWER 3 ===
+```python
+import re
+from collections import Counter
+
+def count_word_frequencies(filepath, encoding="utf-8"):
+    """Return a Counter of word frequencies in a text file (case-insensitive)."""
+    counts = Counter()
+    with open(filepath, "r", encoding=encoding) as f:
+        for line in f:
+            words = re.findall(r"[a-z0-9']+", line.lower())
+            counts.update(words)
+    return counts
+
+if __name__ == "__main__":
+    freqs = count_word_frequencies("sample.txt")
+    for word, n in freqs.most_common(10):
+        print(f"{word}: {n}")
+```
+
+The file is read line by line, so large files don't have to fit in memory. Words are lowercased and matched with a regex that keeps apostrophes (so "don't" stays whole). `Counter.most_common(n)` gives the top results.
+
+=== ANSWER 4 ===
+Ocean tides are caused mainly by the gravitational pull of the Moon, with a smaller contribution from the Sun.
+
+**The basic mechanism:** The Moon's gravity pulls on Earth, and the pull is strongest on the side facing the Moon and weakest on the far side. This difference (a "tidal force") stretches the ocean into two bulges: one facing the Moon, and one on the opposite side of Earth. As Earth rotates, a given coastline passes through both bulges each day, producing two high tides and two low tides, roughly every 24 hours and 50 minutes. The extra 50 minutes arises because the Moon is also orbiting Earth.
+
+**Spring and neap tides:** The Sun also exerts a tidal pull, about 46% as strong as the Moon's. At new and full moon, the Sun, Moon, and Earth line up and their effects combine, producing larger "spring tides." At the quarter moons, their pulls partly work against each other, producing weaker "neap tides."
+
+**Local variation:** Real tides are shaped by coastline shape, ocean basin size, and seafloor depth. Some places, like the Bay of Fundy, have extreme tidal ranges because of resonance in their funnel-shaped basins, while others, like parts of the Gulf of Mexico, have only one high tide per day.
+
+=== ANSWER 5 ===
+Mitochondria are the organelles that produce most of a cell's usable energy. Through cellular respiration, they convert nutrients such as glucose and fatty acids into ATP (adenosine triphosphate), the molecule cells use to power nearly all their activities. This happens mainly via the citric acid cycle in the inner space (matrix) and oxidative phosphorylation across the folded inner membrane (the cristae).
+
+Beyond energy production, mitochondria also help regulate calcium levels, generate heat in some tissues, participate in the synthesis of certain molecules (such as heme and steroids), and play a key role in programmed cell death (apoptosis). They contain their own small circular DNA and are thought to descend from ancient bacteria that were engulfed by early cells.
+
+=== ANSWER 6 ===
+Homework, particularly in large amounts, does more harm than good and should be significantly reduced. Research on student learning consistently shows diminishing returns: while modest, purposeful practice can reinforce skills, heavy workloads show little added academic benefit, especially in elementary and middle school. Meanwhile, the costs are real. Students already spend six or more hours in class, and piling on evening assignments cuts into sleep, physical activity, family time, and unstructured play, all of which are essential to healthy development and, ironically, to learning itself. Homework also widens inequality, since students with quiet spaces, reliable internet, and parental help complete it more easily than those without. Schools serve students better by making class time count and assigning only short, meaningful tasks, rather than treating the volume of homework as a proxy for rigor.

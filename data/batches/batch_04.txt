@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: Why do we have seasons?
+
+PROMPT 2: If log base 2 of x equals 5, what is x?
+
+PROMPT 3: Write a JavaScript function that debounces another function.
+
+PROMPT 4: Use induction to prove that 1 + 2 + ... + n = n(n+1)/2.
+
+PROMPT 5: Write a Python function that detects whether a linked list has a cycle.
+
+PROMPT 6: What causes earthquakes?

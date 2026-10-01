@@ -1,0 +1,104 @@
+```python
+# Verify math prompts
+# Prompt 2: Expected value of fair 6-sided die
+ev = sum(range(1, 7)) / 6
+
+# Prompt 3: Geometric series sum 1 + 1/2 + 1/4 + ...
+# a = 1, r = 0.5
+geom_sum = 1 / (1 - 0.5)
+
+# Prompt 4: Distance between (1, 2) and (4, 6)
+import math
+dist = math.sqrt((4 - 1)**2 + (6 - 2)**2)
+
+print(f"EV: {ev}")
+print(f"Geom Sum: {geom_sum}")
+print(f"Distance: {dist}")
+
+
+```
+
+```text
+EV: 3.5
+Geom Sum: 2.0
+Distance: 5.0
+
+
+```
+
+=== ANSWER 1 ===
+Here is a clean, efficient implementation of quicksort in Python using list comprehensions:
+
+```python
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
+
+# Example usage:
+if __name__ == "__main__":
+    numbers = [3, 6, 8, 10, 1, 2, 1]
+    print("Original:", numbers)
+    print("Sorted:", quicksort(numbers))
+
+```
+
+=== ANSWER 2 ===
+The expected value of a fair six-sided die roll is **3.5**.
+
+**Explanation:**
+A fair six-sided die has possible outcomes of 1, 2, 3, 4, 5, and 6, each with an equal probability of $1/6$. The expected value is calculated as the sum of each outcome multiplied by its probability:
+
+$$\mathbb{E}(X) = (1 + 2 + 3 + 4 + 5 + 6) \times \frac{1}{6} = \frac{21}{6} = 3.5$$
+
+=== ANSWER 3 ===
+The sum of the infinite geometric series $1 + \frac{1}{2} + \frac{1}{4} + \dots$ is **2**.
+
+**Explanation:**
+This is an infinite geometric series with first term $a = 1$ and common ratio $r = \frac{1}{2}$. Since $\vert{}r\vert{} < 1$, the sum $S$ converges and can be found using the formula:
+
+$$S = \frac{a}{1 - r} = \frac{1}{1 - \frac{1}{2}} = \frac{1}{\frac{1}{2}} = 2$$
+
+=== ANSWER 4 ===
+The distance between the points $(1, 2)$ and $(4, 6)$ is **5**.
+
+**Explanation:**
+Using the distance formula $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$:
+
+$$d = \sqrt{(4 - 1)^2 + (6 - 2)^2} = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5$$
+
+=== ANSWER 5 ===
+**Subject:** Out of Office: Currently lost in the digital wilderness
+
+Hi there,
+
+Thanks for reaching out! I am currently out of the office and away from my email until [Date].
+
+Please note that I am taking this time to disconnect, touch grass, and practice advanced procrastination. Because of this, any emails received during this period will be politely read, judged by an imaginary panel of judges, and ultimately deleted to preserve the pristine nature of my inbox.
+
+If your request is truly urgent, please contact [Colleague Name] at [Colleague Email]. Otherwise, I look forward to ignoring your message with renewed vigor upon my return.
+
+Best regards,
+
+[Your Name]
+
+=== ANSWER 6 ===
+The hum of the environmental life-support system was the only sound in the tiny cabin, a low, maternal thrum that Commander Vance had learned to tune out months ago. She was floating weightless in the galley, spooning rehydrated borscht into her mouth, when it happened.
+
+*Tap. Tap-tap.*
+
+Vance froze, the spoon hovering inches from her face.
+
+Sound cannot travel through the vacuum of space. There is no air outside the hull, no medium for a shockwave to carry a mechanical percussion. Yet the vibration had traveled straight through the titanium bulkhead, resonating through the soles of her magnetic boots and vibrating directly into her bones.
+
+*Tap.*
+
+She stared at the viewport, where the curvature of Europa gleamed blindingly white against the starless void. Nothing was docked. No telemetry alarms were flashing on her console.
+
+Slowly, deliberately, Vance set her spoon down, reached out, and tapped twice back against the metal wall.
+
+A split second later, the answering knock came back. Three times. Faster.

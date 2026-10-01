@@ -1,0 +1,127 @@
+=== ANSWER 1 ===
+We have seasons because Earth's axis is tilted about 23.5° relative to its orbital plane around the Sun. As Earth orbits, that tilt keeps pointing in the same direction in space, so for part of the year the Northern Hemisphere leans toward the Sun and for part of the year it leans away (and the Southern Hemisphere does the opposite).
+
+When a hemisphere leans toward the Sun, two things happen:
+
+1. **More direct sunlight.** The Sun is higher in the sky, so sunlight hits the ground at a steeper angle and its energy is concentrated over a smaller area, which heats the surface more effectively.
+2. **Longer days.** More hours of daylight means more time for the ground and air to warm up.
+
+When the hemisphere leans away, the Sun is lower, the light is spread out more thinly, and days are shorter, so it's colder.
+
+A common misconception is that seasons come from Earth being closer to or farther from the Sun. In fact, Earth is closest to the Sun (perihelion) in early January, during Northern Hemisphere winter. Distance has only a small effect compared with tilt.
+
+The solstices (around June 21 and December 21) mark the extremes of the tilt's effect, and the equinoxes (around March 20 and September 22) are when neither hemisphere is tilted toward the Sun and day and night are roughly equal everywhere.
+
+=== ANSWER 2 ===
+If log₂(x) = 5, then by the definition of a logarithm:
+
+x = 2⁵ = **32**
+
+=== ANSWER 3 ===
+```javascript
+function debounce(fn, delay = 300) {
+  let timeoutId;
+
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+```
+
+**Example usage:**
+
+```javascript
+const handleResize = debounce(() => {
+  console.log("Resized!");
+}, 250);
+
+window.addEventListener("resize", handleResize);
+```
+
+Each call resets the timer, so `fn` only runs once the calls have stopped for `delay` milliseconds. Using a regular `function` for the returned wrapper (rather than an arrow function) preserves the caller's `this`, and `...args` forwards the arguments.
+
+If you need extras, common additions are a `cancel()` method (to clear the pending timeout) and a `leading` option (to fire on the first call instead of the last).
+
+=== ANSWER 4 ===
+**Claim:** For every positive integer n, 1 + 2 + ... + n = n(n+1)/2.
+
+**Base case (n = 1):**
+The left side is 1. The right side is 1·(1+1)/2 = 1. They are equal, so the claim holds for n = 1.
+
+**Inductive step:**
+Assume the claim holds for some k ≥ 1 (the inductive hypothesis):
+
+1 + 2 + ... + k = k(k+1)/2.
+
+We must show it holds for k + 1, that is,
+
+1 + 2 + ... + k + (k+1) = (k+1)(k+2)/2.
+
+Starting from the left side and using the hypothesis:
+
+1 + 2 + ... + k + (k+1) = k(k+1)/2 + (k+1)
+
+Factor out (k+1):
+
+= (k+1)(k/2 + 1)
+= (k+1)(k+2)/2
+
+This is exactly the right side for n = k + 1.
+
+**Conclusion:** The claim holds for n = 1, and whenever it holds for k it also holds for k + 1. By the principle of mathematical induction, it holds for all positive integers n. ∎
+
+=== ANSWER 5 ===
+The standard approach is Floyd's tortoise-and-hare algorithm: move one pointer one step at a time and another two steps at a time. If there's a cycle, the fast pointer will eventually catch the slow one.
+
+```python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+def has_cycle(head):
+    slow = fast = head
+
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow is fast:
+            return True
+
+    return False
+```
+
+**Example:**
+
+```python
+a = ListNode(1)
+b = ListNode(2)
+c = ListNode(3)
+a.next, b.next, c.next = b, c, b  # c points back to b, forming a cycle
+
+print(has_cycle(a))  # True
+```
+
+**Complexity:** O(n) time and O(1) extra space. If the list has no cycle, `fast` reaches the end (`None`) and the function returns `False`.
+
+An alternative is to store visited nodes in a set, which is simpler but uses O(n) extra memory.
+
+=== ANSWER 6 ===
+Most earthquakes are caused by the sudden release of stored energy in Earth's crust, usually along faults.
+
+**The basic mechanism:** Earth's outer shell is broken into tectonic plates that slowly move, typically a few centimeters per year. Where plates meet, they often get stuck against each other because of friction. Stress builds up over years or centuries as the surrounding rock deforms. When the stress finally exceeds the strength of the rock or the friction holding the fault, the rock slips suddenly. This releases energy as seismic waves, which we feel as shaking. This idea is called elastic rebound theory.
+
+**Where they happen most:**
+- **Plate boundaries**, such as the Pacific "Ring of Fire," where plates collide, pull apart, or slide past each other (like the San Andreas Fault).
+- **Subduction zones**, where one plate dives beneath another and produces the largest earthquakes.
+
+**Other causes:**
+- Volcanic activity, as magma moves underground
+- Human activity, such as reservoir filling, mining, geothermal energy, and wastewater injection from oil and gas operations (induced seismicity)
+- Rarely, the collapse of underground cavities
+
+The point inside the Earth where the rupture begins is called the focus (or hypocenter), and the point directly above it on the surface is the epicenter.

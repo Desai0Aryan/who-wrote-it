@@ -1,0 +1,171 @@
+=== ANSWER 1 ===
+World War I had several interlocking causes, often summarized with the acronym MAIN (militarism, alliances, imperialism, nationalism), plus a triggering event.
+
+**Long-term causes**
+
+- **Militarism:** The major European powers built up large armies and navies, especially in the decades before 1914. Britain and Germany competed in a naval arms race, and military planners developed rigid mobilization schedules that left little room for diplomacy once a crisis began.
+- **Alliances:** Europe was divided into two blocs: the Triple Entente (France, Russia, Britain) and the Triple Alliance (Germany, Austria-Hungary, Italy). These commitments meant a local conflict could pull in the great powers one after another.
+- **Imperialism:** Rivalry over colonies and markets in Africa and Asia, along with tensions such as the Moroccan crises, heightened mistrust among the powers.
+- **Nationalism:** Nationalist movements, particularly among Slavs in the Balkans, challenged multi-ethnic empires like Austria-Hungary and the Ottoman Empire. Pan-Slavism, Russian support for Serbia, and German and French national pride all raised the stakes.
+
+**Underlying tensions**
+
+- The decline of the Ottoman Empire created instability in the Balkans, leading to the Balkan Wars of 1912-1913.
+- Franco-German hostility persisted after the Franco-Prussian War, especially over Alsace-Lorraine.
+- Germany's rapid rise unsettled the existing balance of power.
+
+**The immediate trigger**
+
+On June 28, 1914, Archduke Franz Ferdinand, heir to the Austro-Hungarian throne, was assassinated in Sarajevo by Gavrilo Princip, a Bosnian Serb nationalist. Austria-Hungary, backed by Germany's "blank check," issued an ultimatum to Serbia and declared war on July 28. Russia mobilized to support Serbia, Germany declared war on Russia and France, and Germany's invasion of neutral Belgium brought Britain in.
+
+Historians still debate how much weight each factor deserves, and how much responsibility lies with Germany, Austria-Hungary, or the system of alliances and miscalculation as a whole.
+
+=== ANSWER 2 ===
+Look around this room. Every person here earned their spot. Not through luck, not through shortcuts, but through early mornings, sore muscles, and a refusal to quit when it got hard.
+
+Tonight, all of that work comes together. The doubters don't matter. The crowd doesn't matter. The scoreboard hasn't even started yet, and it doesn't get to decide who we are.
+
+We are a team. When one of us stumbles, another picks them up. When one of us shines, we all shine. That is our strength, and no opponent can take it away.
+
+Be fearless. Play for the person next to you. Leave nothing behind, because regret is heavier than any loss.
+
+Whatever happens out there, we walk off that court, field, or ice knowing we gave everything we had. So take a breath, trust your training, and trust each other.
+
+Now let's go show them who we are. On three: one, two, three, TEAM!
+
+=== ANSWER 3 ===
+```python
+def dfs(graph, start):
+    """
+    Perform depth-first search on a graph given as an adjacency list.
+
+    Args:
+        graph: dict mapping each node to a list of its neighbors.
+        start: the node to begin the search from.
+
+    Returns:
+        A list of nodes in the order they were visited.
+    """
+    visited = set()
+    order = []
+    stack = [start]
+
+    while stack:
+        node = stack.pop()
+        if node in visited:
+            continue
+        visited.add(node)
+        order.append(node)
+        # Reverse so neighbors are visited in their listed order
+        for neighbor in reversed(graph.get(node, [])):
+            if neighbor not in visited:
+                stack.append(neighbor)
+
+    return order
+
+
+def dfs_recursive(graph, node, visited=None, order=None):
+    """Recursive version of DFS."""
+    if visited is None:
+        visited = set()
+    if order is None:
+        order = []
+
+    visited.add(node)
+    order.append(node)
+    for neighbor in graph.get(node, []):
+        if neighbor not in visited:
+            dfs_recursive(graph, neighbor, visited, order)
+    return order
+
+
+if __name__ == "__main__":
+    graph = {
+        "A": ["B", "C"],
+        "B": ["D", "E"],
+        "C": ["F"],
+        "D": [],
+        "E": ["F"],
+        "F": [],
+    }
+    print(dfs(graph, "A"))            # ['A', 'B', 'D', 'E', 'F', 'C']
+    print(dfs_recursive(graph, "A"))  # ['A', 'B', 'D', 'E', 'F', 'C']
+```
+
+The iterative version uses an explicit stack, which avoids Python's recursion limit on deep graphs. The recursive version is shorter and easier to read for small graphs. Both run in O(V + E) time.
+
+=== ANSWER 4 ===
+A neural network learns by adjusting its internal numbers (called weights and biases) so its predictions get closer to the correct answers. The process repeats over many examples.
+
+**1. Forward pass.** Input data (say, an image's pixel values) flows through layers of artificial neurons. Each neuron computes a weighted sum of its inputs, adds a bias, and applies a non-linear activation function such as ReLU. The final layer produces a prediction.
+
+**2. Measuring error.** A loss function compares the prediction to the true answer and produces a single number describing how wrong the network was. For example, mean squared error is common for regression and cross-entropy for classification.
+
+**3. Backpropagation.** The network works out how much each weight contributed to the error. Using the chain rule from calculus, it computes the gradient of the loss with respect to every weight, moving backward from the output layer to the input layer.
+
+**4. Gradient descent.** Each weight is nudged slightly in the direction that reduces the loss:
+
+new weight = old weight − learning rate × gradient
+
+The learning rate controls the step size. Too large and training becomes unstable; too small and it is painfully slow.
+
+**5. Repeat.** Data is usually processed in small batches, and a full pass through the dataset is called an epoch. Over many epochs, the loss falls and the network's predictions improve.
+
+**An analogy:** imagine hiking down a foggy mountain. You can't see the valley, but you can feel the slope under your feet, so you keep stepping downhill. The gradient is the slope, and the valley is a low-error set of weights.
+
+**Practical concerns.** Networks can overfit, memorizing training data instead of learning general patterns. Techniques like holding out validation data, dropout, regularization, and early stopping help the network generalize to new examples.
+
+=== ANSWER 5 ===
+Hey [Name],
+
+I'm so sorry I missed your birthday party. I hate that I wasn't there to celebrate you, especially because I know how much planning went into it and how much it would have meant to see everyone together.
+
+[Brief honest reason, e.g., "Things got really hectic and I let the time slip away" or "I wasn't feeling well and should have told you sooner."] That's an explanation, not an excuse. I should have called or texted you ahead of time instead of leaving you wondering.
+
+You're an important person in my life, and I feel awful that I let you down on a day that mattered. I'd love to make it up to you. Dinner or drinks are on me, whenever works for you, and I'd really like to hear all about how the party went.
+
+Happy belated birthday. I hope it was a great one, and again, I'm truly sorry.
+
+Love,
+[Your Name]
+
+=== ANSWER 6 ===
+**Part-Time Barista**
+
+**Location:** [Cafe Name], [City, State]
+**Hours:** 15-25 hours per week, including some early mornings and weekends
+**Pay:** $[X] - $[Y] per hour plus tips
+
+**About Us**
+[Cafe Name] is a friendly neighborhood coffee shop serving locally roasted espresso, fresh pastries, and a warm welcome. We're looking for a personable, dependable barista to join our small team.
+
+**Responsibilities**
+- Prepare espresso drinks, brewed coffee, teas, and other beverages to our recipes and quality standards
+- Greet customers warmly, take orders, and handle payments accurately
+- Keep the bar, counter, and seating areas clean and well stocked
+- Follow food safety and sanitation guidelines
+- Open or close the shop as scheduled, including cash handling
+- Help with inventory and restocking supplies
+
+**Requirements**
+- Ability to work a flexible schedule, including weekends
+- Positive attitude and strong customer service skills
+- Ability to stand for extended periods and lift up to 25 pounds
+- Reliability and good communication with teammates
+- Willingness to learn and take feedback
+
+**Nice to Have**
+- Previous barista or food service experience
+- Latte art skills
+- Food handler's certification
+
+**What We Offer**
+- Flexible scheduling that works around school or other commitments
+- Free drinks during shifts and a discount on food
+- Paid training with experienced baristas
+- Opportunities to grow into shift lead roles
+
+**How to Apply**
+Send your resume (or a short note about yourself) to [email address], or stop by [Cafe Name] at [address] and ask for [Manager Name].
+
+[Cafe Name] is an equal opportunity employer and welcomes applicants of all backgrounds.

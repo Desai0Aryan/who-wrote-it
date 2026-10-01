@@ -1,0 +1,134 @@
+=== ANSWER 1 ===
+```python
+def gcd(a: int, b: int) -> int:
+    """Return the greatest common divisor of a and b using the Euclidean algorithm."""
+    a, b = abs(a), abs(b)
+    while b:
+        a, b = b, a % b
+    return a
+```
+
+Examples: `gcd(48, 18)` returns `6`, `gcd(0, 5)` returns `5`, and `gcd(-12, 8)` returns `4`. Python's standard library also provides `math.gcd`.
+
+=== ANSWER 2 ===
+```python
+def rotate_clockwise(matrix: list[list]) -> list[list]:
+    """Return a new square matrix rotated 90 degrees clockwise."""
+    return [list(row) for row in zip(*matrix[::-1])]
+```
+
+For an in-place version:
+
+```python
+def rotate_clockwise_in_place(matrix: list[list]) -> None:
+    n = len(matrix)
+    # Transpose
+    for i in range(n):
+        for j in range(i + 1, n):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+    # Reverse each row
+    for row in matrix:
+        row.reverse()
+```
+
+Example: `[[1,2,3],[4,5,6],[7,8,9]]` becomes `[[7,4,1],[8,5,2],[9,6,3]]`.
+
+=== ANSWER 3 ===
+A blockchain is a shared ledger that many computers keep copies of, designed so that no single party controls it and past records are very hard to alter.
+
+**Blocks and chaining.** Transactions are grouped into blocks. Each block contains a batch of transactions, a timestamp, and a cryptographic hash of the previous block. A hash is a fixed-length fingerprint of data: change even one character of the input and the hash changes completely. Because each block includes the previous block's hash, altering an old block would change its hash and break every link after it.
+
+**Decentralization.** Instead of one company holding the database, thousands of nodes each store a copy and independently verify new transactions against the rules. If one node's copy disagrees with the majority, it gets rejected.
+
+**Consensus.** The network needs a way to agree on which block gets added next. Two common approaches:
+- *Proof of work* (Bitcoin): miners compete to find a number that makes the block's hash meet a difficulty target. This takes heavy computation, which makes rewriting history prohibitively expensive.
+- *Proof of stake* (Ethereum): validators lock up cryptocurrency as collateral and are chosen to propose and attest to blocks. Dishonest behavior can cost them their stake.
+
+**Digital signatures.** Users hold a private key and a public key. A transaction is signed with the private key, and anyone can verify the signature with the public key, proving the owner authorized it without revealing the key.
+
+**Putting it together.** When you send a transaction, it's broadcast to the network, validated by nodes, bundled into a block by a miner or validator, and appended to the chain. Once enough later blocks are built on top, reversing it becomes practically impossible.
+
+**Trade-offs.** Blockchains offer transparency and tamper resistance without a trusted middleman, but they are typically slower and more resource-intensive than a conventional database. They make sense mainly where trust among participants is limited.
+
+=== ANSWER 4 ===
+```c
+#include <string.h>
+
+void reverse_string(char *s) {
+    if (s == NULL) return;
+
+    size_t len = strlen(s);
+    if (len < 2) return;
+
+    char *start = s;
+    char *end = s + len - 1;
+
+    while (start < end) {
+        char tmp = *start;
+        *start = *end;
+        *end = tmp;
+        start++;
+        end--;
+    }
+}
+```
+
+The string must be in modifiable memory, such as a `char` array. This works:
+
+```c
+char buf[] = "hello";
+reverse_string(buf);  // buf is now "olleh"
+```
+
+Passing a string literal like `"hello"` directly is undefined behavior, since literals may live in read-only memory.
+
+=== ANSWER 5 ===
+**After**
+
+The pencil leaves my hand
+and my fingers don't know what to do with themselves.
+
+Paper goes face-down on the pile,
+a small white door closing.
+
+Out in the hallway the air is different,
+thinner somehow, or maybe
+I've just remembered I have lungs.
+
+Every answer I couldn't reach
+is already gone from me,
+nothing to be done, no more fixing,
+and that is its own kind of mercy.
+
+My head hums like a room
+after the music stops.
+Somewhere a bird is making noise
+as if it's been doing it all morning.
+It probably has.
+
+I could sleep for a year.
+I could run to the end of the street.
+I could do absolutely nothing
+and it would be mine,
+the whole bright, unscheduled afternoon.
+
+=== ANSWER 6 ===
+```jsx
+import { useState } from "react";
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div style={{ textAlign: "center", fontFamily: "sans-serif" }}>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount((c) => c - 1)}>-</button>
+      <button onClick={() => setCount((c) => c + 1)} style={{ marginLeft: 8 }}>
+        +
+      </button>
+    </div>
+  );
+}
+```
+
+Using the functional form `setCount((c) => ...)` ensures updates are correct even if several happen in quick succession.

@@ -1,0 +1,146 @@
+=== ANSWER 1 ===
+
+Tobias had kept the Gannet Rock light for thirty-one winters, and in all that time the sea had given him nothing but driftwood and the occasional boot.
+
+The bottle came in on a gray Tuesday, wedged between two boulders below the gallery. Green glass, crusted with barnacles, the cork sealed in wax. He carried it up the spiral stairs like something that might wake.
+
+Inside was a single sheet, brittle as onion skin. The ink had faded to the color of weak tea, but the hand was careful, a child's perhaps, trying hard to be neat.
+
+*To whoever keeps the light: My father says you are the reason he comes home. I wanted to say thank you. We can see your beam from our kitchen window. Mama says it's the brightest star on the coast. Please don't ever go out. —Ellie, age 9*
+
+There was no date. No town. Tobias read it three times, then sat for a long while as the afternoon dimmed.
+
+That night he climbed the stairs earlier than usual. He polished the lens until it threw light in clean, perfect bars across the black water, and he thought of a kitchen window somewhere, and a small face turned toward him.
+
+He did not know if she was nine now, or ninety. But the light stayed on.
+
+=== ANSWER 2 ===
+
+**Why it crashes:** When `xs` is empty, `sum(xs)` is `0` and `len(xs)` is `0`, so the expression becomes `0/0`. Python raises `ZeroDivisionError: division by zero`. The average of nothing is mathematically undefined, so there's no "correct" number to return automatically. You have to decide how to handle it.
+
+**Fixes (pick the behavior that suits your use case):**
+
+Return a default value:
+```python
+def avg(xs):
+    if not xs:
+        return 0  # or None, or float('nan')
+    return sum(xs) / len(xs)
+```
+
+Raise a clearer error:
+```python
+def avg(xs):
+    if not xs:
+        raise ValueError("avg() requires a non-empty sequence")
+    return sum(xs) / len(xs)
+```
+
+Returning `None` or `float('nan')` is often safer than `0`, since `0` can be mistaken for a real average. Raising a `ValueError` is best when an empty list indicates a bug in the caller. Note that `if not xs` also works for tuples and other sequences, but if `xs` could be a generator, `len()` won't work and you'd need to accumulate the sum and count in a loop instead.
+
+=== ANSWER 3 ===
+
+```python
+def roman_to_int(s: str) -> int:
+    values = {
+        'I': 1, 'V': 5, 'X': 10, 'L': 50,
+        'C': 100, 'D': 500, 'M': 1000,
+    }
+    total = 0
+    prev = 0
+    for ch in reversed(s.upper()):
+        value = values[ch]  # raises KeyError on invalid characters
+        if value < prev:
+            total -= value   # subtractive case, e.g. the I in IV
+        else:
+            total += value
+            prev = value
+    return total
+```
+
+**How it works:** It scans the numeral right to left. If a symbol is smaller than the one to its right (like the `I` in `IV`), it's subtracted; otherwise it's added.
+
+**Examples:**
+```python
+roman_to_int("III")      # 3
+roman_to_int("LVIII")    # 58
+roman_to_int("MCMXCIV")  # 1994
+```
+
+This doesn't validate that the numeral is well-formed (e.g., `"IIII"` or `"VX"` would still produce a number), only that the characters are valid Roman symbols.
+
+=== ANSWER 4 ===
+
+GPS works by measuring how long signals take to travel from satellites to your receiver, then using those travel times to calculate distance and position.
+
+**The satellites:** About 30 GPS satellites orbit roughly 20,200 km above Earth, arranged so that at least four are visible from almost anywhere at any time. Each carries atomic clocks and continuously broadcasts its position and the exact time the signal was sent.
+
+**Measuring distance:** Your receiver notes when each signal arrives. The delay between transmission and arrival, multiplied by the speed of light, gives the distance to that satellite. A signal from one satellite tells you that you're somewhere on a sphere of that radius around it.
+
+**Trilateration:** With distances to three satellites, the spheres intersect at two points, and one is usually far out in space, so the receiver can pick the right one. That gives latitude, longitude, and altitude.
+
+**Why four satellites:** Your phone's clock isn't an atomic clock, and since light travels about 30 cm per nanosecond, tiny timing errors become big position errors. Treating the receiver's clock error as a fourth unknown lets the receiver solve for x, y, z, and time offset together, effectively syncing itself to atomic precision.
+
+**Corrections:** Relativity matters here. Satellite clocks run slightly fast due to weaker gravity and slightly slow due to their speed, and the net effect (about 38 microseconds per day) is corrected for. Atmospheric delays are also modeled and corrected. Phones often supplement GPS with Wi-Fi, cell towers, and other satellite systems (GLONASS, Galileo, BeiDou) for speed and accuracy.
+
+Typical consumer accuracy is a few meters in open sky.
+
+=== ANSWER 5 ===
+
+Both lists and tuples are ordered sequences that can hold items of any type, and both support indexing, slicing, and iteration. The key difference is **mutability**.
+
+**List (mutable):** Written with square brackets. You can change it after creation by adding, removing, or modifying items.
+```python
+nums = [1, 2, 3]
+nums.append(4)
+nums[0] = 99   # nums is now [99, 2, 3, 4]
+```
+
+**Tuple (immutable):** Written with parentheses. Once created, it can't be changed.
+```python
+point = (3, 4)
+point[0] = 5   # TypeError
+```
+
+**Other differences:**
+- Tuples are slightly smaller and faster to create and iterate.
+- Tuples are hashable if all their contents are hashable, so they can be dictionary keys or set members. Lists can't.
+- Lists have more methods (`append`, `remove`, `sort`, etc.); tuples have only `count` and `index`.
+
+**When to use a list:** For collections that grow, shrink, or get reordered, and where items are conceptually the same kind of thing: a list of users, scores, or filenames.
+
+**When to use a tuple:** For fixed-size records where each position has its own meaning, such as coordinates `(x, y)`, an RGB color `(255, 128, 0)`, or a database row. They're also good for returning multiple values from a function, for dictionary keys (`{(0, 0): "origin"}`), and for signaling "this shouldn't change."
+
+A rough rule of thumb: homogeneous, variable-length data suggests a list; heterogeneous, fixed-structure data suggests a tuple.
+
+=== ANSWER 6 ===
+
+```python
+def binary_search(arr, target):
+    """Return the index of target in sorted list arr, or -1 if not found."""
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = lo + (hi - lo) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+```
+
+**Example:**
+```python
+binary_search([1, 3, 5, 7, 9, 11], 7)   # 3
+binary_search([1, 3, 5, 7, 9, 11], 4)   # -1
+```
+
+**How it works:** The array must be sorted. Each iteration compares the target to the middle element. If they match, you're done. If the target is larger, it can only be in the right half; if smaller, only in the left half. Either way, half of the remaining candidates are discarded.
+
+**Time complexity:**
+- **Time: O(log n).** Each step halves the search range, so starting from n elements you need at most about log₂(n) steps. Searching a million items takes about 20 comparisons, and a billion takes about 30.
+- **Space: O(1)** for this iterative version. A recursive version would use O(log n) stack space.
+- **Best case:** O(1), when the target is the middle element.
+
+The tradeoff is that the data must already be sorted. If you only search once, a linear scan (O(n)) may be cheaper than sorting first (O(n log n)), but for repeated searches binary search pays off quickly. The `lo + (hi - lo) // 2` form avoids integer overflow in languages with fixed-size integers; in Python it's just a habit, since integers don't overflow.

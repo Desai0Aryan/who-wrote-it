@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: Implement quicksort in Python.
+
+PROMPT 2: What is the expected value of a fair six-sided die roll?
+
+PROMPT 3: What is the sum of the infinite geometric series 1 + 1/2 + 1/4 + ...?
+
+PROMPT 4: Find the distance between the points (1, 2) and (4, 6).
+
+PROMPT 5: Write a funny out-of-office auto-reply message.
+
+PROMPT 6: Write a short sci-fi scene where an astronaut hears a knock on the airlock.

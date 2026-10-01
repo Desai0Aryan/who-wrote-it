@@ -1,0 +1,173 @@
+=== ANSWER 1 ===
+
+ The Message in the Bottle
+
+At the edge of the world, where gray waves battered black cliffs, Elias kept watch over a lonely lighthouse.
+
+ One stormy evening, after hours of rain, he spotted something bobbing among the rocks below. He climbed down carefully and found a green glass bottle tangled in seaweed.
+
+ Inside was a small, yellowed piece of paper.
+
+ “Please tell my sister I survived. Her name is Clara. She lives in the house with the blue door in Bellhaven.”
+
+ There was no date, no surname, and no clue who had written it.
+
+ Elias spent the next morning searching old lighthouse records. At last, he found a shipwreck report from thirty years earlier. A sailor named Thomas Vale had disappeared when his ship sank near the cliffs. His sister, Clara, had been listed as his only surviving relative.
+
+ Elias traveled to Bellhaven on his next day off. After asking around, he found a little house with a faded blue door.
+
+ An elderly woman answered his knock.
+
+ When Elias showed her the message, she pressed a trembling hand to her mouth.
+
+ “My brother,” she whispered.
+
+ For the first time in thirty years, Clara knew that Thomas had lived after the wreck.
+
+ And somehow, across all those years and miles, the sea had finally delivered his message.
+
+ === ANSWER 2 ===
+
+ The crash occurs because `len([])` is `0`, so the function attempts to divide by zero.
+
+```
+def avg(xs):
+    if not xs:
+        raise ValueError("avg() requires a non-empty list")
+    return sum(xs) / len(xs)
+```
+
+ Alternatively, if an empty list should return a particular value such as `0`:
+
+```
+def avg(xs):
+    return sum(xs) / len(xs) if xs else 0
+```
+
+ Raising an exception is usually preferable because an average of no numbers is mathematically undefined.
+
+ === ANSWER 3 ===
+
+```
+def roman_to_int(s):
+    values = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+
+    total = 0
+
+    for i, char in enumerate(s):
+        value = values[char]
+
+        if i + 1 < len(s) and value < values[s[i + 1]]:
+            total -= value
+        else:
+            total += value
+
+    return total
+```
+
+ For example:
+
+```
+roman_to_int("IX")      # 9
+roman_to_int("LVIII")   # 58
+roman_to_int("MCMXCIV") # 1994
+```
+
+ The key idea is that a numeral is subtracted when it is smaller than the numeral immediately following it; otherwise, it is added.
+
+ === ANSWER 4 ===
+
+ GPS determines your location by measuring how long signals from satellites take to reach your receiver.
+
+ 1. **Satellites transmit signals.** GPS satellites continuously broadcast their position and extremely precise time.
+2. **Your receiver measures signal timing.** It determines how long each satellite's signal took to arrive.
+3. **Distance is calculated.** Since radio signals travel at approximately the speed of light, the receiver can estimate its distance from each satellite.
+4. **Trilateration determines the position.** With measurements from multiple satellites, the receiver calculates the point where those distance measurements intersect.
+5. **A fourth satellite improves accuracy.** Because your receiver's clock is not as precise as the satellites' atomic clocks, a fourth satellite allows it to solve for clock error as well as latitude, longitude, and altitude.
+
+ In practice, GPS receivers often use signals from more than four satellites and combine them with other information to improve accuracy.
+
+ === ANSWER 5 ===
+
+ The main difference is **mutability**: lists can be changed after creation, while tuples cannot.
+
+ ### List
+
+```
+numbers = [1, 2, 3]
+numbers.append(4)
+numbers[0] = 10
+```
+
+ Lists are useful when the collection needs to change—for example, when adding, removing, or modifying elements.
+
+ ### Tuple
+
+```
+point = (10, 20)
+```
+
+ A tuple cannot be modified after creation:
+
+```
+point[0] = 5  # TypeError
+```
+
+ Tuples are useful for fixed collections of values, especially when the values represent a single record or should not be changed.
+
+ Tuples can also be used as dictionary keys when their contents are hashable:
+
+```
+locations = {
+    (40.7, -74.0): "New York"
+}
+```
+
+ **Rule of thumb:** use a **list** for a collection that changes; use a **tuple** for a fixed group of values.
+
+ === ANSWER 6 ===
+
+ Binary search works on a **sorted** sequence by repeatedly eliminating half of the remaining search space.
+
+```
+def binary_search(xs, target):
+    left = 0
+    right = len(xs) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if xs[mid] == target:
+            return mid
+        elif xs[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return -1
+```
+
+ Example:
+
+```
+numbers = [1, 3, 5, 7, 9, 11]
+
+binary_search(numbers, 7)  # 3
+binary_search(numbers, 4)  # -1
+```
+
+ At each step, the algorithm compares the target with the middle element. If the target is larger, it searches only the right half; if smaller, only the left half.
+
+ ### Time complexity
+
+ - **Best case:** `O(1)` — the target is the middle element immediately.
+- **Average/worst case:** `O(log n)` — each comparison cuts the remaining search space roughly in half.
+- **Space complexity:** `O(1)` for this iterative implementation.

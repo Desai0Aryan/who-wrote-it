@@ -1,0 +1,132 @@
+=== ANSWER 1 ===
+
+```
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.items:
+            raise IndexError("pop from empty stack")
+        return self.items.pop()
+
+    def peek(self):
+        if not self.items:
+            raise IndexError("peek from empty stack")
+        return self.items[-1]
+```
+
+ === ANSWER 2 ===
+
+ The fall of the Western Roman Empire was caused by a combination of long-term internal problems and external pressures rather than one single event.
+
+ - **Political instability:** Emperors were frequently overthrown, and civil wars weakened the government and military.
+- **Economic problems:** Heavy taxation, inflation, declining trade, and the disruption of agricultural production strained the empire's finances.
+- **Military pressures:** Rome increasingly relied on non-Roman troops and faced growing pressure from groups such as the Goths, Vandals, and Huns.
+- **Administrative difficulties:** The empire became increasingly difficult and expensive to govern, particularly after its political division between eastern and western regions.
+- **Population and demographic changes:** Warfare, disease, migration, and economic disruption affected the population and available manpower.
+- **External migrations and invasions:** Large-scale movements of Germanic and other peoples into Roman territory placed severe pressure on the Western Empire.
+- **Loss of political control:** By the fifth century, Roman authority in many western provinces had substantially weakened.
+
+ The traditional date for the fall of the Western Roman Empire is **476 CE**, when the Germanic military leader Odoacer deposed the western emperor Romulus Augustulus. The Eastern Roman Empire, however, continued for nearly another thousand years, eventually ending in 1453.
+
+ === ANSWER 3 ===
+
+```
+def flatten(nested_list):
+    result = []
+
+    for item in nested_list:
+        if isinstance(item, list):
+            result.extend(flatten(item))
+        else:
+            result.append(item)
+
+    return result
+
+# Example:
+data = [1, [2, [3, 4], 5], [6, 7]]
+print(flatten(data))
+# [1, 2, 3, 4, 5, 6, 7]
+```
+
+ === ANSWER 4 ===
+
+```
+import csv
+import sys
+
+def average_column(filename, column_name):
+    values = []
+
+    with open(filename, newline="", encoding="utf-8") as csvfile:
+        reader = csv.DictReader(csvfile)
+
+        for row in reader:
+            try:
+                values.append(float(row[column_name]))
+            except (KeyError, ValueError):
+                continue
+
+    if not values:
+        raise ValueError("No valid numeric values found.")
+
+    return sum(values) / len(values)
+
+if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        print(f"Usage: python {sys.argv[0]} <csv_file> <column_name>")
+        sys.exit(1)
+
+    filename = sys.argv[1]
+    column_name = sys.argv[2]
+
+    try:
+        average = average_column(filename, column_name)
+        print(f"Average: {average:.2f}")
+    except (FileNotFoundError, ValueError) as e:
+        print(f"Error: {e}")
+        sys.exit(1)
+```
+
+ For example:
+
+```
+python average.py data.csv age
+```
+
+ === ANSWER 5 ===
+
+ Noise-cancelling headphones use **active noise cancellation (ANC)** to reduce unwanted ambient sound.
+
+ 1. **Microphones listen to the environment.** Small microphones detect sounds around you, such as an airplane engine or traffic.
+2. **The headphones analyze the sound.** Electronics generate a sound wave that is essentially the opposite of the detected noise.
+3. **The waves interfere.** When the original noise and the opposing wave meet, they partially cancel each other through **destructive interference**.
+4. **The process happens continuously.** The headphones constantly monitor the environment and adjust the cancellation signal.
+
+ ANC works particularly well against **steady, low-frequency sounds**, such as engine rumble. It is generally less effective against sudden, high-frequency sounds such as voices or clattering objects.
+
+ Noise-cancelling headphones also commonly provide **passive isolation**: the physical ear cups or ear tips block some sound simply by covering or sealing the ears.
+
+ === ANSWER 6 ===
+
+ Diary of a Houseplant
+
+Dear Diary,
+
+ Today was a quiet day, which is usually exactly how I like it. The sun came through the window in the morning and warmed my leaves. I spent several peaceful hours turning sunlight into food while listening to the faint sounds of the world outside.
+
+ Then my human remembered me.
+
+ They gave me some water and said, “You’re looking a little thirsty.” I wanted to tell them that I had been thirsty for three days, but I suppose communication is difficult when you’re a plant.
+
+ One of my newest leaves unfurled today. It feels like a small victory. I may not be able to walk anywhere or say anything, but I am growing.
+
+ Tomorrow, I hope for more sunlight, just enough water, and perhaps fewer people touching my leaves.
+
+ Goodnight,
+
+ A very content houseplant

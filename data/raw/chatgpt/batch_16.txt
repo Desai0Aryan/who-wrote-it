@@ -1,0 +1,81 @@
+=== ANSWER 1 ===
+
+ The Copper Spoon is a charming fictional neighborhood restaurant with a warm, inviting atmosphere and a menu that puts a modern spin on comforting classics. The roasted garlic pasta and crispy chicken are standouts, while the attentive service makes the meal feel especially welcoming. A cozy spot worth returning to.
+
+ === ANSWER 2 ===
+
+ There are 8 marbles total, with 3 red.
+
+ The probability of drawing two red marbles without replacement is:
+
+ $$
+\frac{3}{8}\times\frac{2}{7}=\frac{6}{56}=\boxed{\frac{3}{28}}
+$$
+
+ So the probability is **3/28**, or about **10.7%**.
+
+ === ANSWER 3 ===
+
+ As dusk settles over the city, the night market bursts into a dazzling maze of color, sound, and scent, with strings of warm bulbs glowing above crowded stalls and vendors calling out over the hiss of sizzling pans. The air is thick with the aromas of grilled meat, sweet pastries, chili, garlic, and fresh herbs, while shoppers weave between tables piled high with handmade jewelry, colorful fabrics, vintage trinkets, and steaming bowls of noodles. Somewhere nearby, a street musician strikes up a lively tune, children dart between laughing families, and bicycles squeeze carefully through the throng. Every few steps reveal something new—a cloud of fragrant smoke, a flash of neon, or a vendor dramatically tossing food into a wok—making the whole market feel like a living, glittering celebration.
+
+ === ANSWER 4 ===
+
+ $$
+3x+7=25
+$$
+
+ Subtract 7 from both sides:
+
+ $$
+3x=18
+$$
+
+ Divide by 3:
+
+ $$
+\boxed{x=6}
+$$
+
+ === ANSWER 5 ===
+
+ Lisbon Travel Blog Intro
+
+Lisbon has a way of making a weekend feel much longer than it really is. From the moment you arrive, the Portuguese capital draws you in with its sunlit hills, tiled façades, winding cobblestone streets, and the unmistakable yellow trams rattling through historic neighborhoods. Over just a couple of days, there’s time to wander through Alfama, linger over strong coffee and pastéis de nata, admire sweeping views from a hilltop miradouro, and let the city’s relaxed rhythm set the pace.
+
+ A weekend in Lisbon is also an invitation to explore without a strict plan. Spend the mornings discovering centuries-old streets, the afternoons along the waterfront, and the evenings enjoying fresh seafood and listening to the haunting sounds of fado drifting from a small restaurant. With its blend of history, food, architecture, and effortless charm, Lisbon offers the kind of short escape that leaves you already thinking about your next visit.
+
+ === ANSWER 6 ===
+
+ For
+
+ $$
+A=\begin{pmatrix}2&1\\1&2\end{pmatrix},
+$$
+
+ find the eigenvalues from the characteristic equation:
+
+ $$
+\det(A-\lambda I)
+=
+\begin{vmatrix}
+2-\lambda&1\\
+1&2-\lambda
+\end{vmatrix}
+=0.
+$$
+
+ Thus,
+
+ $$
+(2-\lambda)^2-1=0
+$$
+
+ $$
+(2-\lambda-1)(2-\lambda+1)=0
+$$
+
+ so the eigenvalues are
+
+ $$
+\boxed{\lambda_1=3,\quad \lambda_2=1}.
+$$

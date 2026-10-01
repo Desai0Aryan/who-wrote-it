@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: How does the stock market work?
+
+PROMPT 2: Write a Python function that merges two sorted lists into one sorted list.
+
+PROMPT 3: Write a thank-you note to a neighbor who watched my dog.
+
+PROMPT 4: Write a brief toast for my sister's wedding.
+
+PROMPT 5: Write a LinkedIn post announcing that I finished my first machine learning course.
+
+PROMPT 6: Write a professional email asking my professor for an extension on an assignment.

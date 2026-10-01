@@ -1,0 +1,110 @@
+=== ANSWER 1 ===
+
+```python
+import time
+import functools
+
+def timer(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.perf_counter()
+        result = func(*args, **kwargs)
+        elapsed = time.perf_counter() - start
+        print(f"{func.__name__} took {elapsed:.6f} seconds")
+        return result
+    return wrapper
+
+@timer
+def slow_function():
+    time.sleep(1)
+
+slow_function()  # slow_function took 1.001234 seconds
+```
+
+`time.perf_counter()` is the best clock for measuring durations, and `functools.wraps` preserves the original function's name and docstring.
+
+=== ANSWER 2 ===
+
+Average speed = distance ÷ time = 120 miles ÷ 1.5 hours = **80 miles per hour**.
+
+=== ANSWER 3 ===
+
+DNA and RNA are both nucleic acids, but they differ in several key ways:
+
+**Sugar:** DNA contains deoxyribose; RNA contains ribose, which has one extra oxygen atom (a hydroxyl group).
+
+**Bases:** Both use adenine, guanine, and cytosine. DNA uses thymine, while RNA uses uracil instead.
+
+**Structure:** DNA is typically a double-stranded helix. RNA is usually single-stranded, though it can fold into complex shapes.
+
+**Function:** DNA stores long-term genetic information. RNA carries out tasks involving that information: mRNA carries instructions from DNA to ribosomes, tRNA brings amino acids for protein building, and rRNA forms part of the ribosome itself.
+
+**Stability:** DNA is more chemically stable, which suits long-term storage. RNA is less stable and generally shorter-lived.
+
+**Location:** DNA is found mainly in the nucleus (and mitochondria), while RNA is made in the nucleus but functions largely in the cytoplasm.
+
+=== ANSWER 4 ===
+
+**Ember and the Little Spark**
+
+Far up in the misty mountains lived a young dragon named Ember. She had shimmering green scales, wings as wide as a barn door, and one very big secret: she was afraid of fire.
+
+Every other dragon in the valley loved to puff great golden flames. But whenever Ember felt a tickle in her throat, she clamped her mouth shut and held her breath until it went away.
+
+One chilly evening, her friend Pip the mouse came shivering to her cave. "Ember, it's so cold. My whiskers are frozen!"
+
+Ember wanted to help, but the only way to warm Pip was with fire. Her tummy fluttered. Her knees wobbled. Then she looked at Pip's tiny, trembling paws, and she took a slow, deep breath.
+
+"Just a little one," she whispered.
+
+She opened her mouth, and out came a single, tiny spark. It floated down onto the logs and began to glow, soft and orange and gentle. It didn't roar. It didn't burn. It simply crackled and warmed the whole cave like a hug.
+
+Pip sighed happily and curled up beside it. "Ember, it's wonderful."
+
+Ember watched the flickering light dance on the walls. Maybe fire wasn't something to fear after all. Maybe it was something to care for, the way you'd care for a friend.
+
+From that night on, Ember kept her little fire burning whenever someone needed warmth, and she was never afraid again.
+
+Now close your eyes, little one. Somewhere in the mountains, a small green dragon is keeping the night warm for you.
+
+Goodnight.
+
+=== ANSWER 5 ===
+
+Powers of 2 modulo 7 repeat in a cycle of length 3: 2¹ ≡ 2, 2² ≡ 4, 2³ ≡ 1 (mod 7).
+
+Since 100 = 3 × 33 + 1, we have 2¹⁰⁰ = (2³)³³ · 2 ≡ 1³³ · 2 ≡ 2 (mod 7).
+
+The remainder is **2**.
+
+=== ANSWER 6 ===
+
+The fast-doubling method computes F(n) in O(log n) time, using these identities:
+
+- F(2k) = F(k) · (2·F(k+1) − F(k))
+- F(2k+1) = F(k)² + F(k+1)²
+
+```python
+def fibonacci(n: int) -> int:
+    """Return the n-th Fibonacci number (F(0)=0, F(1)=1) in O(log n) time."""
+    if n < 0:
+        raise ValueError("n must be non-negative")
+
+    def fib_pair(k):
+        # Returns (F(k), F(k+1))
+        if k == 0:
+            return (0, 1)
+        a, b = fib_pair(k // 2)
+        c = a * (2 * b - a)      # F(2m)
+        d = a * a + b * b        # F(2m+1)
+        if k % 2 == 0:
+            return (c, d)
+        return (d, c + d)
+
+    return fib_pair(n)[0]
+
+print(fibonacci(10))   # 55
+print(fibonacci(100))  # 354224848179261915075
+```
+
+For very large n, Python's big integers handle the arithmetic automatically. For simpler cases, an iterative O(n) loop with two variables also works well.

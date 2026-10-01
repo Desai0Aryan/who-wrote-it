@@ -1,0 +1,121 @@
+```python
+# Prompt 2: Rectangle perimeter 36, length = 2 * width. Find area.
+# P = 2 * (L + W) = 36 => L + W = 18. L = 2W => 3W = 18 => W = 6, L = 12. Area = L * W = 72.
+import sympy as sp
+W = sp.Symbol('W')
+eq = sp.Eq(2 * (2*W + W), 36)
+w_val = sp.solve(eq, W)[0]
+l_val = 2 * w_val
+area = l_val * w_val
+print(f"Prompt 2: W={w_val}, L={l_val}, Area={area}")
+
+# Prompt 3: 2x + y = 7, x - y = 2
+x, y = sp.symbols('x y')
+sol = sp.solve((2*x + y - 7, x - y - 2), (x, y))
+print(f"Prompt 3: {sol}")
+
+# Prompt 5: Shirt costs $40 after a 20% discount. Original price?
+# 0.8 * Orig = 40 => Orig = 50
+orig = 40 / 0.8
+print(f"Prompt 5: {orig}")
+
+
+```
+
+```text
+Prompt 2: W=6, L=12, Area=72
+Prompt 3: {x: 3, y: 1}
+Prompt 5: 50.0
+
+
+```
+
+=== ANSWER 1 ===
+The sky is blue due to a phenomenon called **Rayleigh scattering**. Sunlight reaches Earth's atmosphere and is scattered in all directions by all the gases and particles in the air. Because light travels in waves, different colors of light have different wavelengths. Blue light travels in smaller, shorter waves than other colors, meaning it gets scattered more than the other colors, causing us to see a blue sky when we look up.
+
+=== ANSWER 2 ===
+To find the area of the rectangle, we can set up an algebraic equation based on the given information:
+
+* Let the width be $W$ and the length be $L$.
+* We are given that the length is twice the width: $L = 2W$.
+* The perimeter of a rectangle is given by the formula $P = 2(L + W) = 36$.
+
+Substitute $L = 2W$ into the perimeter formula:
+$2(2W + W) = 36$
+$2(3W) = 36$
+$6W = 36$
+$W = 6$
+
+Now, find the length:
+$L = 2(6) = 12$
+
+Finally, calculate the area:
+$\text{Area} = L \times W = 12 \times 6 = 72$.
+
+The area of the rectangle is **72**.
+
+=== ANSWER 3 ===
+To solve the system of equations:
+
+1. $2x + y = 7$
+2. $x - y = 2$
+
+We can use the elimination method by adding the two equations together to eliminate $y$:
+$(2x + y) + (x - y) = 7 + 2$
+$3x = 9$
+$x = 3$
+
+Now, substitute $x = 3$ back into the second equation to find $y$:
+$3 - y = 2$
+$-y = -1$
+$y = 1$
+
+The solution to the system is **$x = 3$ and $y = 1$** (or the ordered pair $(3, 1)$).
+
+=== ANSWER 4 ===
+
+* **Haiku 1**
+Crisp breeze through the trees,
+Amber leaves begin to fall,
+Nature goes to sleep.
+* **Haiku 2**
+Golden morning mist,
+Pumpkin patches glowing bright,
+Harvest time is here.
+* **Haiku 3**
+Frost upon the grass,
+Chilly whispers in the dark,
+Swirling scarlet dance.
+
+=== ANSWER 5 ===
+To find the original price of the shirt:
+
+* A 20% discount means you pay $100\% - 20\% = 80\%$ of the original price.
+* Let $P$ be the original price.
+* $0.80 \times P = 40$
+
+To solve for $P$:
+$P = \frac{40}{0.80} = 50$
+
+The original price of the shirt was **$50**.
+
+=== ANSWER 6 ===
+Subject: Maintenance Request: Broken Heater at [Your Apartment Number]
+
+Dear [Landlord's Name],
+
+I hope this message finds you well.
+
+I am writing to let you know that the heater in my apartment is currently not working. With the colder weather setting in, the apartment is dropping significantly in temperature, and it is becoming quite uncomfortable.
+
+Could you please send a maintenance technician to take a look at it as soon as possible? I am generally available [mention your availability, e.g., in the evenings / work from home on certain days], but please let me know when someone will be stopping by so I can ensure access.
+
+Thank you for your prompt attention to this matter.
+
+Best regards,
+
+[Your Name]
+
+[Your Apartment Number]
+
+[Your Phone Number]

@@ -1,0 +1,106 @@
+```python
+from fractions import Fraction
+f = Fraction(0.375).limit_denominator()
+print(f)
+
+
+```
+
+```text
+3/8
+
+
+```
+
+=== ANSWER 1 ===
+To convert $0.375$ to a fraction in lowest terms:
+
+1. Write the decimal as a fraction over a power of 10: $\frac{375}{1000}$
+2. Find the greatest common divisor (GCD) of 375 and 1000, which is 125.
+3. Divide the numerator and denominator by 125: $\frac{375 \div 125}{1000 \div 125} = \frac{3}{8}$.
+
+Thus, $0.375$ as a fraction in lowest terms is **$\frac{3}{8}$**.
+
+=== ANSWER 2 ===
+**App Name:** StudySync
+
+**The Pitch:**
+Finding the right study partner shouldn't be left to chance bulletin boards or awkward group chat messages. Meet **StudySync**, the ultimate mobile app designed to connect students based on exact courses, study styles, schedules, and academic goals. Whether you're cramming for organic chemistry, preparing for finals, or looking for a long-term accountability partner for your language studies, StudySync uses smart matching algorithms to pair you with compatible peers on your campus or online. With integrated scheduling, shared whiteboards, and a safe in-app chat, StudySync turns isolated studying into a collaborative, engaging, and successful experience. Stop studying hard alone—start studying smart together.
+
+=== ANSWER 3 ===
+Here is a Java method that checks whether two strings are anagrams:
+
+```java
+import java.util.Arrays;
+
+public class AnagramChecker {
+    public static boolean areAnagrams(String s1, String s2) {
+        if (s1 == null || s2 == null) {
+            return false;
+        }
+        
+        // Remove spaces and convert to lowercase for uniform comparison
+        char[] c1 = s1.replaceAll("\\s+", "").toLowerCase().toCharArray();
+        char[] c2 = s2.replaceAll("\\s+", "").toLowerCase().toCharArray();
+        
+        if (c1.length != c2.length) {
+            return false;
+        }
+        
+        Arrays.sort(c1);
+        Arrays.sort(c2);
+        
+        return Arrays.equals(c1, c2);
+    }
+}
+
+```
+
+=== ANSWER 4 ===
+**What is Inflation?**
+Inflation is the general increase in prices and fall in the purchasing value of money over time. When inflation rises, every unit of currency buys a smaller percentage of a good or service, meaning the cost of living increases.
+
+**What Causes It?**
+Inflation is generally driven by a few primary economic forces:
+
+* **Demand-Pull Inflation:** Occurs when aggregate demand for goods and services outpaces aggregate supply. Often described as "too much money chasing too few goods," this happens in growing economies with low unemployment and high consumer spending.
+* **Cost-Push Inflation:** Occurs when the costs of production increase—such as rising wages, raw material prices, or energy costs—forcing businesses to raise prices to maintain profit margins (e.g., supply chain shocks or oil crises).
+* **Built-In (Wage-Price Spiral) Inflation:** Occurs when workers demand higher wages to keep up with rising living costs, which in turn leads businesses to raise their prices further to cover those higher wage costs.
+* **Expansionary Monetary Policy:** When central banks increase the money supply too rapidly (printing money or lowering interest rates excessively), the abundance of currency can diminish its relative value, driving up prices.
+
+=== ANSWER 5 ===
+Here is a Python function that checks whether the parentheses (along with brackets and braces) in a string are balanced using a stack:
+
+```python
+def is_balanced(s: str) -> bool:
+    stack = []
+    mapping = {")": "(", "}": "{", "]": "["}
+    
+    for char in s:
+        if char in mapping.values():
+            stack.append(char)
+        elif char in mapping.keys():
+            if not stack or stack.pop() != mapping[char]:
+                return False
+                
+    return len(stack) == 0
+
+```
+
+=== ANSWER 6 ===
+Here is a Python function that removes duplicates from a list while preserving the original order:
+
+```python
+def remove_duplicates(input_list):
+    seen = set()
+    return [item for item in input_list if not (item in seen or seen.add(item))]
+
+```
+
+Alternatively, utilizing Python's `dict.fromkeys()` (available in Python 3.7+ where dictionary insertion order is guaranteed):
+
+```python
+def remove_duplicates_clean(input_list):
+    return list(dict.fromkeys(input_list))
+
+```

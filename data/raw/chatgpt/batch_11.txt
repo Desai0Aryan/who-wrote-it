@@ -1,0 +1,116 @@
+=== ANSWER 1 ===
+
+```
+import time
+from functools import wraps
+
+def timer(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.perf_counter()
+        result = func(*args, **kwargs)
+        elapsed = time.perf_counter() - start
+        print(f"{func.__name__} took {elapsed:.6f} seconds")
+        return result
+
+    return wrapper
+
+@timer
+def example():
+    time.sleep(1)
+
+example()
+```
+
+ === ANSWER 2 ===
+
+ Average speed = distance ÷ time
+
+ $$
+120 \div 1.5 = 80
+$$
+
+ **Answer: 80 miles per hour.**
+
+ === ANSWER 3 ===
+
+ DNA and RNA are both nucleic acids, but they differ in several key ways:
+
+ - **Sugar:** DNA contains deoxyribose; RNA contains ribose.
+- **Bases:** DNA uses adenine (A), thymine (T), cytosine (C), and guanine (G). RNA uses adenine (A), uracil (U), cytosine (C), and guanine (G).
+- **Structure:** DNA is usually double-stranded, while RNA is usually single-stranded.
+- **Main role:** DNA primarily stores genetic information. RNA helps use that information to make proteins and also performs other cellular functions.
+- **Stability:** DNA is generally more chemically stable than RNA.
+
+ === ANSWER 4 ===
+
+ The Dragon Who Feared Fire
+
+Once upon a time, in a valley surrounded by silver mountains, there lived a young dragon named Ember.
+
+ There was just one problem: Ember was afraid of fire.
+
+ Whenever the other dragons breathed bright orange flames into the night sky, Ember hid behind a rock and covered his eyes. He worried that even the tiniest spark might burn him.
+
+ One evening, a little fox named Pip became lost in the mountains. The sun went down, and the valley grew cold.
+
+ Ember heard Pip shivering and knew he had to help.
+
+ He took a deep breath. A tiny flame flickered from his mouth.
+
+ Ember gasped and nearly ran away. But then he noticed that the little flame wasn't frightening at all. It was warm and gentle.
+
+ So Ember carefully breathed a little more fire and made a cozy campfire for Pip.
+
+ "You're not afraid anymore!" Pip said.
+
+ "Maybe I was afraid of what I thought fire was," Ember replied.
+
+ From that night on, Ember still respected fire—but he no longer let his fear control him.
+
+ And whenever the valley grew cold, everyone knew which dragon could bring the warmest light.
+
+ The end.
+
+ === ANSWER 5 ===
+
+ The powers of 2 repeat modulo 7:
+
+ $$
+2^1 \equiv 2,\quad
+2^2 \equiv 4,\quad
+2^3 \equiv 1 \pmod 7
+$$
+
+ The pattern repeats every 3 powers. Since
+
+ $$
+100 \equiv 1 \pmod 3,
+$$
+
+ we have
+
+ $$
+2^{100} \equiv 2^1 \equiv 2 \pmod 7.
+$$
+
+ **Answer: 2**
+
+ === ANSWER 6 ===
+
+ For an efficient solution, use **iterative dynamic programming**, which runs in $O(n)$ time and $O(1)$ space:
+
+```
+def fibonacci(n):
+    if n < 0:
+        raise ValueError("n must be non-negative")
+
+    a, b = 0, 1
+
+    for _ in range(n):
+        a, b = b, a + b
+
+    return a
+```
+
+ For example, `fibonacci(10)` returns `55`.

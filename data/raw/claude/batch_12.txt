@@ -1,0 +1,109 @@
+=== ANSWER 1 ===
+
+```python
+def quicksort(arr):
+    """Return a new sorted list using quicksort."""
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
+
+
+def quicksort_inplace(arr, lo=0, hi=None):
+    """Sort arr in place using Lomuto partitioning."""
+    if hi is None:
+        hi = len(arr) - 1
+    if lo < hi:
+        pivot = arr[hi]
+        i = lo
+        for j in range(lo, hi):
+            if arr[j] < pivot:
+                arr[i], arr[j] = arr[j], arr[i]
+                i += 1
+        arr[i], arr[hi] = arr[hi], arr[i]
+        quicksort_inplace(arr, lo, i - 1)
+        quicksort_inplace(arr, i + 1, hi)
+
+
+if __name__ == "__main__":
+    data = [3, 6, 8, 10, 1, 2, 1]
+    print(quicksort(data))        # [1, 1, 2, 3, 6, 8, 10]
+    quicksort_inplace(data)
+    print(data)                   # [1, 1, 2, 3, 6, 8, 10]
+```
+
+The first version is simple and readable, using extra memory. The second sorts in place. Both average O(n log n) time, with O(n²) worst case (mitigated by picking a middle or random pivot).
+
+=== ANSWER 2 ===
+
+The expected value is 3.5.
+
+E[X] = (1 + 2 + 3 + 4 + 5 + 6) / 6 = 21/6 = 3.5
+
+=== ANSWER 3 ===
+
+The sum is 2.
+
+For a geometric series with first term a = 1 and ratio r = 1/2 (where |r| < 1), the sum is a / (1 − r) = 1 / (1 − 1/2) = 2.
+
+=== ANSWER 4 ===
+
+The distance is 5.
+
+d = √((4 − 1)² + (6 − 2)²) = √(9 + 16) = √25 = 5
+
+=== ANSWER 5 ===
+
+**Subject: Out of Office (Emotionally and Physically)**
+
+Hello!
+
+Thank you for your email. I am currently out of the office, living my best life somewhere with questionable Wi-Fi and excellent snacks.
+
+I will be returning on [date], at which point I will pretend to be thrilled about the 847 emails waiting for me.
+
+If your matter is urgent, please contact [colleague's name], who has generously agreed to handle emergencies. If it's not urgent, please enjoy this opportunity to practice patience, a skill we could all use more of.
+
+If you're emailing to check whether I've seen your previous email: I haven't. I'm on vacation. That's the whole point.
+
+Warm regards,
+[Your Name]
+
+*P.S. If you don't hear back from me within a week of my return, please assume I've been lost to the inbox. Send a search party, or at least a coffee.*
+
+=== ANSWER 6 ===
+
+Commander Reyes had been alone on Kepler Station for 214 days, and in that time she had learned every sound the station could make: the tick of cooling metal, the sigh of the recyclers, the low hum behind everything that she'd stopped hearing weeks ago.
+
+She did not know this one.
+
+*Knock. Knock-knock.*
+
+She froze mid-sip, a bulb of lukewarm coffee drifting from her fingers. The sound came again from the aft airlock, three taps, unhurried, like a neighbor who wasn't worried about being kept waiting.
+
+"Station, confirm external sensors," she said.
+
+"No objects detected within two kilometers," the computer replied.
+
+*Knock. Knock-knock.*
+
+Reyes pulled herself down the corridor, one hand over the other, heart thudding against her ribs. The airlock's small round window showed nothing but stars and the pale curve of the planet below. She pressed her face close and looked left, then right, then down.
+
+Nothing. Just the dark.
+
+She let out a shaky laugh. Micrometeoroids, thermal expansion, a loose panel. Any of a hundred explanations.
+
+Then, from the other side of the glass, a gloved hand drifted slowly into view and pressed itself flat against the window.
+
+It wore a mission patch she recognized. Her own.
+
+Behind the visor, her own face looked back at her, older, and very tired, and mouthing a single word.
+
+*Don't.*
+
+Her hand hovered over the release.
+
+*Knock.*

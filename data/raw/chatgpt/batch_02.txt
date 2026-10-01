@@ -1,0 +1,105 @@
+=== ANSWER 1 ===
+
+ $$
+\lim_{x\to 0}\frac{\sin x}{x}=1
+$$
+
+ One reason is the **Squeeze Theorem**. For $0<x<\frac{\pi}{2}$,
+
+ $$
+\cos x < \frac{\sin x}{x} < 1.
+$$
+
+ As $x\to0$, both $\cos x$ and $1$ approach $1$. Therefore, by the Squeeze Theorem,
+
+ $$
+\boxed{1}.
+$$
+
+ The same result holds when approaching $0$ from the negative side.
+
+---
+
+ === ANSWER 2 ===
+
+ Later School Start Times
+
+Schools should have later start times because getting enough sleep is essential for students' health, concentration, and academic performance. Teenagers' natural sleep schedules often make it difficult for them to fall asleep early, so very early school start times can leave them chronically sleep-deprived. Starting school later would give students more opportunity to get the sleep they need, helping them arrive at school more alert and prepared to learn. It could also improve students' mood, attention, and ability to participate effectively in class. Although changing school schedules would require adjustments for families and schools, the potential benefits to students' well-being and learning make later start times worth serious consideration.
+
+ === ANSWER 3 ===
+
+ The **Industrial Revolution** was a period of major economic and technological change that began in Britain in the late 18th century and spread to other parts of Europe, North America, and beyond during the 19th century. Production shifted from small workshops and hand tools toward factories, machines, and large-scale manufacturing. Innovations such as the steam engine, mechanized textile machinery, and railroads dramatically increased production and transportation.
+
+ The changes transformed society. Many people moved from rural areas to cities to work in factories, leading to rapid **urbanization**. New industrial working and middle classes emerged, while factory workers often faced long hours, low wages, and dangerous conditions. Over time, these conditions contributed to labor unions and demands for workplace reforms. The Industrial Revolution also increased economic production, expanded markets, accelerated transportation and communication, and helped create the modern industrial economy.
+
+---
+
+ === ANSWER 4 ===
+
+```
+def primes_up_to(n):
+    """Return a list of all prime numbers up to and including n."""
+    if n < 2:
+        return []
+
+    is_prime = [True] * (n + 1)
+    is_prime[0] = is_prime[1] = False
+
+    p = 2
+    while p * p <= n:
+        if is_prime[p]:
+            for multiple in range(p * p, n + 1, p):
+                is_prime[multiple] = False
+        p += 1
+
+    return [i for i, prime in enumerate(is_prime) if prime]
+```
+
+ For example:
+
+```
+print(primes_up_to(20))
+# [2, 3, 5, 7, 11, 13, 17, 19]
+```
+
+ The Sieve of Eratosthenes runs in approximately **$O(n\log\log n)$** time and uses **$O(n)$** space.
+
+---
+
+ === ANSWER 5 ===
+
+ The **theory of evolution by natural selection**, developed independently by Charles Darwin and Alfred Russel Wallace, explains how populations of organisms change over generations.
+
+ Its basic mechanism is:
+
+ 1. **Variation:** Individuals in a population differ in their traits.
+2. **Heritability:** Some of those differences can be passed from parents to offspring.
+3. **Competition:** Organisms produce more offspring than can survive and reproduce.
+4. **Differential survival and reproduction:** Individuals with traits that are advantageous in a particular environment tend to leave more offspring.
+5. **Change over generations:** Advantageous heritable traits become more common in the population.
+
+ For example, if some insects are naturally better camouflaged against predators, they may survive and reproduce more successfully. Over many generations, camouflage may therefore become more common in that population.
+
+ Natural selection acts on **individual differences**, but its evolutionary effects are observed as changes in **populations over generations**.
+
+---
+
+ === ANSWER 6 ===
+
+ **Photosynthesis** is the process by which plants, algae, and some bacteria use light energy to convert carbon dioxide and water into chemical energy stored in glucose.
+
+ The overall equation is:
+
+ $$
+6CO_2 + 6H_2O + \text{light energy}
+\rightarrow C_6H_{12}O_6 + 6O_2
+$$
+
+ In plants, photosynthesis mainly occurs in the **chloroplasts**.
+
+ - **Light-dependent reactions:** Chlorophyll absorbs light energy. This energy is used to split water molecules, releasing oxygen, and to produce energy-rich molecules used in the next stage.
+- **Calvin cycle:** The plant uses carbon dioxide along with the captured chemical energy to build sugars.
+- **Glucose:** The resulting sugars provide chemical energy and carbon for growth and other cellular processes.
+- **Oxygen:** Oxygen produced from splitting water is released into the atmosphere.
+
+ In simplified terms, **light energy + water + carbon dioxide → stored chemical energy + oxygen**.

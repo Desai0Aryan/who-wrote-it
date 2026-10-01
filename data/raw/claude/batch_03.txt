@@ -1,0 +1,153 @@
+=== ANSWER 1 ===
+The Pythagorean theorem states that in a right triangle, the square of the hypotenuse (the side opposite the right angle) equals the sum of the squares of the other two sides: **a² + b² = c²**.
+
+For example, a triangle with legs 3 and 4 has a hypotenuse of 5, since 9 + 16 = 25.
+
+**Where it's used:**
+- **Construction and carpentry:** checking that corners are square (the 3-4-5 method) and calculating diagonal braces or roof rafter lengths.
+- **Navigation and surveying:** finding straight-line distances from perpendicular measurements.
+- **Computer graphics and games:** computing the distance between two points, which is the basis of collision detection and movement.
+- **Physics and engineering:** combining perpendicular vector components, such as velocity or force.
+- **Data science:** Euclidean distance in clustering and nearest-neighbor algorithms generalizes the theorem to many dimensions.
+- **Everyday life:** figuring out whether a TV or a ladder will fit, or the diagonal of a screen.
+
+=== ANSWER 2 ===
+A hash table stores key-value pairs and gives average O(1) lookup, insertion, and deletion.
+
+**How it works:**
+1. A **hash function** converts a key into an integer.
+2. That integer is reduced (usually with modulo) to an index in an underlying array of "buckets."
+3. The value is stored at that index.
+4. Two different keys can land on the same index, which is called a **collision**. Common solutions are **chaining** (each bucket holds a list of entries) and **open addressing** (probe for another free slot).
+5. As the table fills, the **load factor** (items ÷ buckets) rises and performance degrades, so the table **resizes** (typically doubling) and re-inserts everything.
+
+**Simple implementation using chaining:**
+
+```python
+class HashTable:
+    def __init__(self, capacity=8):
+        self.capacity = capacity
+        self.size = 0
+        self.buckets = [[] for _ in range(capacity)]
+
+    def _index(self, key):
+        return hash(key) % self.capacity
+
+    def put(self, key, value):
+        bucket = self.buckets[self._index(key)]
+        for i, (k, _) in enumerate(bucket):
+            if k == key:
+                bucket[i] = (key, value)  # update existing key
+                return
+        bucket.append((key, value))
+        self.size += 1
+        if self.size / self.capacity > 0.75:
+            self._resize()
+
+    def get(self, key, default=None):
+        bucket = self.buckets[self._index(key)]
+        for k, v in bucket:
+            if k == key:
+                return v
+        return default
+
+    def delete(self, key):
+        bucket = self.buckets[self._index(key)]
+        for i, (k, _) in enumerate(bucket):
+            if k == key:
+                del bucket[i]
+                self.size -= 1
+                return True
+        return False
+
+    def _resize(self):
+        old_items = [item for bucket in self.buckets for item in bucket]
+        self.capacity *= 2
+        self.buckets = [[] for _ in range(self.capacity)]
+        self.size = 0
+        for k, v in old_items:
+            self.put(k, v)
+
+    def __contains__(self, key):
+        return self.get(key, None) is not None
+
+
+# Usage
+ht = HashTable()
+ht.put("apple", 3)
+ht.put("banana", 5)
+print(ht.get("apple"))   # 3
+ht.delete("apple")
+print(ht.get("apple"))   # None
+```
+
+=== ANSWER 3 ===
+**Using a subquery (works in most databases):**
+
+```sql
+SELECT MAX(salary) AS SecondHighestSalary
+FROM Employees
+WHERE salary < (SELECT MAX(salary) FROM Employees);
+```
+
+This returns `NULL` if there is no second-highest value, which is usually the desired behavior.
+
+**Using a window function (handles ties correctly and generalizes to the Nth highest):**
+
+```sql
+SELECT DISTINCT salary AS SecondHighestSalary
+FROM (
+    SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
+    FROM Employees
+) ranked
+WHERE rnk = 2;
+```
+
+**Using LIMIT/OFFSET (MySQL, PostgreSQL):**
+
+```sql
+SELECT DISTINCT salary
+FROM Employees
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1;
+```
+
+Note that the last version returns no row (rather than NULL) when there's no second-highest salary.
+
+=== ANSWER 4 ===
+There are **120** ways.
+
+The first position can be filled by any of 5 people, the second by any of the remaining 4, then 3, 2, and 1:
+
+5! = 5 × 4 × 3 × 2 × 1 = **120**
+
+=== ANSWER 5 ===
+**What it measures:** Standard deviation quantifies how spread out the values in a data set are around the mean. A small standard deviation means the data points cluster close to the average; a large one means they are more dispersed. It's expressed in the same units as the data, which makes it easier to interpret than variance.
+
+**Computation for 2, 4, 4, 4, 5, 5, 7, 9:**
+
+1. **Mean:** (2 + 4 + 4 + 4 + 5 + 5 + 7 + 9) / 8 = 40 / 8 = **5**
+2. **Squared deviations from the mean:**
+   - (2 − 5)² = 9
+   - (4 − 5)² = 1 (three times) → 3
+   - (5 − 5)² = 0 (twice) → 0
+   - (7 − 5)² = 4
+   - (9 − 5)² = 16
+   
+   Sum = 9 + 3 + 0 + 4 + 16 = **32**
+3. **Population variance:** 32 / 8 = **4**
+4. **Population standard deviation:** √4 = **2**
+
+If these data are a sample rather than an entire population, divide by n − 1 = 7 instead: variance = 32/7 ≈ 4.571, and the sample standard deviation ≈ **2.138**.
+
+=== ANSWER 6 ===
+The ocean is salty mainly because of a long-running process involving rocks, rain, and rivers, combined with the fact that water leaves the ocean but salt doesn't.
+
+1. **Rain weathers rock on land.** Rainwater absorbs a little carbon dioxide from the air, making it slightly acidic. As it falls on rocks, it slowly dissolves minerals and releases ions such as sodium, calcium, and potassium.
+2. **Rivers carry these ions to the sea.** Over millions of years, rivers have delivered enormous amounts of dissolved minerals to the ocean.
+3. **Evaporation concentrates the salt.** Water evaporates from the ocean surface to form clouds, but the dissolved salts stay behind, so they accumulate over time.
+4. **Undersea sources add more.** Hydrothermal vents and volcanic activity on the seafloor release dissolved minerals and chemicals directly into seawater.
+
+The most abundant ions in seawater are **chloride** and **sodium**, which together make up table salt (sodium chloride). Chloride comes largely from volcanic and hydrothermal sources, while sodium comes mostly from weathered rock.
+
+The ocean's salinity is fairly stable, at about 3.5% by weight, because salt is also removed at roughly the same rate it's added, through processes like mineral deposition on the seafloor and the formation of sediments. That's why the sea doesn't just keep getting saltier.

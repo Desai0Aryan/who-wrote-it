@@ -1,0 +1,69 @@
+=== ANSWER 1 ===
+
+ Solve:\
+
+$$
+x^2-5x+6=0
+$$
+
+ Factor:\
+
+$$
+(x-2)(x-3)=0
+$$
+
+ Therefore:\
+
+$$
+\boxed{x=2 \text{ or } x=3}
+$$
+
+ === ANSWER 2 ===
+
+ Here’s a short, polished introduction:
+
+ Guest Lecturer Introduction
+
+Good afternoon, everyone. It is my pleasure to welcome our guest lecturer, an expert in climate science who will help us better understand the causes and impacts of climate change. Today, we’ll have the opportunity to learn about the science behind our changing climate and what it means for our future. Please join me in giving a warm welcome to our guest lecturer.
+
+ === ANSWER 3 ===
+
+```
+from collections import Counter
+
+def word_frequencies(filename):
+    with open(filename, "r", encoding="utf-8") as file:
+        text = file.read().lower()
+
+    words = text.split()
+    return Counter(words)
+```
+
+ For example:
+
+```
+frequencies = word_frequencies("text.txt")
+print(frequencies)
+```
+
+ This returns a `Counter` mapping each word to the number of times it appears.
+
+ === ANSWER 4 ===
+
+ Ocean tides are mainly caused by the **gravitational pull of the Moon**, with a smaller contribution from the Sun.
+
+ As the Moon orbits Earth, its gravity pulls on Earth's oceans, creating a bulge of water on the side facing the Moon. A second bulge forms on the opposite side because of the motion of the Earth-Moon system. As Earth rotates through these bulges, most coastal areas experience roughly **two high tides and two low tides each day**.
+
+ The Sun also affects tides. When the Sun, Moon, and Earth are aligned, their gravitational effects combine to produce especially high **spring tides**. When the Sun and Moon are at roughly right angles relative to Earth, their effects partially counteract each other, producing weaker **neap tides**.
+
+ === ANSWER 5 ===
+
+ **Mitochondria** are organelles that produce most of a cell's usable energy. They convert energy stored in nutrients into **ATP (adenosine triphosphate)** through a process called cellular respiration.
+
+ ATP provides energy for cellular activities such as movement, growth, transport of substances, and chemical reactions. Mitochondria also have roles in processes including cell signaling and programmed cell death.
+
+ === ANSWER 6 ===
+
+ Argumentative Paragraph About Homework
+
+Homework should be limited because excessive assignments can interfere with students’ ability to rest, participate in activities, and maintain a healthy balance between school and personal life. While some homework can reinforce important concepts and provide opportunities for practice, large amounts of repetitive work do not necessarily improve learning. Schools should therefore focus on assigning purposeful homework that directly supports classroom instruction rather than measuring learning through the quantity of work students complete at home.

@@ -1,0 +1,77 @@
+=== ANSWER 1 ===
+The limit is 1.
+
+**Why (geometric argument):** For a small positive angle x (in radians), compare three areas in the unit circle: the triangle with area (1/2)sin x, the circular sector with area (1/2)x, and the larger triangle with area (1/2)tan x. Since they nest inside one another, sin x < x < tan x. Dividing by sin x gives 1 < x/sin x < 1/cos x, and taking reciprocals gives cos x < sin(x)/x < 1. As x → 0, cos x → 1, so by the Squeeze Theorem sin(x)/x → 1. The same holds for negative x because sin(x)/x is an even function.
+
+**Why (calculus argument):** Since sin(0)/0 is a 0/0 form, L'Hôpital's rule gives lim cos(x)/1 = 1. (This is somewhat circular if you're using the limit to derive the derivative of sine, which is why the squeeze argument is the standard proof.)
+
+Intuitively, near zero the sine curve is almost indistinguishable from the line y = x, so their ratio approaches 1.
+
+=== ANSWER 2 ===
+Schools should start later in the morning, because the evidence shows that early start times work against the very goals education is meant to serve. During adolescence, the body's internal clock shifts, making it biologically difficult for teenagers to fall asleep before about 11 p.m. and to wake up alert at 6 a.m. The result is a generation of students who are chronically sleep deprived, struggling to concentrate, retain information, and regulate their moods during the first classes of the day. Districts that have pushed start times back have reported higher attendance, improved grades, fewer car accidents among teen drivers, and better mental health outcomes. Critics worry about disrupted sports schedules and bus logistics, but these are solvable scheduling problems, while the harm of exhausted students is a daily cost paid in learning and health. If we truly want students to succeed, we should align the school day with how young people's bodies actually work, rather than asking them to fight their own biology every morning.
+
+=== ANSWER 3 ===
+The Industrial Revolution was the shift from hand production and agrarian economies to machine-based manufacturing, powered first by water and steam and later by other energy sources. It began in Britain in the late 1700s and spread to Europe, North America, and eventually the rest of the world through the 1800s.
+
+**Key developments:** Innovations like the spinning jenny, the power loom, and James Watt's improved steam engine mechanized textile production and freed factories from relying on rivers. Iron and steel production expanded, railways and steamships transformed transportation, and later advances such as the telegraph extended the pace of communication.
+
+**How it changed society:**
+- **Urbanization:** People moved in huge numbers from farms to cities seeking factory work, and cities grew rapidly, often with crowded housing, pollution, and poor sanitation.
+- **Work and labor:** Production moved from homes and workshops to factories with set hours and wage labor. Early conditions were harsh, including long days and child labor, which eventually spurred labor unions and reform laws.
+- **Economic growth:** Output and productivity soared, and over the long run living standards, life expectancy, and access to goods rose substantially.
+- **Social structure:** A new industrial middle class and a large urban working class emerged, reshaping politics and fueling movements for suffrage, workers' rights, and socialism.
+- **Global effects:** Industrial powers sought raw materials and markets, which intensified colonialism and widened economic gaps between industrialized and non-industrialized regions.
+- **Environment:** Heavy coal use began the large-scale rise in carbon emissions and environmental degradation that continues to shape the world today.
+
+=== ANSWER 4 ===
+```python
+def sieve_of_eratosthenes(n):
+    """Return a list of all primes less than or equal to n."""
+    if n < 2:
+        return []
+
+    is_prime = [True] * (n + 1)
+    is_prime[0] = is_prime[1] = False
+
+    for i in range(2, int(n ** 0.5) + 1):
+        if is_prime[i]:
+            # Mark multiples of i, starting at i*i, as composite
+            for j in range(i * i, n + 1, i):
+                is_prime[j] = False
+
+    return [i for i, prime in enumerate(is_prime) if prime]
+
+
+print(sieve_of_eratosthenes(50))
+# [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+```
+
+The algorithm starts by assuming every number is prime, then for each prime it finds, crosses off all of its multiples. It only needs to check up to √n, and starting at i*i is safe because smaller multiples were already crossed off by smaller primes. Its time complexity is O(n log log n).
+
+=== ANSWER 5 ===
+Evolution by natural selection is the scientific theory, developed by Charles Darwin and Alfred Russel Wallace, that explains how populations of living things change over generations and how new species arise.
+
+**The core logic rests on a few observations:**
+1. **Variation:** Individuals within a population differ in their traits.
+2. **Heritability:** Many of these traits are passed from parents to offspring.
+3. **Overproduction:** Organisms tend to produce more offspring than the environment can support, so there is competition for limited resources.
+4. **Differential survival and reproduction:** Individuals whose traits happen to suit their environment better tend to survive and reproduce more, passing those traits on.
+
+Over many generations, helpful traits become more common in the population, while harmful ones become rarer. Given enough time and separation of populations, these accumulated changes can produce entirely new species from common ancestors.
+
+**Modern understanding:** Genetics later explained the source of variation, which comes from mutations and the shuffling of genes in sexual reproduction. Together with other mechanisms like genetic drift and gene flow, natural selection forms the foundation of modern evolutionary biology. The theory is supported by evidence from the fossil record, comparative anatomy, DNA similarities among species, and observed evolution in real time, such as antibiotic resistance in bacteria.
+
+=== ANSWER 6 ===
+Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in sugars. The overall equation is:
+
+6 CO₂ + 6 H₂O + light energy → C₆H₁₂O₆ + 6 O₂
+
+It takes place in chloroplasts and occurs in two main stages.
+
+**1. Light-dependent reactions (in the thylakoid membranes):**
+Chlorophyll absorbs sunlight, energizing electrons. This energy is used to split water molecules, releasing oxygen as a byproduct. The excited electrons move along an electron transport chain, which pumps hydrogen ions to build a gradient that drives the production of ATP. The electrons end up reducing NADP⁺ to NADPH. The result is a supply of ATP and NADPH, the energy carriers for the next stage.
+
+**2. Calvin cycle, or light-independent reactions (in the stroma):**
+Using the ATP and NADPH from the first stage, the cell captures carbon dioxide from the air. The enzyme RuBisCO attaches CO₂ to a five-carbon molecule (RuBP), and a series of reactions then builds three-carbon sugars (G3P). Some of this G3P is used to make glucose and other carbohydrates, while the rest regenerates RuBP so the cycle can continue.
+
+**Why it matters:** Photosynthesis produces the oxygen we breathe and forms the base of nearly all food chains by turning sunlight into usable energy.

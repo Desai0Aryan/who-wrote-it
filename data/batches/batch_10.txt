@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: What is the dot product of the vectors (1, 2, 3) and (4, 5, 6)?
+
+PROMPT 2: Explain the difference between permutations and combinations with an example.
+
+PROMPT 3: Explain how vaccines train the immune system.
+
+PROMPT 4: What is the difference between weather and climate?
+
+PROMPT 5: Find the area under y = x^2 from x = 0 to x = 3.
+
+PROMPT 6: What is the difference between a democracy and a republic?

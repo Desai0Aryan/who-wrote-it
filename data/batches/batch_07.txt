@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: What is the water cycle?
+
+PROMPT 2: Prove that the square root of 2 is irrational.
+
+PROMPT 3: Write a limerick about a cat who loves coffee.
+
+PROMPT 4: Explain the difference between a virus and a bacterium.
+
+PROMPT 5: Evaluate the integral of 2x * e^(x^2) dx.
+
+PROMPT 6: Write a dialogue between a robot and a child meeting for the first time.

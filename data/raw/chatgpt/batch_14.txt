@@ -1,0 +1,110 @@
+=== ANSWER 1 ===
+
+ The **stock market** is a system where people and institutions buy and sell shares of publicly traded companies.
+
+ At a basic level:
+
+ - **Companies raise money:** A company can sell shares to the public through an initial public offering (IPO). Investors who buy those shares become partial owners.
+- **Investors trade shares:** After shares are publicly listed, investors can buy and sell them from one another on stock exchanges.
+- **Prices change:** A stock's price moves based largely on supply and demand. Expectations about a company's future profits, economic conditions, interest rates, and news can all affect demand.
+- **Buyers and sellers are matched:** Stock exchanges and brokerage systems facilitate transactions. When someone is willing to buy at a price someone else is willing to accept, a trade occurs.
+- **Investors can make or lose money:** If you buy a stock for $50 and later sell it for $70, you've gained $20 per share before costs and taxes. If it falls to $30, you've lost $20 per share if you sell.
+- **Some stocks pay dividends:** Companies may distribute part of their profits to shareholders as cash payments.
+- **Indexes track groups of stocks:** Measures such as the S&P 500 and Dow Jones Industrial Average are used to track segments of the market.
+
+ One important distinction: **the company generally doesn't receive money every time its shares are traded.** The company receives proceeds when it issues shares (such as in an IPO or later offering); subsequent trades usually occur between investors.
+
+---
+
+ === ANSWER 2 ===
+
+```
+def merge_sorted_lists(a, b):
+    result = []
+    i = j = 0
+
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            result.append(a[i])
+            i += 1
+        else:
+            result.append(b[j])
+            j += 1
+
+    result.extend(a[i:])
+    result.extend(b[j:])
+
+    return result
+```
+
+ Example:
+
+```
+print(merge_sorted_lists([1, 3, 5], [2, 4, 6]))
+# [1, 2, 3, 4, 5, 6]
+```
+
+ This runs in **O(n + m)** time and uses **O(n + m)** space for the resulting list.
+
+---
+
+ === ANSWER 3 ===
+
+ Thank-you note
+
+Hi \[Neighbor’s Name\],
+
+ Thank you so much for watching my dog! I really appreciate you taking the time to help out and making sure \[Dog’s Name\] was well cared for while I was away. It was such a relief knowing they were in good hands.
+
+ I’m very grateful for your kindness and help. Thank you again!
+
+ Best,\
+ \[Your Name\]
+
+ I can also make it warmer, funnier, or more casual.
+
+---
+
+ === ANSWER 4 ===
+
+ Wedding toast
+
+To my wonderful sister and her new husband: may your marriage be filled with laughter, patience, adventure, and countless happy memories. I’ve had the privilege of watching my sister grow into the incredible person she is today, and I couldn’t be happier to see her begin this new chapter with someone who loves and supports her.
+
+ Here’s to a lifetime of love, happiness, and adventures together. Cheers to the happy couple!
+
+---
+
+ === ANSWER 5 ===
+
+ Course completion announcement
+
+I’m excited to share that I’ve officially completed my first machine learning course! 🎉
+
+ This course gave me a strong introduction to the fundamentals of machine learning and helped me better understand how data, algorithms, and models come together to solve real-world problems.
+
+ I’m proud of the progress I’ve made and excited to keep learning, building projects, and exploring the field further.
+
+ On to the next challenge! 🚀
+
+ #MachineLearning #Learning #DataScience #CareerDevelopment #Tech
+
+---
+
+ === ANSWER 6 ===
+
+ Request for Assignment Extension
+
+Dear Professor \[Last Name\],
+
+ I’m writing to ask whether it would be possible to receive a short extension on the \[Assignment Name\] assignment, which is currently due on \[Due Date\].
+
+ I’ve been working on the assignment, but I would appreciate some additional time to complete it carefully and submit work that meets the course expectations. If possible, could I have an extension until \[Proposed New Date\]?
+
+ I understand if an extension is not possible, and I appreciate your consideration of my request.
+
+ Best regards,\
+ \[Your Name\]\
+ \[Course Name/Section\]
+
+ I can make the email more formal, more concise, or add a specific reason for the request.

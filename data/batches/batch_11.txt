@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: Write a Python decorator that times how long a function takes to run.
+
+PROMPT 2: A train travels 120 miles in 1.5 hours. What is its average speed in miles per hour?
+
+PROMPT 3: What is the difference between DNA and RNA?
+
+PROMPT 4: Write a short bedtime story about a dragon who is afraid of fire.
+
+PROMPT 5: What is the remainder when 2^100 is divided by 7?
+
+PROMPT 6: Write a Python function that returns the n-th Fibonacci number efficiently.

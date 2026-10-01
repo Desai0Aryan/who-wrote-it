@@ -1,0 +1,41 @@
+=== ANSWER 1 ===
+**The Copper Spoon: A Warm Welcome with a Few Rough Edges**
+
+Tucked between a bookshop and a flower stall, The Copper Spoon feels like the kind of place you stumble on and then keep returning to. The room is all warm wood, hanging copper pans, and candlelight, with a menu that leans seasonal and unfussy. The roasted beet salad with whipped goat cheese was a bright, earthy start, and the slow-braised short rib fell apart at the touch of a fork, served over a silky parsnip purée. Dessert, a salted caramel pot de crème, was worth saving room for.
+
+Service was friendly and attentive, though the kitchen got a little backed up on a busy Saturday and our mains took nearly 40 minutes. Prices are fair for the quality, with entrées running $22 to $34. A slightly smaller wine list and a quicker pace would make it perfect, but even as it stands, it's a lovely spot for a date night or a quiet celebration. **4 out of 5 stars.**
+
+=== ANSWER 2 ===
+The probability that both marbles are red is **3/28**, about 10.7%.
+
+- First draw: 3 red out of 8 total, so P = 3/8.
+- Second draw (no replacement): 2 red out of 7 remaining, so P = 2/7.
+
+Multiply: (3/8) × (2/7) = 6/56 = **3/28**.
+
+=== ANSWER 3 ===
+The night market erupts into life as dusk settles, a river of lantern light spilling down a narrow street lined with crowded stalls. Smoke curls up from sizzling grills, carrying the sweet-savory scent of caramelized skewers, garlic, and charred chilies, while woks clang and flare with bursts of orange flame. Vendors call out over one another, their voices blending with the thump of distant music and the laughter of families weaving through the crush. Strings of bare bulbs sway overhead, casting a golden glow over mounds of glistening fruit, hand-stitched silks, and trays of tiny trinkets that glitter like treasure. Steam rises from bubbling pots of noodles and dumplings, fogging the air, and the ground is slick with spilled sweet syrup and the tread of a thousand shoes. Everywhere there is motion and color: a child clutching a paper cone of fried dough, a haggler grinning over a stack of ceramic bowls, and a street performer drawing a circle of delighted faces into the warm, humming night.
+
+=== ANSWER 4 ===
+Subtract 7 from both sides: 3x = 18.
+
+Divide both sides by 3: **x = 6**.
+
+Check: 3(6) + 7 = 18 + 7 = 25 ✓
+
+=== ANSWER 5 ===
+**Two Days, Seven Hills, and One Perfect Custard Tart: A Weekend in Lisbon**
+
+Lisbon doesn't announce itself so much as slowly seduce you. You arrive expecting a pretty European capital and instead find a city of steep, cobbled hills, pastel facades flaking in the sunlight, and rattling yellow trams that seem to defy gravity as they climb. By the time you've wandered your first narrow Alfama alleyway, following the sound of a distant fado singer and the smell of grilled sardines, you realize that a weekend here is both too short and exactly enough to fall a little bit in love.
+
+With only two days, the trick is to surrender to the city's rhythm rather than race through a checklist. Start Saturday morning with a warm pastel de nata and a bica at a corner café, then drift through the viewpoints, or miradouros, that give Lisbon its famous golden-hour glow. Spend the afternoon in Belém and the evening in Bairro Alto, where dinner stretches into drinks and the streets hum until late. Sunday is for slowing down: a leisurely market lunch, a ferry across the Tagus, and one last glass of vinho verde as the sun sinks over the river. In this post, I'll walk you through exactly how I spent my 48 hours, and where I'd go back to first.
+
+=== ANSWER 6 ===
+For the matrix A = [[2, 1], [1, 2]], solve det(A − λI) = 0:
+
+(2 − λ)(2 − λ) − (1)(1) = 0
+λ² − 4λ + 4 − 1 = 0
+λ² − 4λ + 3 = 0
+(λ − 1)(λ − 3) = 0
+
+The eigenvalues are **λ = 1** and **λ = 3**.

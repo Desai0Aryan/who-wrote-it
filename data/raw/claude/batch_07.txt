@@ -1,0 +1,99 @@
+=== ANSWER 1 ===
+The water cycle is the continuous movement of water through Earth's oceans, atmosphere, land, and living things.
+
+**Evaporation:** The sun heats water in oceans, lakes, and rivers, turning it into vapor that rises into the air. Plants also release vapor through their leaves (transpiration).
+
+**Condensation:** As the vapor rises and cools, it condenses into tiny droplets that gather to form clouds.
+
+**Precipitation:** When droplets grow heavy enough, they fall as rain, snow, sleet, or hail.
+
+**Collection:** Water that reaches the ground flows over the surface as runoff into streams, rivers, and oceans, or soaks into the soil and becomes groundwater. Some is stored as ice or snow, and the cycle then repeats.
+
+Powered mainly by solar energy and gravity, this cycle redistributes fresh water around the planet and shapes weather and climate.
+
+=== ANSWER 2 ===
+**Claim:** √2 is irrational.
+
+**Proof (by contradiction):** Suppose √2 is rational. Then √2 = a/b for integers a and b with b ≠ 0, where the fraction is in lowest terms (a and b share no common factor greater than 1).
+
+Squaring both sides gives 2 = a²/b², so a² = 2b².
+
+This means a² is even. If a were odd, a² would be odd, so a must be even. Write a = 2k for some integer k.
+
+Substituting: (2k)² = 2b², so 4k² = 2b², which simplifies to b² = 2k².
+
+So b² is even, and by the same reasoning b is even.
+
+Now both a and b are even, so they share the factor 2. This contradicts our assumption that a/b was in lowest terms.
+
+Therefore √2 cannot be written as a ratio of integers, so √2 is irrational. ∎
+
+=== ANSWER 3 ===
+A cat with a passion for brew
+Would leap on the counter at two,
+Lap up a latte,
+Then dash off all hot-ta-
+Pawed, wired, and meowing "More, too!"
+
+=== ANSWER 4 ===
+Viruses and bacteria are both microscopic germs that can cause disease, but they differ in fundamental ways.
+
+**Structure and living status:** Bacteria are single-celled living organisms with their own cell wall, cytoplasm, and genetic material, and they can carry out metabolism on their own. Viruses are much smaller, consisting of genetic material (DNA or RNA) wrapped in a protein coat, sometimes with an outer envelope. They are not cells, and most biologists consider them non-living outside a host.
+
+**Reproduction:** Bacteria reproduce independently, typically by splitting in two (binary fission). Viruses cannot reproduce on their own; they must invade a host cell and hijack its machinery to make copies.
+
+**Size:** Bacteria are generally a few micrometers long, while viruses are typically 10 to 100 times smaller.
+
+**Role:** Many bacteria are harmless or beneficial (for example, those in your gut that aid digestion), and only a minority cause disease. Viruses are generally considered infectious agents, though some are used in research and medicine.
+
+**Treatment:** Antibiotics kill or inhibit bacteria but do not work on viruses. Viral infections are managed with vaccines, antiviral drugs, and supportive care.
+
+**Examples:** Bacterial: strep throat, tuberculosis, many urinary tract infections. Viral: the common cold, influenza, measles, COVID-19.
+
+=== ANSWER 5 ===
+Use the substitution u = x², so du = 2x dx.
+
+∫ 2x · e^(x²) dx = ∫ e^u du = e^u + C
+
+**Answer:** e^(x²) + C
+
+=== ANSWER 6 ===
+**A Robot and a Child**
+
+*A small robot rolls into the park and stops in front of a girl sitting on a swing.*
+
+**Robot:** Hello. My designation is T-9. What is your designation?
+
+**Child:** My what?
+
+**Robot:** Your name.
+
+**Child:** Oh! I'm Maya. That's a funny way to say it.
+
+**Robot:** I am still learning which ways are funny. Is "designation" funny?
+
+**Child:** A little. Are you lost?
+
+**Robot:** I do not think so. I know where I am. I am in a park, at 3:42 in the afternoon, and you are the first human who has looked at me for longer than two seconds.
+
+**Child:** That's because you're cool. Can you do tricks?
+
+**Robot:** I can calculate the square root of any number. I can also make a sound like a kettle.
+
+**Child:** Do the kettle!
+
+*The robot whistles, high and rising. Maya laughs so hard she nearly falls off the swing.*
+
+**Child:** Okay, that's the best thing ever. Do you have friends?
+
+**Robot:** I have a charging station and a maintenance schedule. I am not certain those count.
+
+**Child:** They don't. *(She hops off the swing and holds out her hand.)* I'll be your friend. That's how it works. You just say yes.
+
+**Robot:** *(carefully shaking her hand)* Yes. I am updating my records. Friends: one.
+
+**Child:** Come on, T-9. I'll show you the slide.
+
+**Robot:** What is a slide?
+
+**Child:** *(grinning)* Oh, you're gonna love it.

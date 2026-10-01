@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: What were the main causes of World War I?
+
+PROMPT 2: Write a motivational speech of about 150 words for a team before a big game.
+
+PROMPT 3: Write a Python function that performs depth-first search on a graph given as an adjacency list.
+
+PROMPT 4: Explain how a neural network learns.
+
+PROMPT 5: Write an apology message to a friend for missing their birthday party.
+
+PROMPT 6: Write a job posting for a part-time barista.

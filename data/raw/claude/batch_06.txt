@@ -1,0 +1,219 @@
+=== ANSWER 1 ===
+
+```python
+class Stack:
+    """A simple LIFO stack backed by a Python list."""
+
+    def __init__(self):
+        self._items = []
+
+    def push(self, item):
+        """Add an item to the top of the stack."""
+        self._items.append(item)
+
+    def pop(self):
+        """Remove and return the top item. Raises IndexError if empty."""
+        if self.is_empty():
+            raise IndexError("pop from empty stack")
+        return self._items.pop()
+
+    def peek(self):
+        """Return the top item without removing it. Raises IndexError if empty."""
+        if self.is_empty():
+            raise IndexError("peek from empty stack")
+        return self._items[-1]
+
+    def is_empty(self):
+        return len(self._items) == 0
+
+    def __len__(self):
+        return len(self._items)
+
+    def __repr__(self):
+        return f"Stack({self._items})"
+
+
+if __name__ == "__main__":
+    s = Stack()
+    s.push(1)
+    s.push(2)
+    s.push(3)
+    print(s.peek())  # 3
+    print(s.pop())   # 3
+    print(len(s))    # 2
+```
+
+Push and pop run in amortized O(1) time, and peek is O(1).
+
+=== ANSWER 2 ===
+
+Historians still debate the exact weighting, but most agree the Western Empire fell (traditionally dated to 476 CE, when Odoacer deposed Romulus Augustulus) because of several interacting pressures rather than a single cause.
+
+**Military and external pressures**
+- Migrations and invasions by Goths, Vandals, Franks, Huns, and others strained the frontiers. The disastrous defeat at Adrianople (378) and the later sack of Rome (410) showed how vulnerable the West had become.
+- Rome increasingly relied on barbarian federates and generals, whose loyalties were often to their own leaders. Over time, regions like Gaul, Spain, and North Africa passed into the hands of Germanic kingdoms.
+
+**Political instability**
+- The third and fourth centuries saw frequent civil wars and usurpations, which drained resources and weakened border defense.
+- Weak western emperors, often dominated by powerful generals such as Stilicho and Ricimer, couldn't maintain a stable central authority.
+
+**Economic and fiscal problems**
+- Heavy taxation, currency debasement, and reliance on a shrinking tax base undermined state finances.
+- The loss of rich provinces, especially North Africa to the Vandals in 439, cut off crucial revenue and grain supplies.
+
+**Structural and social factors**
+- The empire was divided administratively, and the wealthier, more defensible East survived for another thousand years while the West collapsed.
+- Some historians point to plague, climate shifts, and demographic decline as further stressors.
+
+**Interpretations**
+Edward Gibbon famously blamed moral decay and Christianity, a view most modern scholars reject. Today, many emphasize external military pressure combined with internal political fragmentation, while others, like Peter Heather, stress the role of the Huns pushing Germanic groups into the empire. Others, like Bryan Ward-Perkins, stress genuine collapse over gradual "transformation." The fall was less a sudden event than a long unraveling of Roman authority in the West.
+
+=== ANSWER 3 ===
+
+```python
+def flatten(nested):
+    """Recursively flatten an arbitrarily nested list."""
+    result = []
+    for item in nested:
+        if isinstance(item, list):
+            result.extend(flatten(item))
+        else:
+            result.append(item)
+    return result
+
+
+print(flatten([1, [2, [3, [4, 5]], 6], [[7]], 8]))
+# [1, 2, 3, 4, 5, 6, 7, 8]
+```
+
+If you need to handle very deep nesting without hitting Python's recursion limit, here's an iterative version:
+
+```python
+def flatten_iterative(nested):
+    """Flatten a nested list without recursion."""
+    result = []
+    stack = [iter(nested)]
+    while stack:
+        try:
+            item = next(stack[-1])
+        except StopIteration:
+            stack.pop()
+            continue
+        if isinstance(item, list):
+            stack.append(iter(item))
+        else:
+            result.append(item)
+    return result
+```
+
+To also flatten tuples or other iterables, change the `isinstance` check to `(list, tuple)`. Avoid treating strings as iterables, or they'll be split into characters.
+
+=== ANSWER 4 ===
+
+```python
+import csv
+import sys
+
+
+def average_column(filename, column):
+    """Return the average of a numeric column in a CSV file."""
+    total = 0.0
+    count = 0
+
+    with open(filename, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+
+        if column not in (reader.fieldnames or []):
+            raise ValueError(
+                f"Column '{column}' not found. Available columns: {reader.fieldnames}"
+            )
+
+        for row_num, row in enumerate(reader, start=2):
+            value = row[column].strip()
+            if not value:
+                continue  # skip empty cells
+            try:
+                total += float(value)
+                count += 1
+            except ValueError:
+                print(f"Warning: skipping non-numeric value '{value}' on line {row_num}")
+
+    if count == 0:
+        raise ValueError(f"No numeric values found in column '{column}'.")
+
+    return total / count
+
+
+def main():
+    if len(sys.argv) != 3:
+        print(f"Usage: python {sys.argv[0]} <file.csv> <column_name>")
+        sys.exit(1)
+
+    filename, column = sys.argv[1], sys.argv[2]
+
+    try:
+        avg = average_column(filename, column)
+    except FileNotFoundError:
+        print(f"Error: file '{filename}' not found.")
+        sys.exit(1)
+    except ValueError as e:
+        print(f"Error: {e}")
+        sys.exit(1)
+
+    print(f"Average of '{column}': {avg:.2f}")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+Run it like this:
+
+```
+python average.py data.csv price
+```
+
+It uses only the standard library, skips blank cells, warns about non-numeric values, and reports clear errors for a missing file or column.
+
+=== ANSWER 5 ===
+
+Noise-cancelling headphones use a technique called **active noise cancellation (ANC)**, which relies on the physics of sound waves.
+
+**The basic idea**
+Sound is a pressure wave. If you generate a second wave that's the exact mirror image of the first (same amplitude, opposite phase), the two cancel when they meet. This is called destructive interference.
+
+**How the headphones do it**
+1. **Microphones listen.** One or more tiny microphones on the outside of the ear cups pick up ambient noise. Many models also have an interior microphone that monitors what actually reaches your ear.
+2. **A processor inverts the signal.** Dedicated circuitry (or a digital signal processor) rapidly creates an "anti-noise" waveform that is the inverse of the incoming sound.
+3. **The speaker plays it.** The anti-noise is played through the headphone driver alongside your music. The two waves combine and largely cancel out before reaching your eardrum.
+
+**Feedforward vs. feedback**
+- *Feedforward* systems use outside microphones to measure noise before it enters the ear cup.
+- *Feedback* systems use an inside microphone to measure what you actually hear and correct for any remaining noise.
+- Many modern headphones use a hybrid of both for better results.
+
+**Strengths and limits**
+- ANC works best on steady, low-frequency sounds like airplane engines, air conditioners, and road rumble, because these are predictable and easy to mirror.
+- It's less effective on sudden, high-pitched sounds like voices or clattering dishes, since they change too quickly to cancel precisely.
+- That's why good headphones also use **passive isolation**: padded ear cups and a tight seal physically block higher-frequency noise.
+
+Many models also offer a "transparency" or "ambient" mode, which does the reverse by using the microphones to pipe outside sound in so you can hear your surroundings.
+
+=== ANSWER 6 ===
+
+**Dear Diary,**
+
+Another Tuesday on the windowsill. The big glowing thing in the sky showed up around nine, as usual, and I leaned toward it as hard as my stem allows. I think I made real progress. Maybe two degrees.
+
+The Tall One watered me this morning. A whole cup! I felt it travel from my roots all the way up to my newest leaf. Last week she forgot, and I'll admit I dramatized a little. I dropped a leaf. Just one. For effect. It worked, so no regrets.
+
+There was a scare around noon when the cat came by and looked at me for a very long time. I don't trust that cat. Last month it took a bite out of my cousin the spider plant, and he still hasn't recovered his confidence. I held very still and tried to look unappetizing. Thankfully, it wandered off to sit in a sunbeam. My sunbeam. Rude.
+
+In happier news, I'm growing a new leaf. It's still curled up tight like a little green fist, but give it a few days and it'll unfurl. I'm so proud. Nobody notices these things except me, but that's fine. Growth is quiet work.
+
+The Tall One talks to me sometimes. Today she said I was "looking great," which I assume is about my posture. I tried to look even better by perking up, but mostly I just photosynthesized.
+
+Anyway, the sun is going down and I'm feeling sleepy. Tomorrow I plan to do more of the same: lean, drink, grow, and judge the cat from a distance.
+
+Yours in chlorophyll,
+**Fern**

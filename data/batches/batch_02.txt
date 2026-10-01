@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: What is the limit of sin(x)/x as x approaches 0, and why?
+
+PROMPT 2: Write a persuasive paragraph arguing that students should have later school start times.
+
+PROMPT 3: What was the Industrial Revolution and how did it change society?
+
+PROMPT 4: Write a Python function that finds all primes up to n using the Sieve of Eratosthenes.
+
+PROMPT 5: What is the theory of evolution by natural selection?
+
+PROMPT 6: How does photosynthesis work?

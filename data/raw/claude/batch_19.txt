@@ -1,0 +1,71 @@
+=== ANSWER 1 ===
+
+The internet moves data by breaking it into small chunks called packets and sending them across a network of interconnected networks.
+
+**Packets:** A file, web page, or message is split into many packets. Each carries a piece of the data plus a header with the sender's address, the destination address, and a sequence number.
+
+**Addressing:** Every device has an IP address. Domain names like example.com are translated into IP addresses by DNS, which works like a phonebook.
+
+**Routing:** Routers along the way read each packet's destination and forward it toward the next hop. Packets from the same message may take different paths depending on congestion or outages.
+
+**Reliability (TCP):** At the destination, the Transmission Control Protocol reassembles packets in order using the sequence numbers. If any are missing or corrupted, the receiver asks for them to be resent. Some applications, like video calls or games, use UDP instead, which skips retransmission in favor of speed.
+
+**Physical layers:** The packets travel as electrical signals over copper, light pulses through fiber-optic cables (including undersea cables), or radio waves over Wi-Fi and cellular networks.
+
+**Layered design:** All of this is organized in layers (application, transport, internet, link), each handling one job. That separation is why a web browser doesn't need to know whether you're on Wi-Fi or Ethernet.
+
+=== ANSWER 2 ===
+
+To find the inverse of f(x) = 2x + 3:
+
+1. Write y = 2x + 3.
+2. Swap x and y: x = 2y + 3.
+3. Solve for y: x − 3 = 2y, so y = (x − 3)/2.
+
+**f⁻¹(x) = (x − 3)/2**
+
+Check: f(f⁻¹(x)) = 2·(x − 3)/2 + 3 = x. ✓
+
+=== ANSWER 3 ===
+
+Prime factorize 360: 360 = 2³ × 3² × 5¹.
+
+The number of positive divisors is the product of (exponent + 1) for each prime:
+
+(3 + 1)(2 + 1)(1 + 1) = 4 × 3 × 2 = **24**
+
+So 360 has 24 positive divisors.
+
+=== ANSWER 4 ===
+
+Airplanes stay up because their wings generate **lift**, an upward force that balances the plane's weight.
+
+**How wings make lift:** A wing is shaped (and tilted slightly, at an "angle of attack") so that it deflects the oncoming air downward. By Newton's third law, pushing air down pushes the wing up. At the same time, air flowing over the curved top surface speeds up and its pressure drops relative to the underside, and this pressure difference also contributes to lift. These are two descriptions of the same physical effect, not competing explanations.
+
+**The four forces:**
+- **Lift** (up) is produced by the wings.
+- **Weight** (down) is gravity pulling on the plane.
+- **Thrust** (forward) comes from engines or propellers.
+- **Drag** (backward) is air resistance.
+
+In steady level flight, lift equals weight and thrust equals drag.
+
+**Why speed matters:** Lift increases with airspeed, which is why planes must accelerate down a runway before taking off. Pilots adjust flaps, speed, and angle of attack to keep enough lift at different stages of flight. If the angle of attack gets too steep, the airflow separates from the wing and lift collapses, which is called a stall.
+
+=== ANSWER 5 ===
+
+The greenhouse effect is the natural process by which certain gases in Earth's atmosphere trap heat, keeping the planet warm enough to support life.
+
+**How it works:**
+1. The Sun's energy reaches Earth, mostly as visible light, and the surface absorbs much of it.
+2. The warmed surface emits energy back out as infrared (heat) radiation.
+3. Greenhouse gases, such as water vapor, carbon dioxide, methane, and nitrous oxide, absorb some of that infrared radiation and re-emit it in all directions, including back toward the surface.
+4. This slows the escape of heat to space and warms the lower atmosphere and surface.
+
+**Why it matters:** Without this effect, Earth's average surface temperature would be roughly −18°C (0°F) instead of the current ~15°C (59°F). So the effect itself is essential.
+
+**The concern:** Human activities, mainly burning fossil fuels and deforestation, have increased concentrations of greenhouse gases, especially CO₂ and methane. This strengthens the effect and is the primary driver of the global warming observed since the industrial era.
+
+=== ANSWER 6 ===
+
+The fog came into Harrow's End the way it always did, without asking, swallowing the lighthouse first and then the harbor and then the crooked row of fishing boats, until the whole town seemed to be holding its breath. Marguerite Vane had lived there sixty-one years and had never once locked her door, which was why it troubled her so much, standing in her kitchen at dawn, to find the back door open, the kettle still warm, and on the table, set neatly beside her good china, a single wet sea-glass bottle with a note curled inside it, written in her late husband's handwriting.

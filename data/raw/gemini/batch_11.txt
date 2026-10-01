@@ -1,0 +1,117 @@
+```python
+speed = 120 / 1.5
+rem = (2**100) % 7
+print(f"Speed: {speed}")
+print(f"Remainder: {rem}")
+
+
+```
+
+```text
+Speed: 80.0
+Remainder: 2
+
+
+```
+
+=== ANSWER 1 ===
+Here is a Python decorator that measures and prints the execution time of a function using the `time` module:
+
+```python
+import time
+from functools import wraps
+
+
+def time_it(func):
+  @wraps(func)
+  def wrapper(*args, **kwargs):
+    start_time = time.perf_counter()
+    result = func(*args, **kwargs)
+    end_time = time.perf_counter()
+    elapsed_time = end_time - start_time
+    print(f"Function '{func.__name__}' took {elapsed_time:.6f} seconds to run.")
+    return result
+
+  return wrapper
+
+
+# Example usage:
+@time_it
+def example_function(n):
+  total = sum(i for i in range(n))
+  return total
+
+
+example_function(1000000)
+
+```
+
+=== ANSWER 2 ===
+To find the average speed in miles per hour, divide the total distance traveled by the total time taken:
+
+$$\text{Average Speed} = \frac{\text{Distance}}{\text{Time}} = \frac{120 \text{ miles}}{1.5 \text{ hours}} = 80 \text{ mph}$$
+
+The train's average speed is **80 miles per hour**.
+
+=== ANSWER 3 ===
+While both DNA and RNA are essential nucleic acids responsible for storing and reading genetic information, they have several key differences:
+
+* **Full Name:** DNA stands for *deoxyribonucleic acid*, while RNA stands for *ribonucleic acid*.
+* **Sugar Component:** DNA contains *deoxyribose* sugar (which has one less oxygen atom than ribose), whereas RNA contains *ribose* sugar.
+* **Strand Structure:** DNA is typically double-stranded, forming a double helix. RNA is usually single-stranded.
+* **Nitrogenous Bases:** Both share Adenine (A), Cytosine (C), and Guanine (G). However, DNA uses **Thymine (T)**, while RNA replaces it with **Uracil (U)**.
+* **Function:** DNA acts as the long-term, stable master blueprint for genetic information storage in the nucleus. RNA acts as a messenger and worker, carrying genetic instructions from DNA to the ribosomes to synthesize proteins.
+
+=== ANSWER 4 ===
+Once upon a time, in a cozy cave carved deep into the whispering slopes of Mount Cinder, lived a little dragon named Pip. While his brothers and sisters loved practicing their fiery roars and roasting marshmallows for midnight snacks, Pip had a secret that made him feel terribly small: he was utterly, hopelessly terrified of fire.
+
+Whenever someone asked him to light the hearth or toast a fern, Pip’s tummy would do backflips, and he’d hide behind his scaly tail. "A dragon who won't spark is like a bird that won't fly!" the older dragons would chortle, not unkindly, but enough to make Pip's green scales flush with embarrassment.
+
+One chilly autumn evening, a heavy mist rolled over the mountain, bringing a deep, shivering frost. The cave was freezing, and the little dragonlings were too tired to spark up their usual warmth. Pip knew he had to do something. He crept to the center of the cavern, his heart beating like a trapped moth.
+
+Taking a deep breath, he opened his mouth... and instead of a blinding sheet of flame, out floated a cascade of glowing, multicolored fireflies! They danced through the air, casting a warm, golden-pink glow against the stone walls. Pip blinked in surprise. They weren't hot and terrifying; they were gentle, shimmering sparks of pure magic.
+
+As the cozy light filled the cave, his siblings snuggled close, sighing happily in the warmth. Pip smiled, curling up beneath a blanket of glowing fireflies. He realized he didn't need a roaring inferno to be a true dragon—his own unique spark was warm enough.
+
+=== ANSWER 5 ===
+To find the remainder when $2^{100}$ is divided by 7, we can look for a pattern in the powers of 2 modulo 7:
+
+* $2^1 \equiv 2 \pmod 7$
+* $2^2 \equiv 4 \pmod 7$
+* $2^3 \equiv 8 \equiv 1 \pmod 7$
+
+Since $2^3 \equiv 1 \pmod 7$, the powers repeat in a cycle of 3.
+
+To find where 100 falls in this cycle, divide 100 by 3:
+$100 \div 3 = 33$ with a remainder of $1$.
+
+This means:
+
+
+$$2^{100} = (2^3)^{33} \times 2^1 \equiv (1)^{33} \times 2 \equiv 2 \pmod 7$$
+
+The remainder is **2**.
+
+=== ANSWER 6 ===
+Here is an efficient Python function to find the $n$-th Fibonacci number using iteration, which runs in $O(n)$ time and $O(1)$ space:
+
+```python
+def fibonacci(n):
+  if n < 0:
+    raise ValueError("Fibonacci is not defined for negative numbers.")
+  if n == 0:
+    return 0
+  if n == 1:
+    return 1
+
+  a, b = 0, 1
+  for _ in range(2, n + 1):
+    a, b = b, a + b
+
+  return b
+
+
+# Example usage:
+print(fibonacci(10))  # Output: 55
+
+```

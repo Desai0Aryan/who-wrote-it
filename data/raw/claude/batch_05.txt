@@ -1,0 +1,114 @@
+=== ANSWER 1 ===
+
+I am writing to apply for the Software Engineering Internship at [Company Name]. As a [year] Computer Science student at [University], I have built a strong foundation in data structures, algorithms, and full-stack development, and I am eager to apply those skills to real-world problems. Through coursework and personal projects, including [brief project description], I have learned to write clean, testable code and to collaborate effectively with others. I am particularly drawn to [Company Name] because of [specific reason, such as a product, mission, or engineering culture], and I would welcome the chance to contribute to your team while learning from experienced engineers.
+
+=== ANSWER 2 ===
+
+The Electoral College is the system the United States uses to elect its president and vice president. Instead of a direct national popular vote, citizens vote for a slate of electors in their state, and those electors formally choose the president.
+
+**The basics**
+- There are 538 electors in total, and a candidate needs 270 electoral votes to win.
+- Each state gets a number of electors equal to its total number of members in Congress: its House seats (based on population) plus two Senators. The District of Columbia gets 3 electors under the 23rd Amendment.
+
+**How it works in practice**
+1. **Voters choose electors.** On Election Day, when people vote for a presidential candidate, they are technically voting for that candidate's slate of electors.
+2. **Winner-take-all in most states.** In 48 states and DC, the candidate who wins the state's popular vote receives all of its electoral votes. Maine and Nebraska instead award two votes to the statewide winner and one vote for each congressional district won.
+3. **Electors meet and vote.** In December, electors gather in their states and cast their votes. Many states have laws requiring them to vote for the candidate they pledged to support, and the Supreme Court upheld such laws in *Chiafalo v. Washington* (2020).
+4. **Congress counts the votes.** In early January, a joint session of Congress counts the electoral votes and certifies the result.
+5. **Contingent election.** If no candidate reaches 270, the House of Representatives chooses the president, with each state delegation getting one vote, and the Senate chooses the vice president.
+
+**Why it matters**
+Because of the winner-take-all approach and the way electors are apportioned, a candidate can win the presidency while losing the national popular vote, as happened in 2000 and 2016. This also makes a handful of closely contested "swing states" disproportionately important in campaigns.
+
+**The debate**
+Supporters argue the system protects the interests of smaller states, encourages candidates to build broad geographic coalitions, and reinforces federalism. Critics argue it undermines the principle of one person, one vote, and focuses campaigns on a few battleground states. Proposals to change it include a constitutional amendment for direct popular vote and the National Popular Vote Interstate Compact, an agreement among states to award their electors to the national popular vote winner once enough states join.
+
+=== ANSWER 3 ===
+
+```python
+class QueueWithTwoStacks:
+    def __init__(self):
+        self._in = []   # stack for incoming items
+        self._out = []  # stack for outgoing items
+
+    def enqueue(self, item):
+        self._in.append(item)
+
+    def dequeue(self):
+        if not self._out:
+            # Move everything from _in to _out, reversing the order
+            while self._in:
+                self._out.append(self._in.pop())
+        if not self._out:
+            raise IndexError("dequeue from empty queue")
+        return self._out.pop()
+
+    def peek(self):
+        if not self._out:
+            while self._in:
+                self._out.append(self._in.pop())
+        if not self._out:
+            raise IndexError("peek from empty queue")
+        return self._out[-1]
+
+    def is_empty(self):
+        return not self._in and not self._out
+
+    def __len__(self):
+        return len(self._in) + len(self._out)
+
+
+if __name__ == "__main__":
+    q = QueueWithTwoStacks()
+    q.enqueue(1)
+    q.enqueue(2)
+    q.enqueue(3)
+    print(q.dequeue())  # 1
+    q.enqueue(4)
+    print(q.dequeue())  # 2
+    print(q.dequeue())  # 3
+    print(q.dequeue())  # 4
+```
+
+**How it works:** New items are pushed onto the `_in` stack. When you need to dequeue, items are popped from `_in` and pushed onto `_out`, which reverses their order so the oldest item ends up on top. Items are only transferred when `_out` is empty, so each element is moved at most once. That gives **amortized O(1)** time for both `enqueue` and `dequeue`, even though a single `dequeue` can occasionally take O(n).
+
+=== ANSWER 4 ===
+
+**Farewell to Old Faithful**
+
+You never won a race or turned a head, but you carried us through every chapter that mattered. You took us to first jobs, last-minute road trips, and the long drives home when nobody wanted to talk. Your engine coughed on cold mornings like an old man clearing his throat, and somehow it always caught.
+
+Your seats held the shape of everyone who rode in you. Your glove box kept the secrets of a decade: maps no one needed, receipts no one threw away, a lone mitten from a winter long past. The radio only picked up one station, and we knew every song by heart.
+
+You've earned your rest, old friend. Thank you for every mile, every rattle, and every time you got us home.
+
+=== ANSWER 5 ===
+
+```bash
+find /path/to/dir -type f -exec du -h {} + | sort -rh | head -n 10
+```
+
+**Explanation:**
+
+- `find /path/to/dir -type f` searches the directory (and all subdirectories) for regular files only, skipping directories.
+- `-exec du -h {} +` runs `du -h` on the files found, printing each file's size in human-readable form (K, M, G). The `+` batches many files into a single `du` call, which is faster than running it once per file.
+- `sort -rh` sorts the results in reverse order (largest first), and the `h` flag makes it understand human-readable sizes like `2.1M` and `340K`.
+- `head -n 10` keeps only the top 10 lines.
+
+**Notes:** Use `.` in place of `/path/to/dir` for the current directory. If you only want files in the top level of the directory, add `-maxdepth 1` after the path. For very large directory trees, you may want to add `2>/dev/null` to hide permission errors.
+
+=== ANSWER 6 ===
+
+**The Fox and the Crow**
+
+High in an old oak tree sat a crow, guarding a piece of golden cheese she had found by the roadside. A fox, passing below, caught the scent and sat down in the grass, his stomach growling.
+
+"Good morning, lovely Crow," he called. "I hear you have the finest voice in the forest. Won't you sing for me?"
+
+The crow narrowed her eyes. "I've heard that one before," she said, and she tucked the cheese firmly beneath her wing and laughed. "If you want my cheese, Fox, you'll have to find your own, as I did."
+
+The fox's smile faded. He tried flattery, then riddles, then a sad story about his empty den, but the crow only shook her head. At last, he slunk off into the brush, hungrier than before.
+
+The crow ate her cheese in peace, and the forest was quiet.
+
+**Moral:** Flattery is a poor key; it only opens the door for those who want to be fooled.

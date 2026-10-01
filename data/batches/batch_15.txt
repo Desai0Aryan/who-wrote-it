@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: Solve the quadratic equation x^2 - 5x + 6 = 0.
+
+PROMPT 2: Write a short speech introducing a guest lecturer on climate science.
+
+PROMPT 3: Write a Python function that counts word frequencies in a text file.
+
+PROMPT 4: How do ocean tides work?
+
+PROMPT 5: What is the function of mitochondria?
+
+PROMPT 6: Write an argumentative paragraph for or against homework, your choice.

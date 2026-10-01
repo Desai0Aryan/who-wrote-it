@@ -1,0 +1,101 @@
+=== ANSWER 1 ===
+
+ **Ada Lovelace** (1815–1852) was an English mathematician and writer, best known for her work on Charles Babbage’s proposed **Analytical Engine**, an early mechanical general-purpose computer.
+
+ She is important because, in her notes on the Analytical Engine, she described an algorithm for calculating Bernoulli numbers—often regarded as the **first published computer program**. More broadly, she recognized that such a machine could potentially manipulate symbols and create things beyond numerical calculations, anticipating the broader capabilities of computers.
+
+ She is therefore often remembered as **the first computer programmer** and as an early visionary of general-purpose computing.
+
+ === ANSWER 2 ===
+
+ The main difference is **where the rules come from**:
+
+ - **Traditional programming:** A programmer explicitly writes the rules. The computer takes those rules plus input data and produces an output.
+  - **Input + Rules → Output**
+- **Machine learning:** The computer is given examples (data and often desired outputs) and learns patterns or rules from them.
+  - **Input + Examples → Learned Model → Output**
+
+ **Example:**\
+ To make a traditional program recognize spam emails, you might explicitly code rules such as “if the email contains certain words, flag it.”
+
+ With machine learning, you could provide many emails labeled **spam** or **not spam**, and the system learns patterns that help it classify new emails.
+
+ In short: **traditional programming tells the computer how to solve the problem; machine learning gives the computer examples so it can learn how to solve it.**
+
+ === ANSWER 3 ===
+
+ Reusable Water Bottle Product Description
+
+### Stay Hydrated, Reuse, and Go
+
+ Meet your everyday hydration companion. This reusable water bottle is designed to keep drinks close at hand while helping reduce reliance on disposable plastic bottles.
+
+ Its durable, reusable design makes it ideal for the gym, office, school, travel, or outdoor adventures. The secure, easy-to-use lid helps prevent spills, while the sleek shape fits comfortably into your daily routine.
+
+ **Features:**
+
+ - Durable reusable construction
+- Secure, leak-resistant lid
+- Easy to carry and use
+- Great for water and other everyday beverages
+- Designed for repeated use
+
+ Hydrate wherever the day takes you—simply fill, carry, reuse, and repeat.
+
+ === ANSWER 4 ===
+
+ First Snowfall
+
+The first snow falls soft and bright,\
+ Turning rooftops silver-white.\
+ The winter world grows still and slow,\
+ As stars of crystal drift below.
+
+ A quiet hush fills every tree—\
+ The season wakes in mystery.
+
+ === ANSWER 5 ===
+
+ $$
+\frac{x^2-9}{x-3}
+$$
+
+ Factor the numerator as a difference of squares:
+
+ $$
+x^2-9=(x-3)(x+3)
+$$
+
+ So:
+
+ $$
+\frac{(x-3)(x+3)}{x-3}=x+3
+$$
+
+ **Answer:**
+
+ $$
+\boxed{x+3}, \qquad x\ne3
+$$
+
+ === ANSWER 6 ===
+
+ Compute $17\times23$:
+
+ $$
+17\times23=17\times(20+3)
+$$
+
+ Distribute:
+
+ $$
+17\times20 + 17\times3
+$$
+
+ $$
+=340+51
+$$
+
+ $$
+=\boxed{391}
+$$

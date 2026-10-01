@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: Write a short story (about 200 words) about a lighthouse keeper who finds a message in a bottle.
+
+PROMPT 2: This function crashes when the list is empty. Explain why and fix it: def avg(xs): return sum(xs)/len(xs)
+
+PROMPT 3: Write a Python function that converts a Roman numeral to an integer.
+
+PROMPT 4: How does GPS determine your location?
+
+PROMPT 5: Explain the difference between a list and a tuple in Python and when to use each.
+
+PROMPT 6: Implement binary search in Python and explain its time complexity.

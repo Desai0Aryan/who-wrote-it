@@ -1,0 +1,97 @@
+```python
+import numpy as np
+import scipy.integrate as integrate
+
+# Prompt 1
+v1 = np.array([1, 2, 3])
+v2 = np.array([4, 5, 6])
+dot_product = np.dot(v1, v2)
+
+# Prompt 5
+area, _ = integrate.quad(lambda x: x**2, 0, 3)
+
+print(f"Dot product: {dot_product}")
+print(f"Area: {area}")
+
+
+```
+
+```text
+Dot product: 32
+Area: 9.000000000000002
+
+
+```
+
+=== ANSWER 1 ===
+The dot product of the vectors $(1, 2, 3)$ and $(4, 5, 6)$ is **32**.
+
+It is calculated by multiplying corresponding components and summing the results:
+
+
+$$(1 \times 4) + (2 \times 5) + (3 \times 6) = 4 + 10 + 18 = 32$$
+
+---
+
+=== ANSWER 2 ===
+The primary difference between permutations and combinations lies in **whether the order of the selected items matters**:
+
+* **Permutations:** Order **matters**. If you rearrange the selected items, it counts as a different outcome.
+* *Formula:* $P(n, r) = \frac{n!}{(n-r)!}$
+
+
+* **Combinations:** Order **does not matter**. Selecting the same items in a different arrangement counts as the exact same outcome.
+* *Formula:* $C(n, r) = \frac{n!}{r!(n-r)!}$
+
+
+
+**Example:**
+Imagine you have 3 fruits: an **Apple**, a **Banana**, and a **Cherry**, and you want to choose 2 of them.
+
+* **Permutation:** Choosing an Apple first and a Banana second ($\text{Apple, Banana}$) is treated as different from choosing a Banana first and an Apple second ($\text{Banana, Apple}$).
+* **Combination:** Choosing an Apple and a Banana ($\text{Apple, Banana}$) is the exact same outcome as choosing a Banana and an Apple, because the group of fruits selected is identical.
+
+---
+
+=== ANSWER 3 ===
+Vaccines train the immune system by safely introducing a harmless component or blueprint of a pathogen (like a virus or bacterium) so the body can learn to recognize and fight it without causing disease. Here is how the process works step-by-step:
+
+* **Introduction of Antigens:** A vaccine contains antigens—either weakened/inactivated parts of the germ, or genetic instructions (like mRNA) that tell your cells how to make a harmless piece of the germ.
+* **Activation of the Immune Response:** Immune cells (such as macrophages and dendritic cells) detect the foreign material and sound the alarm, alerting T-cells and B-cells.
+* **Production of Antibodies and Killer T-Cells:** B-cells produce specific antibodies designed to lock onto and neutralize the antigen, while T-cells learn to destroy infected cells.
+* **Creation of Memory Cells:** After the threat is neutralized, most of the immune cells die off, but **memory cells** remain in the body for months or years.
+* **Long-Term Protection:** If you are exposed to the actual pathogen in the future, your memory cells recognize it instantly and mount a rapid, powerful defense before you can get sick.
+
+---
+
+=== ANSWER 4 ===
+The main difference between weather and climate is **measure of time**:
+
+* **Weather** describes the short-term, atmospheric conditions in a specific place at a given moment. It can change drastically from minute to minute or day to day (e.g., a sudden thunderstorm, a sunny afternoon, or today's temperature of 21°C).
+* **Climate** describes the long-term, average weather patterns of a region, typically tracked over a period of 30 years or more. It defines what conditions are *typical* for an area (e.g., desert climates are hot and arid year-round).
+
+---
+
+=== ANSWER 5 ===
+To find the area under $y = x^2$ from $x = 0$ to $x = 3$, we evaluate the definite integral of the function over that interval:
+
+$$\int_{0}^{3} x^2 \, dx$$
+
+1. Find the antiderivative of $x^2$, which is $\frac{x^3}{3}$.
+2. Apply the limits of integration from $0$ to $3$:
+
+$$\left[ \frac{x^3}{3} \right]_{0}^{3} = \frac{3^3}{3} - \frac{0^3}{3} = \frac{27}{3} - 0 = 9$$
+
+
+
+The area under the curve is **9 square units**.
+
+---
+
+=== ANSWER 6 ===
+While both terms describe systems of government where power stems from the people, they have distinct structural differences:
+
+* **Democracy:** A system of government ruled by the people. In a *pure* or *direct democracy*, citizens vote directly on laws and policies. In an *indirect* or *representative democracy*, citizens elect officials to make decisions for them.
+* **Republic:** A system of government where power rests with the people and their elected representatives, and there is an executive leader (such as a president) rather than a monarch. Crucially, a republic is governed by **the rule of law** (typically a constitution), which places limits on government power and protects minority rights against the "tyranny of the majority."
+
+**In summary:** A democracy focuses on *who* holds power (the people), whereas a republic focuses on *how* that power is governed and constrained (by law and representation). Most modern Western nations (like the United States) are **constitutional republics** operating through democratic processes.

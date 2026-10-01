@@ -1,0 +1,126 @@
+=== ANSWER 1 ===
+Arthur climbed the spiral iron stairs of Cape Sorrow Lighthouse, his joints aching with the rising gale. Outside, the North Atlantic battered the cliffs, spraying salt against the thick glass of the lantern room. It was a lonely life, but Arthur preferred the predictable rhythm of the beacon to the chaos of the mainland.
+
+As he swept the floor near the eastern window, his boot struck something metallic. Bending down, he picked up a dusty glass bottle, sealed tightly with wax stamped with an anchor. Inside rolled a scrap of yellowed parchment.
+
+Curiosity piqued, Arthur carefully cracked the wax and extracted the note. The ink was faded, written in a cramped, trembling hand: *"If you are reading this, the storm finally won. Tell Sarah I loved her."*
+
+Arthur stared at the date scrawled at the bottom: October 14, 1944. Eighty-two years ago.
+
+He walked over to the railing, looking out at the churning abyss below. Sarah had been gone for decades, her grave resting quietly in the village churchyard. Yet, holding the paper, Arthur felt a strange bridge across time. He folded the note carefully, resolved that tomorrow, he would place it beside her headstone—finally delivering a message eighty years overdue.
+
+=== ANSWER 2 ===
+
+### Why it Crashes
+
+The function crashes with a **`ZeroDivisionError`** when `xs` is an empty list (`[]`) because:
+
+* `sum([])` evaluates to `0`.
+* `len([])` evaluates to `0`.
+* The expression attempts to calculate `0 / 0`, which is undefined in mathematics and raises an error in Python.
+
+### The Fix
+
+You can handle empty lists by checking their length or truthiness before performing division, returning a safe default value like `0` or `None`:
+
+```python
+def avg(xs):
+    if not xs:
+        return 0  # Or None, depending on your use case
+    return sum(xs) / len(xs)
+
+```
+
+=== ANSWER 3 ===
+Here is a Python function that converts a Roman numeral string into an integer. It works by iterating through the string and subtracting the value if a smaller numeral appears before a larger one (e.g., IV = 5 - 1 = 4); otherwise, it adds the value.
+
+```python
+def roman_to_int(s: str) -> int:
+    roman_map = {
+        'I': 1, 'V': 5, 'X': 10, 
+        'L': 50, 'C': 100, 'D': 500, 'M': 1000
+    }
+    total = 0
+    n = len(s)
+    
+    for i in range(n):
+        current_val = roman_map[s[i]]
+        # If the next value is larger, subtract current value
+        if i + 1 < n and current_val < roman_map[s[i + 1]]:
+            total -= current_val
+        else:
+            total += current_val
+            
+    return total
+
+# Example usage:
+# print(roman_to_int("MCMXCIV")) # Output: 1994
+
+```
+
+=== ANSWER 4 ===
+GPS (Global Positioning System) determines your location using a technique called **trilateration** based on time-of-flight measurements from a constellation of satellites. Here is how it works step-by-step:
+
+* **Satellite Signals:** Medium Earth orbit satellites continuously transmit radio signals containing their exact position and the precise time the signal was sent.
+* **Time of Flight:** Your GPS receiver (like a smartphone) picks up these signals. By comparing the timestamp of when the signal was sent to the time it was received, the receiver calculates the exact distance to each satellite (Distance = Speed of Light $\times$ Time).
+* **Trilateration (The Sphere Method):**
+* Distance from **one** satellite places you somewhere on the surface of a giant sphere centered on that satellite.
+* Distance from a **second** satellite narrows your location to the intersecting circle of two spheres.
+* A **third** satellite narrows it down to two specific points on Earth.
+
+
+* **The Fourth Satellite (Clock Correction):** A fourth satellite is required to correct for timing errors between the receiver's internal clock and the ultra-precise atomic clocks on the satellites, while also resolving your exact altitude.
+
+=== ANSWER 5 ===
+In Python, both lists and tuples are ordered collections of items, but they have key differences in mutability and purpose:
+
+### Key Differences
+
+* **Mutability:** **Lists are mutable** (they can be modified, appended to, or elements changed after creation). **Tuples are immutable** (once created, their contents cannot be changed).
+* **Syntax:** Lists are defined using square brackets (`[1, 2, 3]`), while tuples use parentheses `(1, 2, 3)`.
+* **Memory & Performance:** Tuples are slightly more memory-efficient and faster to create and iterate over than lists because their fixed size allows Python to optimize memory allocation.
+
+### When to Use Each
+
+* **Use a List when:**
+* You need a collection of items that will change over time (e.g., a shopping list, a dynamic queue of tasks).
+* You need to perform frequent insertions, deletions, or sorting.
+
+
+* **Use a Tuple when:**
+* Data should remain constant/read-only to prevent accidental modification (e.g., geographic coordinates, configuration settings).
+* You want to use the collection as a dictionary key (tuples are hashable if their contents are hashable; lists are not).
+* You are returning multiple values from a function.
+
+
+
+=== ANSWER 6 ===
+
+### Implementation
+
+Binary search works on **sorted** lists by repeatedly dividing the search interval in half.
+
+```python
+def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+    
+    while left <= right:
+        mid = left + (right - left) // 2
+        
+        if arr[mid] == target:
+            return mid  # Target found, return index
+        elif arr[mid] < target:
+            left = mid + 1  # Discard left half
+        else:
+            right = mid - 1  # Discard right half
+            
+    return -1  # Target not found
+
+```
+
+### Time Complexity
+
+* **Worst/Average Case: $O(\log n)$** — Every step cuts the search space in half. If a list has 1,000 items, binary search takes at most roughly 10 comparisons ($\log_2 1000 \approx 10$).
+* **Best Case: $O(1)$** — The target is found immediately at the middle index on the first check.
+* **Space Complexity: $O(1)$** — It uses a constant amount of extra memory for pointers (`left`, `right`, `mid`), regardless of the input size (iterative approach).

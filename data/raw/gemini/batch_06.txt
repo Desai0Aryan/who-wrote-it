@@ -1,0 +1,98 @@
+=== ANSWER 1 ===
+Here is a simple Python class implementing a stack using a standard list:
+
+```python
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+        raise IndexError("pop from empty stack")
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+        raise IndexError("peek from empty stack")
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def size(self):
+        return len(self.items)
+
+```
+
+=== ANSWER 2 ===
+The fall of the Western Roman Empire in 476 CE was not caused by a single event, but rather by a complex combination of internal decay and external pressures over centuries:
+
+* **Political Instability and Corruption:** Rapid turnover of emperors, civil wars, and a weakened Senate made governance erratic and ineffective.
+* **Economic Crises:** Heavy taxation, inflation, overreliance on slave labor, and disrupted trade networks impoverished the citizenry and strained state finances.
+* **Military Overextension and Decline:** The vast borders became too expensive and difficult to defend. The empire increasingly relied on barbarian mercenaries (*foederati*) who lacked loyalty to Rome itself.
+* **Barbarian Invasions:** Pressure from tribes like the Huns pushed Germanic peoples (such as the Visigoths and Vandals) into Roman territory, culminating in the sack of Rome and the deposition of Romulus Augustulus in 476 CE.
+* **Division of the Empire:** The permanent split into the Western and Eastern (Byzantine) Empires left the West economically poorer and more vulnerable while the East thrived.
+
+=== ANSWER 3 ===
+Here is a Python function using a generator to flatten an arbitrarily nested list:
+
+```python
+def flatten(nested_list):
+    for item in nested_list:
+        if isinstance(item, list):
+            yield from flatten(item)
+        else:
+            yield item
+
+# Example usage:
+# my_list = [1, [2, [3, 4], 5], 6]
+# print(list(flatten(my_list)))  # Output: [1, 2, 3, 4, 5, 6]
+
+```
+
+=== ANSWER 4 ===
+Here is a Python script using the built-in `csv` module to calculate the average of a numeric column:
+
+```python
+import csv
+
+def print_column_average(filename, column_name):
+    total = 0.0
+    count = 0
+    
+    with open(filename, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            try:
+                total += float(row[column_name])
+                count += 1
+            except (ValueError, KeyError):
+                # Skip rows with missing or non-numeric values
+                continue
+                
+    if count == 0:
+        print("No valid numeric data found in the specified column.")
+    else:
+        average = total / count
+        print(f"The average of '{column_name}' is: {average}")
+
+# Example usage:
+# print_column_average('data.csv', 'Price')
+
+```
+
+=== ANSWER 5 ===
+Active noise-cancelling (ANC) headphones work using the principle of **destructive interference** in physics:
+
+1. **Sound Capture:** Tiny microphones on the outside of the earcups monitor and sample ambient background noise (such as low-frequency hums from airplanes or trains).
+2. **Phase Inversion:** A digital signal processor (DSP) instantly analyzes the sound waves and generates an exact "anti-phase" wave—a sound wave with the exact same amplitude but inverted polarity (peaks matching troughs).
+3. **Cancellation:** When the original noise wave and the artificially generated anti-phase wave meet inside the speaker, they cancel each other out, significantly reducing the perceived volume of the background sound.
+4. **Passive Isolation:** This is combined with physical design (dense foam, tight seals) that blocks higher-frequency sounds which are harder for electronic cancellation to target.
+
+=== ANSWER 6 ===
+**May 14**
+
+Today was a good day. The Tall One came by with the Long-Nosed Watering Can and gave me a long, cool drink right at my roots. I felt every drop sink down into my soil, quenching a thirst I didn't even realize was building up. Then, they rotated me a quarter-turn toward the window. My leaves are a bit stiff from leaning toward the light all week, so the shift feels refreshing—though it'll take me a day or two to twist all my solar panels back toward the sunbeams. For now, I'm just soaking in the afternoon warmth and enjoying the quiet. Life on the windowsill is pretty sweet.

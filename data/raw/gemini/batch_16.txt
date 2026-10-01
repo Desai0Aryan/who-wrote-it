@@ -1,0 +1,73 @@
+=== ANSWER 1 ===
+The Copper Spoon is a hidden gem that delivers an unforgettable dining experience. Tucked away on a quiet downtown corner, the restaurant charms guests with its warm, industrial-chic decor and intimate ambiance. The menu is a masterclass in modern comfort food, highlighted by their signature cast-iron seared ribeye and an earthy, decadent truffle risotto. Impeccable service and a thoughtfully curated wine list complete the evening. Whether you're celebrating a milestone or seeking a cozy date night, The Copper Spoon is a must-visit destination.
+
+=== ANSWER 2 ===
+To find the probability of drawing two red marbles without replacement, we calculate the probability of each independent draw:
+
+* The bag contains a total of $3 + 5 = 8$ marbles, with $3$ of them being red. The probability of drawing a red marble on the first try is $\frac{3}{8}$.
+* After removing one red marble, there are now $7$ marbles left in the bag, including $2$ red marbles. The probability of drawing a second red marble is $\frac{2}{7}$.
+
+Multiplying these probabilities together:
+
+
+$$\frac{3}{8} \times \frac{2}{7} = \frac{6}{56} = \frac{3}{28}$$
+
+The probability that both drawn marbles are red is $\frac{3}{28}$ (approximately **10.7%**).
+
+=== ANSWER 3 ===
+The night market explodes into a sensory symphony of neon glare, roaring woks, and the dense, fragrant smoke of grilling skewers. Stalls overflow with vibrant mounds of tropical fruit and steaming bamboo baskets releasing clouds of fragrant steam into the cool evening air. Vendors belt out competing invitations above the chatter of shoulder-to-shoulder crowds weaving through the labyrinth of alleys. Every step reveals a new temptation—crispy fried delicacies, sweet sesame treats, and the infectious, electric energy of a community alive after dark.
+
+=== ANSWER 4 ===
+To solve for $x$ in the equation $3x + 7 = 25$:
+
+1. Subtract $7$ from both sides:
+
+$$3x = 25 - 7$$
+
+
+$$3x = 18$$
+
+
+2. Divide both sides by $3$:
+
+$$x = \frac{18}{3}$$
+
+
+$$x = 6$$
+
+
+
+=== ANSWER 5 ===
+There is a distinct, golden-hour magic to arriving in Lisbon, where the afternoon light bounces off pastel-colored facades and dances across the shimmering surface of the Tagus River. As the iconic yellow Tram 28 rattles its way up steep, cobblestone hills, you instantly realize this city demands to be explored at a slower, more deliberate pace. Every corner reveals a new visual poetry—crumbling Moorish architecture, laundry fluttering from wrought-iron balconies, and the haunting, soulful strains of live fado spilling out from hidden taverns.
+
+Over the next forty-eight hours, this sun-drenched capital of Portugal unfolds like an open invitation to savor life. Between morning stops for warm, custard-filled *pastéis de nata* and sunset drinks overlooking panoramic terracotta rooftops, Lisbon feels less like a city you simply visit and more like a place you instantly fall in love with.
+
+=== ANSWER 6 ===
+To find the eigenvalues of the matrix
+
+
+$$A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix},$$
+
+
+we solve the characteristic equation $\det(A - \lambda I) = 0$, where $I$ is the identity matrix and $\lambda$ represents the eigenvalues.
+
+$$\det \begin{pmatrix} 2 - \lambda & 1 \\ 1 & 2 - \lambda \end{pmatrix} = 0$$
+
+Calculate the determinant:
+
+
+$$(2 - \lambda)(2 - \lambda) - (1)(1) = 0$$
+
+$$(2 - \lambda)^2 - 1 = 0$$
+
+Factor or solve for $\lambda$:
+
+
+$$(2 - \lambda)^2 = 1$$
+
+$$2 - \lambda = \pm 1$$
+
+* If $2 - \lambda = 1$, then $\lambda = 1$.
+* If $2 - \lambda = -1$, then $\lambda = 3$.
+
+The eigenvalues of the matrix are **$1$** and **$3$**.

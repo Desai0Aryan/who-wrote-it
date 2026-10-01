@@ -1,0 +1,193 @@
+=== ANSWER 1 ===
+
+ The **Pythagorean theorem** describes the relationship between the sides of a right triangle:
+
+ $$
+a^2+b^2=c^2
+$$
+
+ where $a$ and $b$ are the two legs (the sides meeting at the right angle), and $c$ is the hypotenuse (the longest side).
+
+  a2+b2=c2a^2 + b^2 = c^2  For example, if the legs are 3 and 4:
+
+ $$
+3^2+4^2=9+16=25=5^2
+$$
+
+ so the hypotenuse is 5.
+
+ It is used in geometry, construction, engineering, physics, navigation, computer graphics, and anywhere distances between perpendicular points need to be calculated.
+
+---
+
+ === ANSWER 2 ===
+
+ A **hash table** stores key-value pairs and uses a **hash function** to convert each key into an array index.
+
+ For example:
+
+```
+"apple" → hash function → index 3 → "red"
+```
+
+ The main operations—lookup, insertion, and deletion—are typically **O(1) average time**.
+
+ A collision occurs when two keys produce the same index. A simple approach to handling collisions is **separate chaining**, where each array position contains a list of key-value pairs.
+
+```
+class HashTable:
+    def __init__(self, size=10):
+        self.size = size
+        self.table = [[] for _ in range(size)]
+
+    def _index(self, key):
+        return hash(key) % self.size
+
+    def set(self, key, value):
+        index = self._index(key)
+
+        # Update existing key
+        for i, (k, v) in enumerate(self.table[index]):
+            if k == key:
+                self.table[index][i] = (key, value)
+                return
+
+        # Add new key-value pair
+        self.table[index].append((key, value))
+
+    def get(self, key):
+        index = self._index(key)
+
+        for k, v in self.table[index]:
+            if k == key:
+                return v
+
+        raise KeyError(key)
+
+    def delete(self, key):
+        index = self._index(key)
+
+        for i, (k, v) in enumerate(self.table[index]):
+            if k == key:
+                del self.table[index][i]
+                return
+
+        raise KeyError(key)
+
+# Example
+ht = HashTable()
+
+ht.set("name", "Alice")
+ht.set("age", 30)
+
+print(ht.get("name"))  # Alice
+print(ht.get("age"))   # 30
+
+ht.delete("age")
+```
+
+ Python's built-in `dict` implements a much more sophisticated and optimized hash-table structure.
+
+---
+
+ === ANSWER 3 ===
+
+ Assuming you want the **second-highest distinct salary**, a portable SQL query is:
+
+```
+SELECT MAX(salary) AS second_highest_salary
+FROM Employees
+WHERE salary < (
+    SELECT MAX(salary)
+    FROM Employees
+);
+```
+
+ Alternatively, with `DENSE_RANK()`:
+
+```
+SELECT salary
+FROM (
+    SELECT salary,
+           DENSE_RANK() OVER (ORDER BY salary DESC) AS rank
+    FROM Employees
+) AS ranked
+WHERE rank = 2;
+```
+
+ The second version is particularly useful if you want to handle duplicate salaries explicitly.
+
+---
+
+ === ANSWER 4 ===
+
+ For 5 distinct people arranged in a row, the number of arrangements is the number of permutations of 5 objects:
+
+ $$
+5! = 5\times4\times3\times2\times1 = \boxed{120}
+$$
+
+ So there are **120 ways**.
+
+---
+
+ === ANSWER 5 ===
+
+ **Standard deviation** measures how spread out a set of values is around its mean. A small standard deviation means the values tend to be close to the mean; a large one means they are more dispersed.
+
+ For:
+
+ $$
+2,4,4,4,5,5,7,9
+$$
+
+ the mean is:
+
+ $$
+\frac{40}{8}=5
+$$
+
+  σ=1N∑i=1N(xi−μ)2\\sigma = \\sqrt{\\frac{1}{N}\\sum\_{i=1}^{N}(x\_i-\\mu)^2}  The squared deviations from the mean are:
+
+ $$
+9,1,1,1,0,0,4,16
+$$
+
+ Their sum is:
+
+ $$
+32
+$$
+
+ ### Population standard deviation
+
+ $$
+\sigma=\sqrt{\frac{32}{8}}
+=\sqrt{4}
+=\boxed{2}
+$$
+
+ So the **population standard deviation is 2**.
+
+ If these eight observations are considered a **sample** rather than the entire population, the sample standard deviation uses $n-1$:
+
+ $$
+s=\sqrt{\frac{32}{7}}\approx\boxed{2.14}
+$$
+
+---
+
+ === ANSWER 6 ===
+
+ The ocean is salty mainly because **dissolved minerals and ions accumulate in seawater over very long periods**.
+
+ The main process is:
+
+ 1. **Rainwater absorbs carbon dioxide** from the atmosphere and becomes slightly acidic.
+2. As water flows over rocks and through soil, it **weathers the rocks**, dissolving small amounts of minerals.
+3. Rivers carry dissolved ions—including sodium, calcium, chloride, and other substances—into the ocean.
+4. At the ocean, **water evaporates but most dissolved salts do not**, leaving them behind.
+5. Additional salts enter through **underwater volcanic activity, hydrothermal vents, and chemical reactions involving ocean-floor rocks**.
+6. Some salts are removed by organisms, sediments, and chemical processes, so the ocean's composition reflects a long-term balance between inputs and removal.
+
+ The most abundant ions in seawater are **chloride and sodium**, which combine to form the familiar saltiness of seawater.

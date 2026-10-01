@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: Write a short review of a fictional restaurant called The Copper Spoon.
+
+PROMPT 2: A bag has 3 red and 5 blue marbles. Two are drawn without replacement. What is the probability both are red?
+
+PROMPT 3: Describe a bustling night market in vivid detail in one paragraph.
+
+PROMPT 4: Solve for x: 3x + 7 = 25.
+
+PROMPT 5: Write a two-paragraph travel blog intro about a weekend in Lisbon.
+
+PROMPT 6: Find the eigenvalues of the matrix [[2, 1], [1, 2]].

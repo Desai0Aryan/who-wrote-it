@@ -1,0 +1,70 @@
+=== ANSWER 1 ===
+Dear Hiring Manager,
+
+As a passionate computer science student with hands-on experience in full-stack development and modern software engineering principles, I am thrilled to apply for the Software Engineering Intern position at your company. I have long admired your team's commitment to building scalable, user-centric tools, and I am eager to contribute my strong problem-solving skills and dedication to clean code to your upcoming projects.
+
+=== ANSWER 2 ===
+The United States Electoral College is the formal system established by the U.S. Constitution for electing the President and Vice President.
+
+* **The Electors:** Each state is allocated a specific number of electors based on its total representation in Congress (two senators plus its members in the House of Representatives). There are 538 total electors, and a candidate must win at least **270 electoral votes** to secure the presidency.
+* **The Winner-Take-All System:** In 48 states and Washington, D.C., a winner-take-all approach is used, meaning the candidate who wins the plurality of a state's popular vote receives all of that state's electoral votes. Maine and Nebraska allocate their votes proportionally by congressional district.
+* **The Timeline:** Citizens cast their popular votes in November, which determines which slate of electors meets in December to officially cast the electoral votes, followed by formal congressional certification in January.
+
+=== ANSWER 3 ===
+Here is an implementation of a queue using two stacks in Python:
+
+```python
+class QueueUsingTwoStacks:
+    def __init__(self):
+        self.inbox = []
+        self.outbox = []
+
+    def enqueue(self, item):
+        self.inbox.append(item)
+
+    def dequeue(self):
+        if not self.outbox:
+            while self.inbox:
+                self.outbox.append(self.inbox.pop())
+        if not self.outbox:
+            raise IndexError("dequeue from empty queue")
+        return self.outbox.pop()
+
+    def peek(self):
+        if not self.outbox:
+            while self.inbox:
+                self.outbox.append(self.inbox.pop())
+        if not self.outbox:
+            raise IndexError("peek from empty queue")
+        return self.outbox[-1]
+
+    def is_empty(self):
+        return not self.inbox and not self.outbox
+
+```
+
+* **`inbox`**: Used for incoming elements during `enqueue` operations with $O(1)$ time complexity.
+* **`outbox`**: Used for dequeueing. When empty, elements are transferred from `inbox` to `outbox`, reversing their order to achieve First-In-First-Out (FIFO) behavior with an amortized $O(1)$ time complexity.
+
+=== ANSWER 4 ===
+She wasn't much to look at in her final years—faded cobalt paint kissed by rust around the wheel wells, a bumper dented by a rogue shopping cart, and a dashboard held together by sheer willpower and determination. Yet, that trusty old sedan was much more than just metal and rubber; she was a faithful companion through every milestone of my early adulthood. From late-night drives chasing city lights to cross-country road trips with the windows rolled down and the radio static hissing, she never once asked for more than regular oil changes and a comforting pat on the steering wheel. Though her engine finally fell silent for good, the memories carved into her worn seats remain timeless.
+
+=== ANSWER 5 ===
+Here is a robust bash one-liner to find the 10 largest files in a directory:
+
+```bash
+find . -type f -exec du -h {} + | sort -hr | head -n 10
+
+```
+
+### Explanation:
+
+* **`find . -type f`**: Searches recursively starting from the current directory (`.`) for regular files only (`-type f`).
+* **`-exec du -h {} +`**: Passes the found files to the disk usage utility (`du`), displaying their sizes in a human-readable format (`-h` like MB, GB) efficiently in batches.
+* **`sort -hr`**: Sorts the output in reverse numeric order (`-r`) based on human-readable size values (`-h`).
+* **`head -n 10`**: Limits the output to display only the top 10 lines, which correspond to the 10 largest files.
+
+=== ANSWER 6 ===
+A clever fox was trotting through the autumn woods when he spotted a crow perched high on a branch, holding a large, golden piece of cheese in her beak. Eager for a snack, the fox smiled slyly and called out, "Good day, majestic bird! Your feathers shine like polished jet, and I am certain your voice must be sweeter than a nightingale's. Would you grace me with a single song?" Flattered by the unaccustomed praise, the crow eagerly opened her beak to caw, and the cheese dropped straight into the waiting jaws of the fox below.
+
+**Moral:** Beware of flattery; those who praise your virtues too loudly often seek to profit from your vanity.

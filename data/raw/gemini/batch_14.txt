@@ -1,0 +1,98 @@
+=== ANSWER 1 ===
+
+## How the Stock Market Works
+
+The stock market is a collection of marketplaces where shares of publicly traded companies are bought, sold, and issued. Think of it as a giant digital auction house connecting investors who want to buy shares with sellers who want to unload them.
+
+### Key Components
+
+* **Shares:** Units of ownership in a company. When you buy a share, you own a tiny fraction of that business.
+* **Exchanges:** The platforms where trading happens. Major examples include the New York Stock Exchange (NYSE) and the Nasdaq.
+* **Brokers:** The intermediaries (like Fidelity, Robinhood, or Charles Schwab) that allow everyday people to buy and sell stocks.
+
+### The Lifecycle of a Stock
+
+1. **Going Public (IPO):** A private company offers shares to the public for the first time through an Initial Public Offering to raise capital.
+2. **The Secondary Market:** Once shares are issued, they trade among investors on exchanges. The company doesn't get money from these daily trades; the investors do.
+3. **Supply and Demand:** Stock prices fluctuate based on how many people want to buy versus sell. Strong company earnings and growth drive demand up, while poor performance or economic downturns push prices down.
+
+---
+
+What specific aspect of investing or market analysis would you like to explore next?
+
+=== ANSWER 2 ===
+Here is a Python function that merges two sorted lists into a single sorted list efficiently in $O(n + m)$ time:
+
+```python
+def merge_sorted_lists(list1, list2):
+    merged = []
+    i = 0
+    j = 0
+    
+    # Traverse both lists and append the smaller element
+    while i < len(list1) and j < len(list2):
+        if list1[i] < list2[j]:
+            merged.append(list1[i])
+            i += 1
+        else:
+            merged.append(list2[j])
+            j += 1
+            
+    # Append any remaining elements from list1 or list2
+    merged.extend(list1[i:])
+    merged.extend(list2[j:])
+    
+    return merged
+
+# Example usage:
+# print(merge_sorted_lists([1, 3, 5], [2, 4, 6])) -> [1, 2, 3, 4, 5, 6]
+
+```
+
+=== ANSWER 3 ===
+Dear [Neighbor's Name],
+
+Thank you so much for taking such wonderful care of [Dog's Name] while I was away! It was such a huge relief knowing they were in such safe, loving hands, and it made my time away so much more relaxing.
+
+[Dog's Name] has been extra happy (and perhaps a bit spoiled!) since we got back. Please let us know if we can ever return the favor for you or your pets.
+
+Warmly,
+
+[Your Name]
+
+=== ANSWER 4 ===
+"To [Sister's Name] and [Partner's Name],
+
+Standing here today, watching the two of you look at each other, it is so clear how lucky you are to have found your person. [Sister's Name], you've always brought so much joy, passion, and light into our family, and seeing how deeply [Partner's Name] cherishes and supports you is just wonderful.
+
+To a lifetime of shared laughter, quiet comforts, and grand adventures together. Everyone, please raise your glasses to the bride and groom!"
+
+=== ANSWER 5 ===
+Thrilled to share that I've officially completed my first Machine Learning course! 🚀
+
+Diving into algorithms, data preprocessing, and model evaluation was challenging, but seeing predictions come to life has been an incredible journey. A huge thank you to the instructors and peers who made this learning experience so rewarding.
+
+Ready to build on these foundations and take on the next challenge in AI/ML! 💻✨
+
+#MachineLearning #DataScience #ContinuousLearning #AI #TechJourney
+
+=== ANSWER 6 ===
+Subject: Extension Request for [Assignment Name] - [Your Name] - [Course Name/Section]
+
+Dear Professor [Last Name],
+
+I hope you are having a good week.
+
+I am writing to respectfully request a short extension on [Assignment Name], which is currently due on [Current Due Date]. Unfortunately, [briefly mention reason, e.g., I have been dealing with an unexpected illness / I am managing a sudden personal conflict this week], which has temporarily set back my progress.
+
+I have already completed [mention what is done, e.g., the research phase / the initial draft], and I am confident I can submit a polished final version by [Proposed New Date, e.g., Monday, October 5th].
+
+Thank you very much for your time, understanding, and consideration. Please let me know if you are open to this arrangement or if you would like to discuss it further.
+
+Best regards,
+
+[Your Name]
+
+[Student ID Number]
+
+[Course Name and Section]

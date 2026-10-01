@@ -1,0 +1,56 @@
+=== ANSWER 1 ===
+The limit of $\frac{\sin(x)}{x}$ as $x$ approaches $0$ is **1**.
+
+**Why?**
+There are a few primary ways to demonstrate this:
+
+1. **L'Hôpital's Rule:** Direct substitution yields the indeterminate form $\frac{0}{0}$. Taking the derivative of the numerator ($\cos(x)$) and the denominator ($1$) gives $\lim_{x \to 0} \frac{\cos(x)}{1} = \frac{\cos(0)}{1} = 1$.
+2. **Geometric Proof (The Squeeze Theorem):** By comparing the areas of a sector of a unit circle, an inscribed triangle, and a circumscribed triangle, one can show that $\cos(x) < \frac{\sin(x)}{x} < 1$ for angles near $0$. Taking the limit as $x \to 0$ squeezes the expression between two values that both approach $1$.
+
+=== ANSWER 2 ===
+Shifting school start times later is not just a matter of convenience; it is a biological necessity that profoundly impacts student well-being and academic success. During adolescence, biological sleep rhythms shift, causing teenagers to naturally fall asleep later and wake up later. Forcing them to wake up at the crack of dawn defies their natural circadian rhythms, resulting in chronic sleep deprivation that impairs memory, concentration, and emotional regulation. By delaying start times to align with adolescent biology, schools can dramatically improve student attendance, mental health, and academic performance, giving every young person a fair foundation to thrive.
+
+=== ANSWER 3 ===
+The **Industrial Revolution** was a period of profound global transition from agrarian, hand-tool economies to industrialized, machine-driven manufacturing. Beginning in Great Britain in the mid-18th century and spreading worldwide, it was fueled by innovations like the steam engine, textile machinery, and the widespread use of coal and iron.
+
+**How it changed society:**
+
+* **Urbanization:** Millions of people migrated from rural farming communities to rapidly growing factory cities in search of work.
+* **Economic Structure:** Shifted society from localized craft production to mass production, giving rise to modern capitalism, factory systems, and distinct socioeconomic classes.
+* **Technology and Infrastructure:** Revolutionized transportation (railroads, steamships) and communication, drastically shrinking the perceived size of the world.
+* **Social Costs:** Initially brought severe exploitation, including child labor, dangerous working conditions, and overcrowded, unsanitary urban slums, which eventually spurred labor rights movements and regulatory reforms.
+
+=== ANSWER 4 ===
+Here is a Python function implementing the Sieve of Eratosthenes to find all prime numbers up to a given integer $n$:
+
+```python
+def sieve_of_eratosthenes(n):
+    if n < 2:
+        return []
+        
+    # Initialize a boolean array "is_prime" true for all indices
+    is_prime = [True] * (n + 1)
+    is_prime[0] = is_prime[1] = False
+    
+    for p in range(2, int(n**0.5) + 1):
+        if is_prime[p]:
+            # Mark multiples of p as non-prime, starting from p^2
+            for i in range(p * p, n + 1, p):
+                is_prime[i] = False
+                
+    # Collect all numbers that are still marked True
+    return [i for i, prime in enumerate(is_prime) if prime]
+
+# Example usage:
+# print(sieve_of_eratosthenes(50))
+
+```
+
+=== ANSWER 5 ===
+The **theory of evolution by natural selection**, primarily formulated by Charles Darwin and Alfred Russel Wallace, is the foundational scientific explanation for the diversity of life on Earth. It posits that within any population of organisms, individuals possess heritable variations in traits (such as size, color, or metabolic efficiency). Because resources are limited, individuals with traits best suited to their specific environment are more likely to survive, reproduce, and pass those advantageous traits to their offspring. Over successive generations, these advantageous traits become more common in the population, driving adaptation and, ultimately, the evolution of new species.
+
+=== ANSWER 6 ===
+**Photosynthesis** is the biochemical process by which plants, algae, and some bacteria convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen. It primarily takes place inside chloroplasts and occurs in two main stages:
+
+1. **Light-Dependent Reactions:** These occur in the thylakoid membranes and require sunlight. Chlorophyll absorbs light energy, which is used to split water molecules ($H_2O$) into oxygen gas ($O_2$) (released as a byproduct), protons, and electrons. This process generates ATP and NADPH, which are energy-carrying molecules.
+2. **Light-Independent Reactions (Calvin Cycle):** These occur in the stroma of the chloroplast and do not directly require light. Using the ATP and NADPH produced in the first stage, enzymes fix carbon dioxide ($CO_2$) from the atmosphere into organic molecules, eventually synthesizing glucose ($C_6H_{12}O_6$) for plant growth and energy storage.

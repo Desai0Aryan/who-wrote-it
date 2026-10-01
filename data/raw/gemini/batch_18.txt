@@ -1,0 +1,94 @@
+=== ANSWER 1 ===
+
+The outbreak of World War I in 1914 was the result of a complex web of long-term and short-term factors. Historians generally summarize the primary underlying causes using the acronym **M-A-I-N**, alongside a crucial catalyst.
+
+* **Militarism:** European powers engaged in a massive arms race in the late 19th and early 20th centuries. Germany and Britain, in particular, competed for naval dominance, while continental armies drastically expanded their forces and war plans.
+* **Alliances:** A dense network of mutual defense treaties divided Europe into two rival blocs: the Triple Entente (France, Russia, and Great Britain) and the Triple Alliance (Germany, Austria-Hungary, and Italy). This meant a conflict between two nations would inevitably drag the others in.
+* **Imperialism:** Fierce competition for colonial territories and global markets in Africa and Asia created persistent friction and mistrust among European empires.
+* **Nationalism:** Intense national pride fueled rivalries. Furthermore, ethnic groups ruled by the Austro-Hungarian and Ottoman empires—particularly Slavic populations in the Balkans—yearned for independence, turning the region into a volatile "powder keg."
+* **The Catalyst (The Assassination):** On June 28, 1914, Archduke Franz Ferdinand, heir to the Austro-Hungarian throne, was assassinated in Sarajevo by Gavrilo Princip, a Serbian nationalist. This triggered the July Crisis, wherein Austria-Hungary declared war on Serbia, activating the alliance system and plunging Europe into total war.
+
+--- === ANSWER 2 ===
+
+Listen up, everyone! Look around this room right through the eyes of the person standing next to you. Every single grueling practice, every drop of sweat, every early morning and late night has all led to this exact moment.
+
+Nobody handed us an easy path, and nobody expected us to be here—except for us. The other team has talent, but they don't have our heart. They don't know the sacrifices we’ve made when nobody was watching.
+
+When you step out onto that field tonight, play for the teammate to your left and the teammate to your right. Leave everything out there. No regrets, no hesitation, absolute relentless effort. Let’s go shock the world!
+
+--- === ANSWER 3 ===
+
+```python
+def dfs(graph, start_node):
+    """
+    Performs a depth-first search on a graph represented as an adjacency list.
+    
+    Parameters:
+    graph (dict): A dictionary where keys are nodes and values are lists of neighbor nodes.
+    start_node: The starting node for the DFS traversal.
+    
+    Returns:
+    list: A list of nodes in the order they were visited.
+    """
+    visited = set()
+    traversal_order = []
+    
+    def dfs_recursive(node):
+        visited.add(node)
+        traversal_order.append(node)
+        
+        for neighbor in graph.get(node, []):
+            if neighbor not in visited:
+                dfs_recursive(neighbor)
+                
+    dfs_recursive(start_node)
+    return traversal_order
+
+```
+
+--- === ANSWER 4 ===
+
+A neural network learns by iteratively adjusting its internal parameters—called **weights** and **biases**—to minimize errors in its predictions. This process relies on four core steps:
+
+* **Forward Propagation:** Input data is passed through the network's layers. Each neuron multiplies inputs by its weights, adds a bias, and passes the result through an activation function to generate a prediction.
+* **Loss Calculation:** A loss function compares the network's prediction against the actual ground-truth label, generating a numerical score representing how "wrong" the model was.
+* **Backpropagation:** Using calculus (the chain rule), the network calculates the gradient of the loss function with respect to every weight and bias, determining how much each parameter contributed to the error.
+* **Optimization:** An optimization algorithm (such as Gradient Descent) updates the weights and biases in the direction that reduces the loss.
+
+By repeating this cycle across millions of training examples, the network gradually improves its pattern recognition capabilities.
+
+--- === ANSWER 5 ===
+
+Hey [Friend's Name], I am so incredibly sorry that I missed your birthday party. I felt terrible when I realized I wasn't there to celebrate with you. Things got completely overwhelming on my end, but that's no excuse for missing such a special day for one of my best friends.
+
+I hope you had an amazing time surrounded by people who love you. I would love to take you out for dinner or grab coffee sometime soon to properly celebrate you and make it up to you. Let me know when you're free! Happy belated birthday!
+
+--- === ANSWER 6 ===
+
+**Job Title:** Part-Time Barista
+
+**Location:** [Cafe Name] – [City, State]
+
+**Hourly Wage:** [$XX/hour] + Tips
+
+**About Us:**
+
+At [Cafe Name], we are passionate about crafting exceptional coffee and building a warm, welcoming community space. We pride ourselves on top-tier customer service and great vibes.
+
+**Responsibilities:**
+
+* Welcome customers with a friendly attitude and take accurate orders.
+* Expertly prepare coffee, espresso drinks, teas, and food items to quality standards.
+* Maintain a clean, organized, and stocked front-of-house and bar area.
+* Handle cash and digital transactions efficiently using the POS system.
+
+**Qualifications:**
+
+* Previous barista or food service experience is a plus, but we are willing to train the right enthusiastic candidate!
+* A positive, team-oriented mindset and strong communication skills.
+* Ability to work in a fast-paced environment and stand for extended periods.
+* Flexible availability (including weekends and mornings).
+
+**To Apply:**
+
+Send your resume or a brief note about yourself to [Email Address] or drop by the shop in person!

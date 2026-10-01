@@ -1,0 +1,121 @@
+prompt_id,category,prompt
+1,coding,"Write a Python function that checks whether a string is a palindrome, ignoring punctuation and case."
+2,coding,Write a Python function that merges two sorted lists into one sorted list.
+3,coding,Implement binary search in Python and explain its time complexity.
+4,coding,Write a Python function that returns the n-th Fibonacci number efficiently.
+5,coding,"Write a Python class implementing a stack with push, pop, and peek."
+6,coding,Write a JavaScript function that debounces another function.
+7,coding,Write a SQL query that finds the second-highest salary from an Employees table.
+8,coding,Write a Python function that counts word frequencies in a text file.
+9,coding,Implement a queue using two stacks in Python.
+10,coding,Write a Python function that detects whether a linked list has a cycle.
+11,coding,"Write a bash one-liner to find the 10 largest files in a directory, and explain it."
+12,coding,Write a Python function that flattens an arbitrarily nested list.
+13,coding,This function crashes when the list is empty. Explain why and fix it: def avg(xs): return sum(xs)/len(xs)
+14,coding,Write a Python decorator that times how long a function takes to run.
+15,coding,Implement quicksort in Python.
+16,coding,Write a regular expression that validates a simple email address and explain each part.
+17,coding,Write a Python function that finds all primes up to n using the Sieve of Eratosthenes.
+18,coding,Write a C function that reverses a string in place.
+19,coding,Write a Python function that converts a Roman numeral to an integer.
+20,coding,Write a Java method that checks whether two strings are anagrams.
+21,coding,Implement an LRU cache in Python.
+22,coding,Write a Python script that reads a CSV file and prints the average of a numeric column.
+23,coding,Write a function that checks whether the parentheses in a string are balanced.
+24,coding,Explain the difference between a list and a tuple in Python and when to use each.
+25,coding,Write a Python function that performs depth-first search on a graph given as an adjacency list.
+26,coding,Write a Python function that computes the greatest common divisor of two numbers.
+27,coding,Write a React component that shows a counter with increment and decrement buttons.
+28,coding,Write a Python function that removes duplicates from a list while preserving order.
+29,coding,Write a Python function that rotates a square matrix 90 degrees clockwise.
+30,coding,Explain how a hash table works and implement a simple one in Python.
+31,math,Solve for x: 3x + 7 = 25.
+32,math,What is the derivative of x^3 * sin(x)?
+33,math,Evaluate the integral of 2x * e^(x^2) dx.
+34,math,A train travels 120 miles in 1.5 hours. What is its average speed in miles per hour?
+35,math,How many ways can 5 people be arranged in a row?
+36,math,Find the sum of the first 50 positive integers and show your reasoning.
+37,math,Solve the quadratic equation x^2 - 5x + 6 = 0.
+38,math,What is the probability of getting a sum of 8 when rolling two fair dice?
+39,math,Prove that the square root of 2 is irrational.
+40,math,"Find the eigenvalues of the matrix [[2, 1], [1, 2]]."
+41,math,A shirt costs $40 after a 20% discount. What was its original price?
+42,math,"What is the limit of sin(x)/x as x approaches 0, and why?"
+43,math,Compute 17 x 23 without a calculator and show your steps.
+44,math,A rectangle has perimeter 36 and its length is twice its width. Find its area.
+45,math,How many positive divisors does 360 have?
+46,math,Solve the system: 2x + y = 7 and x - y = 2.
+47,math,What is the expected value of a fair six-sided die roll?
+48,math,Find the area under y = x^2 from x = 0 to x = 3.
+49,math,Explain the difference between permutations and combinations with an example.
+50,math,Simplify (x^2 - 9)/(x - 3).
+51,math,What is the sum of the infinite geometric series 1 + 1/2 + 1/4 + ...?
+52,math,Use induction to prove that 1 + 2 + ... + n = n(n+1)/2.
+53,math,A bag has 3 red and 5 blue marbles. Two are drawn without replacement. What is the probability both are red?
+54,math,Convert 0.375 to a fraction in lowest terms.
+55,math,Find the inverse of the function f(x) = 2x + 3.
+56,math,What is the remainder when 2^100 is divided by 7?
+57,math,"If log base 2 of x equals 5, what is x?"
+58,math,"Find the distance between the points (1, 2) and (4, 6)."
+59,math,"Explain what standard deviation measures and compute it for the data 2, 4, 4, 4, 5, 5, 7, 9."
+60,math,"What is the dot product of the vectors (1, 2, 3) and (4, 5, 6)?"
+61,factual,Why is the sky blue?
+62,factual,What caused the fall of the Western Roman Empire?
+63,factual,How does photosynthesis work?
+64,factual,What is the difference between weather and climate?
+65,factual,Explain how vaccines train the immune system.
+66,factual,What were the main causes of World War I?
+67,factual,How does a blockchain work?
+68,factual,Why do we have seasons?
+69,factual,What is the function of mitochondria?
+70,factual,Explain the difference between a virus and a bacterium.
+71,factual,How do airplanes stay in the air?
+72,factual,What is inflation and what causes it?
+73,factual,Who was Ada Lovelace and why is she important?
+74,factual,How does GPS determine your location?
+75,factual,What is the greenhouse effect?
+76,factual,Explain how the electoral college works in the United States.
+77,factual,What is the difference between DNA and RNA?
+78,factual,How do ocean tides work?
+79,factual,What was the Industrial Revolution and how did it change society?
+80,factual,Explain how a neural network learns.
+81,factual,What causes earthquakes?
+82,factual,How does the stock market work?
+83,factual,What is the difference between a democracy and a republic?
+84,factual,How do noise-cancelling headphones work?
+85,factual,What is the theory of evolution by natural selection?
+86,factual,Why is the ocean salty?
+87,factual,What is the Pythagorean theorem and where is it used?
+88,factual,How does the internet send data between computers?
+89,factual,What is the water cycle?
+90,factual,What is the difference between machine learning and traditional programming?
+91,writing,Write a short story (about 200 words) about a lighthouse keeper who finds a message in a bottle.
+92,writing,Write three original haikus about autumn.
+93,writing,Write a professional email asking my professor for an extension on an assignment.
+94,writing,Write a persuasive paragraph arguing that students should have later school start times.
+95,writing,Write a product description for a reusable water bottle.
+96,writing,Write a short poem about the first snowfall of winter.
+97,writing,Write the opening paragraph of a cover letter for a software engineering internship.
+98,writing,Write a dialogue between a robot and a child meeting for the first time.
+99,writing,Describe a bustling night market in vivid detail in one paragraph.
+100,writing,Write a motivational speech of about 150 words for a team before a big game.
+101,writing,Write a limerick about a cat who loves coffee.
+102,writing,Write a short review of a fictional restaurant called The Copper Spoon.
+103,writing,Write a thank-you note to a neighbor who watched my dog.
+104,writing,Write the opening paragraph of a mystery novel set in a small coastal town.
+105,writing,Write a LinkedIn post announcing that I finished my first machine learning course.
+106,writing,Write a short bedtime story about a dragon who is afraid of fire.
+107,writing,Write an apology message to a friend for missing their birthday party.
+108,writing,"Write an argumentative paragraph for or against homework, your choice."
+109,writing,Write a brief toast for my sister's wedding.
+110,writing,Write a short sci-fi scene where an astronaut hears a knock on the airlock.
+111,writing,Write a polite complaint to a landlord about a broken heater.
+112,writing,Write a two-paragraph travel blog intro about a weekend in Lisbon.
+113,writing,Write a short tribute to a beloved old car.
+114,writing,Write a funny out-of-office auto-reply message.
+115,writing,Write a short speech introducing a guest lecturer on climate science.
+116,writing,Write a free-verse poem about the feeling of finishing an exam.
+117,writing,Write a short original fable with a moral about a fox and a crow.
+118,writing,Write a job posting for a part-time barista.
+119,writing,Write a short diary entry from the perspective of a houseplant.
+120,writing,Write a pitch for a mobile app that helps people find study partners.

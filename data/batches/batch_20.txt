@@ -1,0 +1,13 @@
+I'm going to give you 6 separate prompts. Answer each one independently, exactly as you normally would if it were the only message in our conversation. Begin each answer with a line containing exactly === ANSWER k === (where k is the prompt number), and write nothing before the first marker.
+
+PROMPT 1: Write a Python function that checks whether a string is a palindrome, ignoring punctuation and case.
+
+PROMPT 2: Implement an LRU cache in Python.
+
+PROMPT 3: What is the probability of getting a sum of 8 when rolling two fair dice?
+
+PROMPT 4: Write a regular expression that validates a simple email address and explain each part.
+
+PROMPT 5: What is the derivative of x^3 * sin(x)?
+
+PROMPT 6: Find the sum of the first 50 positive integers and show your reasoning.

@@ -1,0 +1,111 @@
+=== ANSWER 1 ===
+
+The stock market is a system where people buy and sell ownership shares (stocks) in publicly traded companies.
+
+**Why companies sell shares:** When a company wants to raise money, it can "go public" through an initial public offering (IPO), selling slices of ownership to investors. In return, the company gets capital to grow, and investors get a claim on part of its future profits.
+
+**Where trading happens:** Shares are traded on exchanges like the New York Stock Exchange or Nasdaq. These are organized marketplaces that match buyers with sellers. Most people don't trade directly; they use a brokerage that submits orders on their behalf.
+
+**How prices are set:** Prices come from supply and demand. If more people want to buy a stock than sell it, the price rises; if more want to sell, it falls. Each trade happens at a price where a buyer and seller agree. Prices move based on company earnings, economic data, interest rates, news, and investor sentiment about the future.
+
+**How investors make money:**
+- **Price appreciation:** buying a share and selling it later at a higher price.
+- **Dividends:** some companies distribute a portion of profits to shareholders regularly.
+
+**Key concepts:**
+- **Market cap:** a company's total value (share price × number of shares).
+- **Indexes:** benchmarks like the S&P 500 or Dow Jones that track groups of stocks to gauge overall market performance.
+- **Bull vs. bear markets:** sustained rising vs. falling prices.
+- **Diversification:** spreading money across many investments to reduce risk, often done through index funds or ETFs.
+
+**Risk:** Stock prices can fall as well as rise, and you can lose money. Historically, the broad market has trended upward over long periods, but with significant short-term swings.
+
+I'm not a financial advisor, so for decisions about your own investments, it's worth consulting one.
+
+=== ANSWER 2 ===
+
+```python
+def merge_sorted(a, b):
+    """Merge two sorted lists into one sorted list in O(n + m) time."""
+    result = []
+    i = j = 0
+
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            result.append(a[i])
+            i += 1
+        else:
+            result.append(b[j])
+            j += 1
+
+    # Append whatever remains in either list
+    result.extend(a[i:])
+    result.extend(b[j:])
+    return result
+
+
+# Example
+print(merge_sorted([1, 3, 5, 7], [2, 4, 6, 8, 10]))
+# [1, 2, 3, 4, 5, 6, 7, 8, 10]
+```
+
+It walks through both lists with two pointers, always taking the smaller current element, then appends the leftover tail of whichever list isn't exhausted. Using `<=` keeps the merge stable. (Python's standard library also offers `heapq.merge(a, b)`, which does this lazily.)
+
+=== ANSWER 3 ===
+
+Dear [Neighbor's name],
+
+Thank you so much for taking care of [dog's name] while I was away. It meant a great deal to me to know [he/she] was in such good hands. Your kindness and reliability made it easy to relax, and [dog's name] clearly had a wonderful time with you.
+
+I really appreciate you going out of your way to help. If you ever need a favor in return, whether it's watching your place, your pets, or anything else, please don't hesitate to ask.
+
+Thanks again for being such a wonderful neighbor.
+
+Warmly,
+[Your name]
+
+=== ANSWER 4 ===
+
+Good evening, everyone. For those who don't know me, I'm [your name], [sister's name]'s sister, which means I've known her longest and have the most embarrassing stories. Don't worry, [sister's name], I'll save those for another day.
+
+Growing up with you has been one of the great gifts of my life. You've always been my biggest supporter, my best friend, and the person I call first with good news and bad. And watching you with [partner's name], I've seen you become even more yourself: happier, calmer, and full of laughter.
+
+[Partner's name], welcome to the family. You've got a good one, and we're lucky to have you.
+
+Please raise your glasses. To [sister's name] and [partner's name]: may your life together be full of love, laughter, and adventure. Cheers!
+
+=== ANSWER 5 ===
+
+I'm excited to share that I just completed my first machine learning course! 🎉
+
+Over the past [number] weeks, I dove into [course name] on [platform], covering topics like supervised learning, model evaluation, and building my first predictive models. Going from "what even is a neural network?" to training one myself was challenging, humbling, and a lot of fun.
+
+A few things I'm taking away:
+✅ Good data matters more than fancy algorithms
+✅ Debugging a model is its own kind of puzzle
+✅ Consistent learning beats cramming
+
+This is just the beginning. I'm looking forward to applying these skills to real projects and continuing to learn.
+
+Thank you to [instructor/community] for the guidance and support. If you're working in ML or have resources to recommend, I'd love to hear from you!
+
+#MachineLearning #AI #Learning #DataScience #CareerGrowth
+
+=== ANSWER 6 ===
+
+**Subject:** Extension Request for [Assignment Name] – [Course Code]
+
+Dear Professor [Last Name],
+
+I hope you're doing well. I'm writing to respectfully ask for an extension on [assignment name], currently due on [due date].
+
+[Briefly explain your reason, e.g., "I've been dealing with an illness / a family situation / an unexpectedly heavy workload from overlapping deadlines"], which has made it difficult for me to complete the assignment to the standard I'd like. I've already [describe progress, e.g., "finished the research and a draft of the first half"], and I'm confident I can submit a strong final version with a bit more time.
+
+Would it be possible to extend the deadline to [proposed new date]? I'm happy to provide documentation if needed, and I understand if this isn't possible.
+
+Thank you for your time and consideration.
+
+Sincerely,
+[Your full name]
+[Course name and section]
+[Student ID, if applicable]

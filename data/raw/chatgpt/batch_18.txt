@@ -1,0 +1,146 @@
+=== ANSWER 1 ===
+
+ The main causes of World War I were a combination of long-term tensions and immediate events:
+
+ - **Militarism:** European powers expanded their armies and navies and developed detailed military plans, increasing the risk that a crisis would escalate into war.
+- **Alliances:** Europe was divided into competing alliance systems, particularly the **Triple Alliance** (Germany, Austria-Hungary, and Italy) and the **Triple Entente** (France, Russia, and Britain). These alliances meant a conflict between two countries could draw in others.
+- **Imperialism:** Competition for colonies and economic influence, especially in Africa and Asia, intensified rivalries among European powers.
+- **Nationalism:** Strong national identities and nationalist movements created tensions, particularly in the Balkans, where Slavic nationalist movements challenged the Austro-Hungarian Empire.
+- **Balkan instability:** The decline of the Ottoman Empire created competition among Austria-Hungary, Russia, Serbia, and other powers over territory and influence.
+- **The assassination of Archduke Franz Ferdinand:** On June 28, 1914, Serbian nationalist **Gavrilo Princip** assassinated Austria-Hungary's heir in Sarajevo. Austria-Hungary declared war on Serbia, triggering a chain of mobilizations and declarations of war.
+
+ The assassination was the **immediate trigger**, but the underlying causes had built up over decades.
+
+ === ANSWER 2 ===
+
+ Pre-Game Motivational Speech
+
+Team, this is our moment.
+
+ We’ve worked for this day through every practice, every early morning, every setback, and every time we pushed ourselves when it would have been easier to stop. Tonight, all of that preparation comes with us onto the field.
+
+ Don’t worry about the scoreboard. Don’t worry about what happened before. Focus on the play in front of you, trust the person beside you, and give everything you have.
+
+ We don’t need perfection. We need effort, discipline, communication, and belief. When things get difficult, respond together. When one person falls, lift them up. When an opportunity comes, take it.
+
+ Play with courage. Play for each other. Leave everything out there so that when the final whistle blows, we know we gave our absolute best.
+
+ Now let’s step up, stay together, and make this game count. Let’s go!
+
+ You can make it more intense, humorous, or sport-specific if you want.
+
+ === ANSWER 3 ===
+
+```
+def dfs(graph, start):
+    """Perform depth-first search on an adjacency-list graph.
+
+    Args:
+        graph: Dictionary mapping each node to an iterable of neighbors.
+        start: Node from which to begin the search.
+
+    Returns:
+        A list of nodes in the order they were visited.
+    """
+    visited = set()
+    result = []
+
+    def visit(node):
+        if node in visited:
+            return
+
+        visited.add(node)
+        result.append(node)
+
+        for neighbor in graph.get(node, []):
+            visit(neighbor)
+
+    visit(start)
+    return result
+```
+
+ For example:
+
+```
+graph = {
+    "A": ["B", "C"],
+    "B": ["D", "E"],
+    "C": ["F"],
+    "D": [],
+    "E": [],
+    "F": []
+}
+
+print(dfs(graph, "A"))
+```
+
+ This visits nodes by going as deeply as possible along each branch before backtracking.
+
+ === ANSWER 4 ===
+
+ A neural network learns by **adjusting its internal parameters so that its predictions become more accurate**.
+
+ The basic process is:
+
+ 1. **Input:** Data is fed into the network, such as an image, sentence, or set of numerical measurements.
+2. **Forward pass:** The data moves through layers of neurons. Each neuron applies weights, adds a bias, and passes the result through an activation function.
+3. **Prediction:** The final layer produces the network's output.
+4. **Loss calculation:** The prediction is compared with the correct answer using a **loss function**. The loss measures how wrong the prediction was.
+5. **Backpropagation:** The network calculates how much each parameter contributed to the error using derivatives.
+6. **Parameter update:** An optimization algorithm, commonly **gradient descent**, adjusts the weights and biases to reduce the loss.
+7. **Repeat:** This process happens repeatedly across many examples.
+
+ Over many training iterations, the network learns parameter values that allow it to recognize patterns and make useful predictions on new data.
+
+ === ANSWER 5 ===
+
+ Birthday Apology
+
+Hey, I’m really sorry I missed your birthday party. I feel terrible that I wasn’t there to celebrate with you, especially because I know it was an important day. I hope you had an amazing time and got properly spoiled! I’d really love to make it up to you and take you out soon. Happy belated birthday — you mean a lot to me, and I’m sorry I missed it.
+
+ I can make it more casual, heartfelt, funny, or shorter.
+
+ === ANSWER 6 ===
+
+ Part-Time Barista Job Posting
+
+# Part-Time Barista
+
+ **Location:** \[City, State\]\
+ **Employment Type:** Part-Time\
+ **Schedule:** Flexible shifts, including mornings, evenings, and weekends
+
+ ## About the Role
+
+ We’re looking for a friendly, reliable **Part-Time Barista** to join our team. The ideal candidate enjoys working with people, takes pride in providing excellent customer service, and can stay organized in a fast-paced environment.
+
+ ## Responsibilities
+
+ - Prepare coffee, tea, and other beverages according to company standards
+- Take customer orders accurately and provide welcoming service
+- Operate the register and handle payments
+- Keep the café clean, organized, and well stocked
+- Follow food-safety and sanitation procedures
+- Work collaboratively with other team members
+- Help create a positive experience for every customer
+
+ ## Qualifications
+
+ - Friendly and professional attitude
+- Strong communication and customer-service skills
+- Reliable and punctual
+- Ability to work effectively in a busy environment
+- Previous café or customer-service experience is a plus, but not required
+- Must be available for some weekend or evening shifts
+
+ ## What We Offer
+
+ - Flexible part-time scheduling
+- Competitive hourly pay
+- Employee discounts
+- Supportive team environment
+- Opportunities to learn and develop barista skills
+
+ **To Apply:** Send your resume and a brief introduction to \[application contact\].
+
+ I can also tailor this for a specific café, add a salary range and benefits, or make it more casual and appealing to college students.
