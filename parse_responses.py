@@ -1,10 +1,3 @@
-"""Step 3: parse the raw chatbot replies into data/dataset.csv.
-
-Run:  python parse_responses.py
-Reads data/raw/<model>/batch_XX.txt, writes data/dataset.csv with columns
-  llm_name, prompt_id, category, input, output
-and prints a summary plus any problems (missing/empty answers).
-"""
 import json
 import re
 from pathlib import Path
