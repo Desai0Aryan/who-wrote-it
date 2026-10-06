@@ -1,0 +1,10 @@
+variant,model,mode,acc_mean,acc_std,f1_mean,f1_std,n_folds
+full,cnn,both,0.794,0.037,0.793,0.04,5.0
+full,cnn,input,0.333,0.0,0.296,0.017,5.0
+full,cnn,output,0.779,0.035,0.776,0.037,5.0
+full,lstm,both,0.525,0.044,0.519,0.049,5.0
+full,lstm,input,0.333,0.0,0.297,0.015,5.0
+full,lstm,output,0.684,0.04,0.68,0.042,5.0
+full,tfidf_lr,both,0.842,0.04,0.842,0.04,5.0
+full,tfidf_lr,input,0.333,0.0,0.167,0.0,5.0
+full,tfidf_lr,output,0.856,0.051,0.855,0.05,5.0

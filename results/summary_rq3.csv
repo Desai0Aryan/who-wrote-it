@@ -1,0 +1,4 @@
+variant,model,coding,factual,math,writing,mean
+full,cnn,0.463,0.522,0.552,0.441,0.495
+full,lstm,0.415,0.381,0.467,0.441,0.426
+full,tfidf_lr,0.5,0.6,0.522,0.533,0.539

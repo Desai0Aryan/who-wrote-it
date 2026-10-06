@@ -1,12 +1,13 @@
 # Who Wrote It? Identifying LLMs from Their Responses
 
-CMPSC 448 Midterm Project — Part 1: Dataset Collection
+CMPSC 448 Midterm Project
+Part 1: Dataset Collection
 
-## Steps I Completed
+## Part 1: Dataset Collection
 
-### 1. Set Up the Project Environment
+### 1. Set Up the Project
 
-I created a Python virtual environment and installed the required dependencies using:
+I created a Python virtual environment and installed the required packages.
 
 ```bash
 python3 -m venv .venv
@@ -14,7 +15,7 @@ python3 -m venv .venv
 pip install -r requirements.txt
 ```
 
-### 2. Generated the Prompts
+### 2. Created the Prompts
 
 I ran:
 
@@ -22,88 +23,106 @@ I ran:
 python build_prompts.py
 ```
 
-This generated a dataset of **120 original prompts**, divided equally across four categories:
+This created 120 prompts across four categories:
 
 * 30 coding prompts
 * 30 math prompts
 * 30 factual prompts
 * 30 writing prompts
 
-The 120 prompts were then divided into **20 batches of 6 prompts each** and saved in `data/batches/`.
+The prompts were split into 20 batches with 6 prompts in each batch. The batches were saved in `data/batches/`.
 
-### 3. Collected Responses from the LLMs
+### 3. Collected the LLM Responses
 
-I collected responses from the free web chat interfaces of **Claude, ChatGPT, and Gemini**.
+I collected responses from the free web versions of Claude, ChatGPT, and Gemini.
 
-For each model, I:
+For each model, I used a new chat for every batch so that previous conversations would not affect the results. I also turned off memory and custom instructions when those options were available.
 
-1. Opened a **new chat for each batch** to prevent previous conversations from influencing the responses.
-2. Turned off memory and custom instructions when those options were available.
-3. Pasted the full contents of each batch file, starting with `batch_01.txt`.
-4. Sent the six prompts to the chatbot.
-5. Copied the chatbot's **entire response without editing or formatting it**.
-6. Saved the response in the appropriate model folder, such as:
+For each batch, I pasted the six prompts into the chatbot and copied the full response without changing the wording or formatting. The responses were saved in the corresponding model folder:
 
-   * `data/raw/claude/batch_01.txt`
-   * `data/raw/chatgpt/batch_01.txt`
-   * `data/raw/gemini/batch_01.txt`
-7. Repeated this process for all **20 batches** for each of the three models.
+```text
+data/raw/claude/batch_01.txt
+data/raw/chatgpt/batch_01.txt
+data/raw/gemini/batch_01.txt
+```
 
-This resulted in approximately **20 messages/responses per chatbot**, with each response containing six prompts.
+I repeated this for all 20 batches for each model.
 
-### 4. Preserved the Original Responses
+### 4. Kept the Original Responses
 
-I kept the chatbot responses unedited because formatting, wording, structure, and other characteristics of the original responses may be useful signals for identifying which LLM produced them.
+I kept the responses as they were given by the models because things like formatting, wording, structure, and response style could be useful when trying to identify the model.
 
-If a response was incomplete or stopped before answering all of the prompts, I continued the conversation or reran the batch so that the complete response could be collected.
+If a response was incomplete, I reran the batch or continued the conversation to get a complete response. I also recorded the model/version shown by each website since these versions can change over time.
 
-I also kept track of the model/version displayed by each chatbot because the free versions of these services can change over time.
+### 5. Created the Dataset
 
-### 5. Built the Final Dataset
-
-After collecting the raw responses, I ran:
+Once the responses were collected, I ran:
 
 ```bash
 python parse_responses.py
 ```
 
-This processed the individual response files and created:
+This combined the individual response files into:
 
 ```text
 data/dataset.csv
 ```
 
-The resulting dataset contains the following columns:
+The dataset includes:
 
-* `llm_name` — the model that generated the response
-* `prompt_id` — the ID of the original prompt
-* `category` — coding, math, factual, or writing
-* `input` — the original prompt
-* `output` — the LLM's response
+* `llm_name` - the model that generated the response
+* `prompt_id` - the ID of the original prompt
+* `category` - coding, math, factual, or writing
+* `input` - the original prompt
+* `output` - the model's response
 
-The script also provided summary information, including the number of responses per model and category, average response length, and any missing responses that needed to be addressed.
+The script also reports the number of responses for each model and category, average response length, and any missing responses.
+
+## Part 2: Models and Experiments
+
+The main experiments can be run with the following commands:
+
+```bash
+pip install -r requirements.txt
+
+python baseline.py                              # TF-IDF + logistic regression
+
+python train_nn.py --exp rq1 --quick            # quick smoke test
+python train_nn.py --exp rq1                    # RQ1: CNN + BiLSTM
+python train_nn.py --exp rq2                    # RQ2: input/output combinations
+python train_nn.py --exp rq3                    # RQ3: leave-one-task-out
+python train_nn.py --exp rq1 --strip_format     # RQ4: formatting ablation
+python analyze_features.py                      # RQ4: stylometric features
+python summarize.py                              # generate tables and confusion matrices
+```
+
+### Experiment Notes
+
+* All experiments use the same 5-fold splits. The splits are prompt-grouped and task-stratified in `common.py`.
+* `train_nn.py` uses 3 seeds across 5 folds. `--seeds 1` can be used to run a faster version.
+* Results are saved in `results/` and can be used in `REPORT_TEMPLATE.md`.
 
 ## Dataset Information
 
-The prompts consisted of **120 original questions** that I created for this project across four task types: coding, math, factual questions, and writing.
+The dataset contains 120 original prompts that I created for the project. They cover four types of tasks: coding, math, factual questions, and writing.
 
-The responses were collected manually from the free web interfaces for **Claude, ChatGPT, and Gemini**.
+The responses were collected manually from the free web interfaces of Claude, ChatGPT, and Gemini.
 
-The model versions displayed by the applications were:
+The model versions displayed by the applications during collection were:
 
 * Claude: `sonnet-5.5`
 * ChatGPT: `gpt-6-luna`
 * Gemini: `gemini-3.5-Flash-Lite`
 
-Each batch contained six prompts, and every batch was submitted in a fresh chat. The responses were saved in their original, unedited form.
+Each batch contained six prompts and was submitted in a fresh chat. The responses were saved without editing them.
 
 ## Limitations
 
-There were several limitations to the data collection process:
+There are a few limitations to the dataset:
 
 * The dataset is relatively small.
-* Using six prompts in a single message may produce slightly different responses than submitting each prompt individually.
-* Free-tier chatbot services may change the underlying model or model version over time.
-* The responses were collected manually, which introduces the possibility of human error during copying or organization.
+* Sending six prompts in one message may produce different results than sending each prompt separately.
+* Free-tier chatbot models and versions can change over time.
+* Since the responses were collected manually, copying or organization errors are possible.
 
 No private or third-party data was included in the dataset.

@@ -1,0 +1,4 @@
+llm_name,coding,factual,math,writing
+chatgpt,66.0,129.0,27.0,104.0
+claude,134.0,216.0,20.0,156.0
+gemini,99.0,138.0,50.0,107.0

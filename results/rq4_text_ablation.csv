@@ -1,0 +1,6 @@
+text variant,acc_mean,acc_std
+full text,0.856,0.045
+no markdown/newlines,0.767,0.039
+"no punctuation, letters+digits only",0.731,0.04
+first 30 tokens only,0.714,0.034
+last 30 tokens only,0.694,0.056
